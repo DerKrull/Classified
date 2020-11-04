@@ -1,13 +1,6 @@
-##### Die README unseres Projektes
+##### Die README vom Dev Branch
 
 Ideen
 =====
 +
 +
-+
-
-
-
-
-
-
