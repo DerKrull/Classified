@@ -1,5 +1,4 @@
-##### Die README unseres Projektes
-
+##### Die README vom Main Branch
 Ideen
 =====
 +
