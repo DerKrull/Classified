@@ -13,6 +13,8 @@ Story - Game auf der Konsole, mit kleineren Aufgaben und alternativen Enden, die
 	+ GUI
 	+ Extras (Einbindung von Scores, oder konkret Guthaben und Notenschnitt)
 
++ Grober Spielablaufplan ![Skizze1](Pictures_Readme/Skizze1.jpg)
++ Grobe Skizze der GUI ![Skizze2](Pictures_Readme/Skizze2.jpg)
 
 
 
