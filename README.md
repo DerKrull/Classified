@@ -16,6 +16,25 @@ Story - Game auf der Konsole, mit kleineren Aufgaben und alternativen Enden, die
 + Grober Spielablaufplan ![Skizze1](Pictures_Readme/Skizze1.jpg)
 + Grobe Skizze der GUI ![Skizze2](Pictures_Readme/Skizze2.jpg)
 
+Die Umsetzung
+=====
++ Die Story: "Der Aufstieg als Informatiker"
++ Stufen: 
+    + an der Arbeit
+	+ Studium
+	+ die Zeit der Entscheidung
+	+ die ersten 10
+	+ die zweiten 10 
+	+ ...
+    + privat
+    	+ Studium
+	+ die Zeit der Entscheidung
+	+ die ersten 10
+	+ die zweiten 10
+	+ ...
+
++ Extras
+	+ Startparameter
 
 
 
