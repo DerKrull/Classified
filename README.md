@@ -25,12 +25,12 @@ Die Umsetzung
 
 
 + Stufenplan:
-        1. Stufe: 1/2 Semester
-        2. Stufe: 3/5 Semester
-        3. Stufe: 6 Semester/Bachelorarbeit
-        4. Stufe: Wie gehts weiter nach dem Studium
-        5. Stufe: variabel: bsp. Master / Selbstständig / Angestellter
-        6. ...
+    1. Stufe: 1/2 Semester
+    2. Stufe: 3/5 Semester
+    3. Stufe: 6 Semester/Bachelorarbeit
+    4. Stufe: Wie gehts weiter nach dem Studium
+    5. Stufe: variabel: bsp. Master / Selbstständig / Angestellter
+    6. ...
 
 
 Die Idee
