@@ -23,14 +23,14 @@ Die Umsetzung
     + an der Arbeit
         + Studium
         + die Zeit der Entscheidung
-        + die ersten 10
-        + die zweiten 10 
+        + die ersten 10 Jahre nach dem Studium
+        + die zweiten 10 Jahre nach dem Studium
         + ...
     + privat
     	+ Studium
         + die Zeit der Entscheidung
-        + die ersten 10
-        + die zweiten 10
+        + die ersten 10 nach dem Studium
+        + die zweiten 10 nach dem Studium
         + ...
 
 + Extras
