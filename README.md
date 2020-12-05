@@ -21,22 +21,28 @@ Die Umsetzung
 + Die Story: "Der Aufstieg als Informatiker"
 + Stufen: 
     + an der Arbeit
-	+ Studium
-	+ die Zeit der Entscheidung
-	+ die ersten 10
-	+ die zweiten 10 
-	+ ...
+        + Studium
+        + die Zeit der Entscheidung
+        + die ersten 10
+        + die zweiten 10 
+        + ...
     + privat
     	+ Studium
-	+ die Zeit der Entscheidung
-	+ die ersten 10
-	+ die zweiten 10
-	+ ...
+        + die Zeit der Entscheidung
+        + die ersten 10
+        + die zweiten 10
+        + ...
 
 + Extras
 	+ Startparameter
 
-
++ Stufenplan:
+	1. Stufe: 1/2 Semester
+	2. Stufe: 3/5 Semester
+	3. Stufe: 6 Semester/Bachelorarbeit
+	4. Stufe: Wie gehts weiter nach dem Studium
+	5. Stufe: variabel: bsp. Master / Selbstständig / Angestellter
+	6. ...
 
 
 
