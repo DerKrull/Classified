@@ -32,9 +32,13 @@ Die Umsetzung
         + die ersten 10 nach dem Studium
         + die zweiten 10 nach dem Studium
         + ...
-
++ Grafische Oberfläche
+    + Basis Funktionen
+    + Erweiterungen z.B. Zeit, Map, Geld(Guthaben), ...
 + Extras
 	+ Startparameter
+	+ Geld und Erfahrung mit einbeziehen; Fragen an Geld anbinden
+
 
 + Stufenplan:
 	1. Stufe: 1/2 Semester
