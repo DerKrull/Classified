@@ -1,6 +1,6 @@
-##### Die README vom Dev Branch
+###### ReadMe Dev - Branch
 
-Ideen
-=====
-+
-+
+Stand der Game.java
+[Skizze1](/pictures/GameStruktur.jpg)
+
+
