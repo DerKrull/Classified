@@ -136,7 +136,7 @@ public class Game{
 
 		antwort[1][1][0] = " 1 = S 1 - F 2 - A 1";
 		antwort[1][1][1] = " 2 = S 1 - F 2 - A 2";
-		antwort[1][1][2] = " 2 = S 1 - F 2 - A 3";
+		antwort[1][1][2] = " 3 = S 1 - F 2 - A 3";
 
 
 		antwort[2][0][0] = " 1 = S 2 - F 1 - A 1";
