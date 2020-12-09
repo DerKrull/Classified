@@ -50,36 +50,89 @@ public class Game{
 
 			int a = in.nextInt();
 
-			if(x != 7){
-				if(x == 2 && y == 2){
+			if(x == 0){
+				if(a == 1){
+					x += 1;
+					y = 0;
+				}
+				if(a == 2){
+					x += 1;
+					y = 1;
+				}
+			}
+
+			else if(x == 1){
+				if(a == 1){
+					x += 1;
+					y = 0;
+				}
+				if(a == 2){
+					x += 1;
+					y = 1;
+				}
+				if(a == 3){
+					x += 1;
+					y = 2; 
+				}
+			}
+
+			else if(x == 2){
+				if(y == 2){
 					if(a == 1){
-						x = x - 1;
+						x = 1;
 						y = 0;
 					}
-					if(a == 2){
+					else if(a == 2){
 						x = x;
 						y = 1;
 					}
 				}
-
 				else{
 					if(a == 1){
 						x += 1;
 						y = 0;
 					}
-			
 					if(a == 2){
 						x += 1;
 						y = 1;
 					}
-
-					if(a == 3){
-						x += 1;
-						y = 2; 
-					}
 				}
+			}
+
+			else if(x == 3){
+				if(a == 1){
+					x += 1;
+					y = 0;
+				}
+				if(a == 2){
+					x += 1;
+					y = 1;
+				}
+			}
+
+			else if(x == 4){
+				if(a == 1){
+					x += 1;
+					y = 0;
+				}
+				if(a == 2){
+					x += 1;
+					y = 1;
+				}
+			}
+
+			else if(x == 5){
+				if(a == 1){
+					x += 1;
+					y = 0;
+				}
+				if(a == 2){
+					x += 1;
+					y = 1;
+				}
+			}
 			
-			else{
+			else if(x == 6){
 				if(a == 1){
 					clearScreen();
 					System.out.println("\nGAME OVER\n");
@@ -90,6 +143,7 @@ public class Game{
 					y = 0;
 				}
 			}
+			
 
 			z = 0;
 		
