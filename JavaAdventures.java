@@ -5,7 +5,6 @@ public class JavaAdventures {
     Scanner scanner = new Scanner(System.in);
     String playerName;
     int playerChoice;
-    /*TEST..........................................................................................................................................*/
     System.out.println("You stranded on an island.");
     System.out.println("What is your name?");
     String name = scanner.nextLine();
