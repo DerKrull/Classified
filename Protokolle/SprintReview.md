@@ -26,7 +26,7 @@
 **Erreicht**:
 
 - Klasse in Java erstellt, welche die unterschiedlichen Stufen erstellt
-- Ablauf für Stufen 1-3 erstellt 
+- Ablauf für Stufen 1-3 erstellt
 
 **To-Do**:
 
