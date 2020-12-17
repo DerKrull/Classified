@@ -28,7 +28,7 @@ public class Game {
 
     while (gameOver) {
       System.out.println(currentStep.getDescription());
-	  LiveChoice[] choices = currentStep.getChoices();
+      LiveChoice[] choices = currentStep.getChoices();
 
       for (int i = 0; i < choices.length; i++) {
         System.out.println(choices[i].getDescription());
@@ -37,10 +37,10 @@ public class Game {
       int answer = in.nextInt();
       id = choices[answer - 1].getNextStep();
       currentStep = steps[id];
-      if (id == 9){
+      if (id == 9) {
         System.out.println("Game Over");
         gameOver = false;
-	  }
+      }
       clearScreen(); 
     }
   }
