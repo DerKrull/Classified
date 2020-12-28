@@ -8,6 +8,7 @@ public class Game {
     int sumQuestions = 30;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
+	//1. Stage
     steps[0] = new LiveStep(0, "Das ist die vorrübergehende Einleitung", new LiveChoice[]{
       new LiveChoice(weiter, 1)
       });
@@ -113,7 +114,23 @@ public class Game {
     + " Glückwunsch.\n Auf gehts ins nächste Semester", new LiveChoice[]{
       new LiveChoice("1 -Und los!", 23)
       });
-
+    //2. Stage
+    steps[23] = new LiveStep(23, "Herzlich Willkommen im 3.Semester!", 
+	  new LiveChoice[]{
+        new LiveChoice("1 -Auf zur Wahl deiner Spezialisierung!",24)
+      });
+    steps[24] = new LiveStep(24, "Wähle eine der Spezialisierungen.", 
+      new LiveChoice[]{
+        new LiveChoice("1 -Embedded Systems", 25),
+        new LiveChoice("2 -Internet Engineering", 25),
+        new LiveChoice("3 -Medieninformatik", 25),
+        new LiveChoice("4 -Wirtschaftsinformatik", 25),
+        new LiveChoice("5 -keine Spezialisierung", 25)
+	  });
+    steps[25] = new LiveStep(25, "Du belegst 3 Fächer deiner Spezialisierung.", //TODO vielleicht Spezialisierungsvar einfügen
+      new LiveChoice[]{
+        new LiveChoice("1 -Weiter", 26)
+      });
     int id = 0;
     LiveStep currentStep = steps[id];
     boolean gameOver = true;
