@@ -8,7 +8,7 @@ public class Game {
     int sumQuestions = 50;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
-	//1. Stage
+    //Stage1
     steps[0] = new LiveStep(0, "Das ist die vorrübergehende Einleitung", new LiveChoice[]{
       new LiveChoice(weiter, 1)
       });
@@ -114,120 +114,120 @@ public class Game {
     + " Glückwunsch.\n Auf gehts ins nächste Semester", new LiveChoice[]{
       new LiveChoice("1 -Und los!", 23)
       });
-    //2. Stage
+    //Stage2
     steps[23] = new LiveStep(23, "Herzlich Willkommen im 3.Semester!", 
-      new LiveChoice[]{
-        new LiveChoice("1 -Auf zur Wahl deiner Spezialisierung!",24)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Auf zur Wahl deiner Spezialisierung!", 24)
+        });
     steps[24] = new LiveStep(24, "Wähle eine der Spezialisierungen.", 
-      new LiveChoice[]{
-        new LiveChoice("1 -Embedded Systems", 25),
-        new LiveChoice("2 -Internet Engineering", 25),
-        new LiveChoice("3 -Medieninformatik", 25),
-        new LiveChoice("4 -Wirtschaftsinformatik", 25),
-        new LiveChoice("5 -keine Spezialisierung", 25)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Embedded Systems", 25),
+          new LiveChoice("2 -Internet Engineering", 25),
+          new LiveChoice("3 -Medieninformatik", 25),
+          new LiveChoice("4 -Wirtschaftsinformatik", 25),
+          new LiveChoice("5 -keine Spezialisierung", 25)
+        });
     steps[25] = new LiveStep(25, "Du belegst 3 Fächer deiner Spezialisierung.",
-      new LiveChoice[]{ //TODO vielleicht Spezialisierungsvar einfügen
-        new LiveChoice(weiter, 26)
-      });
+        new LiveChoice[]{ //TODO vielleicht Spezialisierungsvar einfügen
+          new LiveChoice(weiter, 26)
+        });
     steps[26] = new LiveStep(26, "Besuchst du regelmäßig die Veranstalltungen (Vorlesungen, etc.)",
-      new LiveChoice[]{
-        new LiveChoice("1 -Ja", 27),
-        new LiveChoice("2 -Nein", 28)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Ja", 27),
+          new LiveChoice("2 -Nein", 28)
+        });
     steps[27] = new LiveStep(27, "Wie findest du das Studium bis zu diesem Punkt?",
-      new LiveChoice[]{
-        new LiveChoice("1 -Gut!", 29),
-        new LiveChoice("2 -Anstrengend, wird aber schon!", 30),
-        new LiveChoice("3 -Schlecht!", 31)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Gut!", 29),
+          new LiveChoice("2 -Anstrengend, wird aber schon!", 30),
+          new LiveChoice("3 -Schlecht!", 31)
+        });
     steps[28] = new LiveStep(28, "Dir fehlen wichtige Vorkenntnisse, die dir später zum Nachteil"
     + " werden könnten!",
-      new LiveChoice[]{
-        new LiveChoice(weiter, 27)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 27)
+        });
     steps[29] = new LiveStep(29, "Läuft!",
-      new LiveChoice[]{
-        new LiveChoice(weiter, 33)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 33)
+        });
     steps[30] = new LiveStep(30, "Läuft! (Auswirkung Privatleben)", //TODO Auswirkung Privatleben
-      new LiveChoice[]{
-        new LiveChoice(weiter, 33)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 33)
+        });
     steps[31] = new LiveStep(31, "Ändere deine Spezialisierung oder wechsel den Studiengang?",
-      new LiveChoice[]{
-        new LiveChoice("1 -Spezialisierung ändern!", 24),
-        new LiveChoice("2 -Studiengang wechseln!", 32)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Spezialisierung ändern!", 24),
+          new LiveChoice("2 -Studiengang wechseln!", 32)
+        });
     steps[32] = new LiveStep(32, "Du wechseltst den Studiengang!\nDieser Weg endet hier!",
-      new LiveChoice[]{
-        new LiveChoice("1 -Spiel beenden!", 1000) //TODO eleganteres Ende
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Spiel beenden!", 1000) //TODO eleganteres Ende
+        });
     steps[33] = new LiveStep(33, "Du hast die nächsten Semester soweit gemeistert!\nDie "
     + "Semesterferien stehen an! Ab ins Privatleben!",
-      new LiveChoice[]{
-        new LiveChoice(weiter, 34)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 34)
+        });
     steps[34] = new LiveStep(34, "Willst du mit deinen Kumpels nach Mallorca?",
-      new LiveChoice[]{
-        new LiveChoice("1 -Na Klar!", 35),
-    	new LiveChoice("2 -Nein ich muss mich auf mein Studium konzentrieren.", 36)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Na Klar!", 35),
+          new LiveChoice("2 -Nein ich muss mich auf mein Studium konzentrieren.", 36)
+        });
     steps[35] = new LiveStep(35, "Nach ein paar Tagen feiern wird ein Freund festgenommen "
     + "und\nihr teilt euch die Kosten!", //TODO Geld verlieren
-      new LiveChoice[]{
-        new LiveChoice(weiter, 43)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 43)
+        });
     steps[36] = new LiveStep(36, "Nach erfolgreichem Lernen gehst du in eine Kneipe/Kirmes/Club "
     + "und lernst\njemanden kennen.\nHast du Interesse an einer Beziehung",
-      new LiveChoice[]{
-        new LiveChoice("1 -Ja!", 37),  
-        new LiveChoice("2 -Nein!", 43)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Ja!", 37),  
+          new LiveChoice("2 -Nein!", 43)
+        });
     steps[37] = new LiveStep(37, "(Studium-Anstrengend)", //TODO Antwort speichern
-      new LiveChoice[]{
-        new LiveChoice("1 -Ja", 39),
-        new LiveChoice("2 -Nein", 38)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Ja", 39),
+          new LiveChoice("2 -Nein", 38)
+        });
     steps[38] = new LiveStep(38, "Ihr hattet ein paar Dates.\nDu bist nun in einer festen "
     + "Beziehung.",
-      new LiveChoice[]{
-        new LiveChoice(weiter, 40)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 40)
+        });
     steps[39] = new LiveStep(39, "Du musst deinen Partner mehrfach, wegen des Studiums versetzen!"
     + "\nAus der Beziehung wird leider nichts!",
-      new LiveChoice[]{
-        new LiveChoice(weiter, 43)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 43)
+        });
     steps[40] = new LiveStep(40, "Dein Partner fragt, ob ihr zusammenziehen wollt.",
-      new LiveChoice[]{
-        new LiveChoice("1 -Ja!", 41),
-        new LiveChoice("2 -Nein!", 42)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Ja!", 41),
+          new LiveChoice("2 -Nein!", 42)
+        });
     steps[41] = new LiveStep(41, "Mehr/Weniger Kosten!",
-      new LiveChoice[]{
-        new LiveChoice(weiter, 43)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 43)
+        });
     steps[42] = new LiveStep(42, "Sie sieht keine Zukunft für eure Beziehung!\nDiese "
     + "Beziehung endet!",
-      new LiveChoice[]{
-        new LiveChoice(weiter, 43)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 43)
+        });
     steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot von <Spezialisierung>!",
-      new LiveChoice[]{
-        new LiveChoice("1 -Jobangebot annehmen!", 44),
-        new LiveChoice("2 -Jobangebot ablehnen!", 45)
-      });
+        new LiveChoice[]{
+          new LiveChoice("1 -Jobangebot annehmen!", 44),
+          new LiveChoice("2 -Jobangebot ablehnen!", 45)
+        });
     steps[44] = new LiveStep(44, "Du begibst dich ins Berufsleben!",
-      new LiveChoice[]{
-        new LiveChoice(weiter, 1000)
-      });
+        new LiveChoice[]{
+          new LiveChoice(weiter, 1000)
+        });
     steps[45] = new LiveStep(45, "Du machst das Studium fertig, aber verlierst das Jobangebot!",
-      new LiveChoice[]{
-        new LiveChoice(weiter, 1000)
-      });
-    //3. Stage
+        new LiveChoice[]{
+          new LiveChoice(weiter, 1000)
+        });
+    //Stage3
 
 
     int id = 0;
