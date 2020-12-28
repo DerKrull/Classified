@@ -163,7 +163,7 @@ public class Game {
     steps[32] = new LiveStep(32, "Du wechseltst den Studiengang!\nDieser Weg endet hier!",
         new LiveChoice[]{
           new LiveChoice("1 -Spiel beenden!", 1000) //TODO eleganteres Ende
-        });
+          });
     steps[33] = new LiveStep(33, "Du hast die nächsten Semester soweit gemeistert!\nDie "
     + "Semesterferien stehen an! Ab ins Privatleben!",
         new LiveChoice[]{
