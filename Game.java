@@ -228,6 +228,16 @@ public class Game {
           new LiveChoice(weiter, 1000)
           });
     //Stage3
+    steps[46] = new LiveStep(46, "Hast du dchon ein Thema?",
+        new LiveChoice[]{
+          new LiveChoice("Nein", 46)
+		  new LiveChoice("Ja", 47)
+          });	
+    steps[47] = new LiveStep(47, "Deine Freunde laden dich zu einem ........-Trip ein Gehst du mit?",
+        new LiveChoice[]{
+          new LiveChoice("Ja, ich habe ja noch Zeit", 46)
+		  new LiveChoice("Nein, ich muss mich auf andere Sachen konzentrieren", 47)
+          });
 
 
     int id = 0;
