@@ -1,4 +1,4 @@
-## Übrige Fragen
+# Übrige Fragen
 
 - Freund*in
 - Gesundheitsaspekt (Sport oder nächste Essensbestellung)
@@ -19,7 +19,7 @@
 - Soft Skills verbessern (indem man sich in unangenehme Situtaionen begibt)
   oder etwas lernen
 
-## Neue Fragen
+# Neue Fragen
 
 - Weitere neue Jobangebote
 - Mit Freunden in einer Bar treffen oder an dem Projekt arbeiten Arbeit
