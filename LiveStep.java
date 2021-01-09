@@ -3,12 +3,13 @@ public class LiveStep {
   private String description;
   private LiveChoice[] choices;
   private int choiceTaken;
+  private int neededPreviousStep;
+  private int neededPreviousAnswer;
 
-  public LiveStep(int id, String description, LiveChoice[] choices, int choiceTaken) {
+  public LiveStep(int id, String description, LiveChoice[] choices) {
     this.id = id;
     this.description = description;
-    this.choices = choices;  
-    this.choiceTaken = choiceTaken;
+    this.choices = choices;
   }
 
   public int getId() {
@@ -42,4 +43,22 @@ public class LiveStep {
   public void setChoiceTaken(int choiceTaken) {
     this.choiceTaken = choiceTaken;
   }
+
+  public int getNeededPreviousStep() {
+    return neededPreviousStep;
+  }
+
+  public void setNeededPreviousStep(int neededPreviousStep) {
+    this.neededPreviousStep = neededPreviousStep;
+  }
+
+  public int getNeededPreviousAnswer() {
+    return neededPreviousAnswer;
+  }
+
+  public void setNeededPreviousAnswer(int neededPreviousAnswer) {
+    this.neededPreviousAnswer = neededPreviousAnswer;
+  }
+
+ 
 }
