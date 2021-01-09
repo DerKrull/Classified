@@ -81,7 +81,6 @@ public class Game {
       new LiveChoice("2 - Ach, das passt schon ich hab andere Quellen die mich unterstützen, da"
       + " muss ich selbst nicht arbeiten gehen", 18)
       });
-    //TODO Frage abhängig von Antwort bei steps[7]
     steps[17] = new LiveStep(17,  "Da du Vorkenntnisse in Java hast, kannst du nach einem"
     + " entsprechenden Nebenjob suchen", new LiveChoice[]{
       new LiveChoice("1 - Da kann ich auch gleich noch Praxiserfahrung sammeln, das klingt gut",
