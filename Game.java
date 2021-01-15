@@ -285,7 +285,7 @@ public class Game {
           new LiveChoice(weiter, 55)
         });
 
-    int id = 46;
+    int id = 0;
     LiveStep currentStep = steps[id];
     boolean gameOver = true;
     clearScreen();
