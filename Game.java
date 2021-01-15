@@ -255,7 +255,7 @@ public class Game {
     + " angemeldet", 
         new LiveChoice[]{
           new LiveChoice(weiter, 52)
-    });
+          });
     steps[50] = new LiveStep(50, "Du bist ein sehr vorbildlicher Student, die Zeichen stehen gut",
         new LiveChoice[]{
           new LiveChoice(weiter, 53)
@@ -268,7 +268,7 @@ public class Game {
     + " angemeldet!", 
         new LiveChoice[]{
           new LiveChoice(weiter, 52)
-    });
+          });
     steps[52] = new LiveStep(52, "Du hast eine durchschnittliche Bachelorarbeit geschrieben, du"
     + " hast das Studium soweit abgeschlossen",
         new LiveChoice[]{
@@ -283,7 +283,7 @@ public class Game {
     + " dein Weg hier!", 
         new LiveChoice[]{
           new LiveChoice(weiter, 55)
-        });
+          });
 
     int id = 0;
     LiveStep currentStep = steps[id];
