@@ -239,28 +239,43 @@ public class Game {
     steps[47] = new LiveStep(47, "Deine Freunde laden dich zu einem spontanen Studie-Trip ein"
     + "  Gehst du mit?",
         new LiveChoice[]{
-          new LiveChoice("Ja, ich habe ja noch Zeit", 46),
+          new LiveChoice("Ja, ich habe ja noch Zeit", 48),
           new LiveChoice("Nein, ich muss mich auf andere Sachen konzentrieren", 47)
           });
     steps[48] = new LiveStep(48, "Du hast dich verschätzt und hast nicht geschafft dich"
-    + " rechtzeitig anzumelden",
+    + " rechtzeitig anzumelden", 
         new LiveChoice[]{
-          new LiveChoice(weiter, 49)
+          new LiveChoice(weiter, 54)
           });
-    steps[49] = new LiveStep(49, "Du bist ein sehr vorbildlicher Student, die Zeichen stehen gut",
+    steps[49] = new LiveStep(49, "Abwechslung tut gut, du hast dich ja bereits rechtzeitig"
+    + " angemeldet", 
         new LiveChoice[]{
-          new LiveChoice(weiter, 50)
+          new LiveChoice(weiter, 52)
+    });
+    steps[50] = new LiveStep(50, "Du bist ein sehr vorbildlicher Student, die Zeichen stehen gut",
+        new LiveChoice[]{
+          new LiveChoice(weiter, 53)
           });
-    steps[50] = new LiveStep(50, "Du hast eine durchschnittliche Bachelorarbeit geschrieben, du"
+    steps[51] = new LiveStep(51, "Du hast noch rechtzeitig ein Thema gefunden und dich"
+    + " angemeldet!", 
+        new LiveChoice[]{
+          new LiveChoice(weiter, 52)
+    });
+    steps[52] = new LiveStep(52, "Du hast eine durchschnittliche Bachelorarbeit geschrieben, du"
     + " hast das Studium soweit abgeschlossen",
         new LiveChoice[]{
-          new LiveChoice(weiter, 46)
+          new LiveChoice(weiter, 55)
           });
-    steps[51] = new LiveStep(51, "Du hast eine sehr gute Bachelorarbeit geschrieben, Du hast"
+    steps[53] = new LiveStep(53, "Du hast eine sehr gute Bachelorarbeit geschrieben, Du hast"
     + " dein Bachelor-Studium abgeschlossen",
         new LiveChoice[]{
-          new LiveChoice(weiter, 46)
+          new LiveChoice(weiter, 55)
           });
+    steps[54] = new LiveStep(54, "Da du die Anmeldung zur Bachelorarbeit verpasst hast, endet"
+    + " dein Weg hier!", 
+        new LiveChoice[]{
+          new LiveChoice(weiter, 55)
+        })
 
     int id = 0;
     LiveStep currentStep = steps[id];
