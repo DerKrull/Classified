@@ -40,10 +40,12 @@ public class Game {
           new LiveChoice("1 - Ja, ich habe bereits Vorkenntnisse in Java", 8),
           new LiveChoice("2 - Nein, ich habe noch nichts mit Java zu tun gehabt", 9)
           });
-    steps[8] = new LiveStep(8, "JAVA-QUIZ HIER EINFÜGEN", new LiveChoice[]{
-      new LiveChoice("1 - Antwort -> bestanden", 10),
-      new LiveChoice("2 - Antwort -> durchgefallen", 9)
-      });
+    steps[8] = new LiveStep(8, "Was ist die Ausgabe?\n\nint i = 2;\nint total = 0;\nwhile"
+    + " (i < 9) {\n  i++\n  total = total + i;\n}\nSystem.out.println(total);\n", 
+        new LiveChoice[]{
+          new LiveChoice("1 - 42", 10),
+          new LiveChoice("2 - 39", 9)
+          });
     steps[9] = new LiveStep(9, "Du musst viel Zeit investieren um in Prog1 am Ball zu bleiben. Du"
     + " hast weniger Zeit für andere Dinge", new LiveChoice[]{
       new LiveChoice(weiter, 10)
