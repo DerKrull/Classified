@@ -5,7 +5,7 @@ public class Game {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);    
     //TODO add all Questions
-    int sumQuestions = 55;
+    int sumQuestions = 56;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
     //Stage1
@@ -233,20 +233,24 @@ public class Game {
     //Stage3
     steps[46] = new LiveStep(46, "Hast du dchon ein Thema?",
         new LiveChoice[]{
-          new LiveChoice("1 - Nein", 46),
-          new LiveChoice("2 - Ja", 47)
+          new LiveChoice("1 - Ja", 47),
+          new LiveChoice("2 - Nein", 47)
           });
     steps[47] = new LiveStep(47, "Deine Freunde laden dich zu einem spontanen Studie-Trip ein"
     + "  Gehst du mit?",
         new LiveChoice[]{
           new LiveChoice("1 - Ja, ich habe ja noch Zeit", 48),
-          new LiveChoice("2 - Nein, ich muss mich auf andere Sachen konzentrieren", 47)
+          new LiveChoice("2 - Nein, ich muss mich auf andere Sachen konzentrieren", 50)
           });
     steps[48] = new LiveStep(48, "Du hast dich verschätzt und hast nicht geschafft dich"
     + " rechtzeitig anzumelden", 
         new LiveChoice[]{
           new LiveChoice(weiter, 54)
           });
+    steps[48].setNeededPreviousStep(46);
+    steps[48].setNeededPreviousAnswer(2);
+    steps[48].setAlternativeStep(49);
+
     steps[49] = new LiveStep(49, "Abwechslung tut gut, du hast dich ja bereits rechtzeitig"
     + " angemeldet", 
         new LiveChoice[]{
@@ -256,6 +260,10 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 53)
           });
+    steps[50].setNeededPreviousStep(46);
+    steps[50].setNeededPreviousAnswer(1);
+    steps[50].setAlternativeStep(51);
+
     steps[51] = new LiveStep(51, "Du hast noch rechtzeitig ein Thema gefunden und dich"
     + " angemeldet!", 
         new LiveChoice[]{
@@ -275,9 +283,9 @@ public class Game {
     + " dein Weg hier!", 
         new LiveChoice[]{
           new LiveChoice(weiter, 55)
-        })
+        });
 
-    int id = 0;
+    int id = 46;
     LiveStep currentStep = steps[id];
     boolean gameOver = true;
     clearScreen();
