@@ -90,6 +90,7 @@ public class Game {
       });
     steps[17].setNeededPreviousStep(7);
     steps[17].setNeededPreviousAnswer(1);
+    steps[17].setAlternativeStep(19);
 
     steps[18] = new LiveStep(18, "Aus welchen Quellen kommt denn das Geld", new LiveChoice[]{
       new LiveChoice("1 - Meine Eltern", 19), //TODO 40% GELD
@@ -185,19 +186,18 @@ public class Game {
     steps[36] = new LiveStep(36, "Nach erfolgreichem Lernen gehst du in eine Kneipe/Kirmes/Club "
     + "und lernst\njemanden kennen.\nHast du Interesse an einer Beziehung",
         new LiveChoice[]{
-          new LiveChoice("1 -Ja!", 37),  
+          new LiveChoice("1 -Ja!", 38),  
           new LiveChoice("2 -Nein!", 43)
-          });
-    steps[37] = new LiveStep(37, "(Studium-Anstrengend)", //TODO Antwort speichern
-        new LiveChoice[]{
-          new LiveChoice("1 -Ja", 39),
-          new LiveChoice("2 -Nein", 38)
           });
     steps[38] = new LiveStep(38, "Ihr hattet ein paar Dates.\nDu bist nun in einer festen "
     + "Beziehung.",
         new LiveChoice[]{
           new LiveChoice(weiter, 40)
           });
+    steps[38].setNeededPreviousStep(27);
+    steps[38].setNeededPreviousAnswer(1);
+    steps[38].setAlternativeStep(39);
+
     steps[39] = new LiveStep(39, "Du musst deinen Partner mehrfach, wegen des Studiums versetzen!"
     + "\nAus der Beziehung wird leider nichts!",
         new LiveChoice[]{
@@ -293,17 +293,14 @@ public class Game {
 
   public static LiveStep checkGivenAnswer(LiveStep currentStep, LiveStep[] steps) {
     if (currentStep.getNeededPreviousStep() != 0) {
-      int id = currentStep.getNeededPreviousAnswer();
+      int id = currentStep.getNeededPreviousStep();
       LiveStep checkedStep = steps[id]; 
 
       if (checkedStep.getChoiceTaken() == currentStep.getNeededPreviousAnswer()) {
         return currentStep;
       } else {
-        int neededAnswer = currentStep.getNeededPreviousAnswer();
-        LiveChoice[] choices = currentStep.getChoices();
-        int nextStep = choices[neededAnswer].getNextStep();
-        currentStep = steps[nextStep]; 
-        return currentStep;
+        int nextStep = currentStep.getAlternativeStep();
+        return steps[nextStep];
       }
     } else {
       return currentStep;
