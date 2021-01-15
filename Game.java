@@ -224,11 +224,11 @@ public class Game {
           });
     steps[44] = new LiveStep(44, "Du begibst dich ins Berufsleben!",
         new LiveChoice[]{
-          new LiveChoice(weiter, 1000)
+          new LiveChoice(weiter, 46)
           });
     steps[45] = new LiveStep(45, "Du machst das Studium fertig, aber verlierst das Jobangebot!",
         new LiveChoice[]{
-          new LiveChoice(weiter, 1000)
+          new LiveChoice(weiter, 46)
           });
     //Stage3
     steps[46] = new LiveStep(46, "Hast du dchon ein Thema?",
