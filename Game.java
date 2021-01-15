@@ -5,7 +5,7 @@ public class Game {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);    
     //TODO add all Questions
-    int sumQuestions = 50;
+    int sumQuestions = 55;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
     //Stage1
@@ -228,7 +228,36 @@ public class Game {
           new LiveChoice(weiter, 1000)
           });
     //Stage3
-
+    steps[46] = new LiveStep(46, "Hast du dchon ein Thema?",
+        new LiveChoice[]{
+          new LiveChoice("Nein", 46),
+          new LiveChoice("Ja", 47)
+          });
+    steps[47] = new LiveStep(47, "Deine Freunde laden dich zu einem spontanen Studie-Trip ein"
+    + "  Gehst du mit?",
+        new LiveChoice[]{
+          new LiveChoice("Ja, ich habe ja noch Zeit", 46),
+          new LiveChoice("Nein, ich muss mich auf andere Sachen konzentrieren", 47)
+          });
+    steps[48] = new LiveStep(48, "Du hast dich verschätzt und hast nicht geschafft dich"
+    + " rechtzeitig anzumelden",
+        new LiveChoice[]{
+          new LiveChoice(weiter, 49)
+          });
+    steps[49] = new LiveStep(49, "Du bist ein sehr vorbildlicher Student, die Zeichen stehen gut",
+        new LiveChoice[]{
+          new LiveChoice(weiter, 50)
+          });
+    steps[50] = new LiveStep(50, "Du hast eine durchschnittliche Bachelorarbeit geschrieben, du"
+    + " hast das Studium soweit abgeschlossen",
+        new LiveChoice[]{
+          new LiveChoice(weiter, 46)
+          });
+    steps[51] = new LiveStep(51, "Du hast eine sehr gute Bachelorarbeit geschrieben, Du hast"
+    + " dein Bachelor-Studium abgeschlossen",
+        new LiveChoice[]{
+          new LiveChoice(weiter, 46)
+          });
 
     int id = 0;
     LiveStep currentStep = steps[id];
