@@ -74,20 +74,23 @@ public class Game {
          new LiveChoice[]{
            new LiveChoice(weiter, 16)
            });
-    //TODO Frage abhängig von Antwort bei steps[7]
+    
     steps[16] = new LiveStep(16, "Du hast die Möglichkeit einen Nebenjob zu machen um deine" 
     + " Haushaltskasse etwas aufzubessern", new LiveChoice[]{
       new LiveChoice("1 - Das hört sich vernünftig an, dann bin ich maximal selbstständig", 17),
       new LiveChoice("2 - Ach, das passt schon ich hab andere Quellen die mich unterstützen, da"
       + " muss ich selbst nicht arbeiten gehen", 18)
       });
-    steps[17] = new LiveStep(17,  "Falls du Vorkenntnisse in Programmierung hast, kannst du dich"
-    + " jetzt nach einem Nebenjob in diesem Bereich umsehen", new LiveChoice[]{
+    steps[17] = new LiveStep(17,  "Da du Vorkenntnisse in Java hast, kannst du nach einem"
+    + " entsprechenden Nebenjob suchen", new LiveChoice[]{
       new LiveChoice("1 - Da kann ich auch gleich noch Praxiserfahrung sammeln, das klingt gut",
        19), //TODO 100% GELD
       new LiveChoice("2 - Ich suche mir lieber einen \"normalen\" Nebenjob und gehe kellnern",
        19) //TODO 50% GELD
       });
+    steps[17].setNeededPreviousStep(7);
+    steps[17].setNeededPreviousAnswer(1);
+
     steps[18] = new LiveStep(18, "Aus welchen Quellen kommt denn das Geld", new LiveChoice[]{
       new LiveChoice("1 - Meine Eltern", 19), //TODO 40% GELD
       new LiveChoice("2 - Bafög", 19), //TODO 30% GELD
@@ -265,14 +268,19 @@ public class Game {
     clearScreen();
 
     while (gameOver) {
+      currentStep = checkGivenAnswer(currentStep, steps);
+
       System.out.println(currentStep.getDescription());
       LiveChoice[] choices = currentStep.getChoices();
-
+     
       for (int i = 0; i < choices.length; i++) {
         System.out.println(choices[i].getDescription());
       }
 
       int answer = in.nextInt();
+
+      steps[id].setChoiceTaken(answer);
+
       id = choices[answer - 1].getNextStep();
       currentStep = steps[id];
       if (id == sumQuestions) {
@@ -282,6 +290,27 @@ public class Game {
       clearScreen(); 
     }
   }
+
+  public static LiveStep checkGivenAnswer(LiveStep currentStep, LiveStep[] steps) {
+    if (currentStep.getNeededPreviousStep() != 0) {
+      int id = currentStep.getNeededPreviousAnswer();
+      LiveStep checkedStep = steps[id]; 
+
+      if (checkedStep.getChoiceTaken() == currentStep.getNeededPreviousAnswer()) {
+        return currentStep;
+      } else {
+        int neededAnswer = currentStep.getNeededPreviousAnswer();
+        LiveChoice[] choices = currentStep.getChoices();
+        int nextStep = choices[neededAnswer].getNextStep();
+        currentStep = steps[nextStep]; 
+        return currentStep;
+      }
+    } else {
+      return currentStep;
+    }
+
+  }
+
 
   //https://stackoverflow.com/questions/2979383/java-clear-the-console
   public static void clearScreen() {  
