@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class Game {
-  public static void main(String[] args) {
-    Scanner in = new Scanner(System.in);    
+  public static void main(String[] args) {   
     //TODO add all Questions
     int sumQuestions = 55;
     LiveStep[] steps = new LiveStep[sumQuestions];
@@ -265,7 +264,7 @@ public class Game {
 
     int id = 0;
     LiveStep currentStep = steps[id];
-    boolean gameOver = true;
+    Scanner in = new Scanner(System.in); 
     clearScreen();
 
 
@@ -277,6 +276,7 @@ public class Game {
     Player user = new Player(name);
     clearScreen(); 
     
+    boolean gameOver = true;
 
     while (gameOver) {
       currentStep = checkGivenAnswer(currentStep, steps);
