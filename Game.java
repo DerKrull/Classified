@@ -230,12 +230,12 @@ public class Game {
     //Stage3
     steps[46] = new LiveStep(46, "Hast du dchon ein Thema?",
         new LiveChoice[]{
-          new LiveChoice("Nein", 46)
+          new LiveChoice("Nein", 46),
 		  new LiveChoice("Ja", 47)
           });	
     steps[47] = new LiveStep(47, "Deine Freunde laden dich zu einem spontanen Studie-Trip ein Gehst du mit?",
         new LiveChoice[]{
-          new LiveChoice("Ja, ich habe ja noch Zeit", 46)
+          new LiveChoice("Ja, ich habe ja noch Zeit", 46),
 		  new LiveChoice("Nein, ich muss mich auf andere Sachen konzentrieren", 47)
           });
     steps[48] = new LiveStep(48, "Du hast dich verschätzt und hast nicht geschafft dich rechtzeitig anzumelden",
