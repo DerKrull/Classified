@@ -224,14 +224,14 @@ public class Game {
           });
     steps[44] = new LiveStep(44, "Du begibst dich ins Berufsleben!",
         new LiveChoice[]{
-          new LiveChoice(weiter, 46)
+          new LiveChoice(weiter, 52)
           });
     steps[45] = new LiveStep(45, "Du machst das Studium fertig, aber verlierst das Jobangebot!",
         new LiveChoice[]{
           new LiveChoice(weiter, 46)
           });
     //Stage3
-    steps[46] = new LiveStep(46, "Hast du dchon ein Thema?",
+    steps[46] = new LiveStep(46, "Hast du schon ein Thema?",
         new LiveChoice[]{
           new LiveChoice("Nein", 46),
           new LiveChoice("Ja", 47)
@@ -254,12 +254,12 @@ public class Game {
     steps[50] = new LiveStep(50, "Du hast eine durchschnittliche Bachelorarbeit geschrieben, du"
     + " hast das Studium soweit abgeschlossen",
         new LiveChoice[]{
-          new LiveChoice(weiter, 46)
+          new LiveChoice(weiter, 52)
           });
     steps[51] = new LiveStep(51, "Du hast eine sehr gute Bachelorarbeit geschrieben, Du hast"
     + " dein Bachelor-Studium abgeschlossen",
         new LiveChoice[]{
-          new LiveChoice(weiter, 46)
+          new LiveChoice(weiter, 52)
           });
 
     int id = 0;
