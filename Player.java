@@ -1,11 +1,9 @@
 public class Player {
     private String name;
-    private char gender;
     private int kontostand = 0;
 
-    public Player(String name, char gender) {
+    public Player(String name) {
         this.name = name;
-        this.gender = gender;
     }
 
     public String getName() {
@@ -14,14 +12,6 @@ public class Player {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public char getGender() {
-        return gender;
-    }
-
-    public void setGender(char gender) {
-        this.gender = gender;
     }
 
     public int getKontostand() {

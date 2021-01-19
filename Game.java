@@ -272,11 +272,9 @@ public class Game {
     System.out.println("Bitte geben sie einen Namen ein:");
     String name = in.nextLine();
     clearScreen(); 
-    System.out.println("Bitte wählen sie ihr Geschlecht:\n m - Mann\n f - Frau\n"
-        + " d - geht keinen was an");
-    String gender = in.nextLine();
-    clearScreen(); 
-    Player user = new Player(name, gender.charAt(0));
+
+    
+    Player user = new Player(name);
     clearScreen(); 
     
 
