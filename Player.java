@@ -1,6 +1,6 @@
 public class Player {
     private String name;
-    private int kontostand = 0;
+    private int credit = 0;
 
     public Player(String name) {
         this.name = name;
@@ -14,11 +14,19 @@ public class Player {
         this.name = name;
     }
 
-    public int getKontostand() {
-        return kontostand;
+    public int getCredit() {
+        return credit;
     }
 
-    public void setKontostand(int kontostand) {
-        this.kontostand = kontostand;
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
+    public void addMoney(int amount) {
+        this.credit += amount;
+    }
+
+    public void removeMoney(int amount) {
+        this.credit -= amount;
     }
 }
