@@ -226,7 +226,7 @@ public class Game {
           });
     steps[44] = new LiveStep(44, "Du begibst dich ins Berufsleben!",
         new LiveChoice[]{
-          new LiveChoice(weiter, 52)
+          new LiveChoice(weiter, 55)
           });
     steps[45] = new LiveStep(45, "Du machst das Studium fertig, aber verlierst das Jobangebot!",
         new LiveChoice[]{
