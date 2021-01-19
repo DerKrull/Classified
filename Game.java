@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Game {
@@ -268,6 +267,18 @@ public class Game {
     LiveStep currentStep = steps[id];
     boolean gameOver = true;
     clearScreen();
+
+
+    System.out.println("Bitte geben sie einen Namen ein:");
+    String name = in.nextLine();
+    clearScreen(); 
+    System.out.println("Bitte wählen sie ihr Geschlecht:\n m - Mann\n f - Frau\n"
+        + " d - geht keinen was an");
+    String gender = in.nextLine();
+    clearScreen(); 
+    Player user = new Player(name, gender.charAt(0));
+    clearScreen(); 
+    
 
     while (gameOver) {
       currentStep = checkGivenAnswer(currentStep, steps);
