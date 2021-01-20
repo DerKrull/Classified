@@ -274,7 +274,10 @@ public class Game {
     steps[52] = new LiveStep(52, "Du hast eine durchschnittliche Bachelorarbeit geschrieben, du"
     + " hast das Studium soweit abgeschlossen",
         new LiveChoice[]{
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
           new LiveChoice(weiter, 55)
           });
     steps[53] = new LiveStep(53, "Du hast eine sehr gute Bachelorarbeit geschrieben, Du hast"
