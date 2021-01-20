@@ -9,34 +9,20 @@
 ## Kurzer Bericht von jedem Teammitglied
 
 1. Was habe ich bisher gemacht?
-
-Felix:
-- Java Quiz, Transition fixed, Spezialisierung in den Fragen, SpeichernMethode fast fertig, Guthaben angefangen
-
-Omar:
-- Startscreen GUI, erste Stufe GUI
-
-Jonas:
-- Planing für die Meetings
-
 2. Was mach ich als nächstes?
-
-Felix:
-- SpeichernMethode abschließen
-
-Omar:
-- weiter arbeiten an der GUI
-
-Jonas:
-- Issues beseitigen
-
 3. Was blockiert mich / welche Probleme habe ich?
 
 Felix:
+- Java Quiz, Transition fixed, Spezialisierung in den Fragen, SpeichernMethode fast fertig, Guthaben angefangen
+- SpeichernMethode abschließen
 - Im Moment keine
 
 Omar:
+- Startscreen GUI, erste Stufe GUI
+- weiter arbeiten an der GUI
 - Array umsetzen im GUI
 
 Jonas:
--  Im Moment keine
+- Planing für die Meetings
+- Issues beseitigen
+- Im Moment keine
