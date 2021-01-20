@@ -12,8 +12,10 @@
 
 Felix:
 - Java Quiz, Transition fixed, Spezialisierung in den Fragen, SpeichernMethode fast fertig, Guthaben angefangen
+
 Omar:
 - Startscreen GUI, erste Stufe GUI
+
 Jonas:
 - Planing für die Meetings
 
@@ -21,8 +23,10 @@ Jonas:
 
 Felix:
 - SpeichernMethode abschließen
+
 Omar:
 - weiter arbeiten an der GUI
+
 Jonas:
 - Issues beseitigen
 
@@ -30,7 +34,9 @@ Jonas:
 
 Felix:
 - Im Moment keine
+
 Omar:
 - Array umsetzen im GUI
+
 Jonas:
 -  Im Moment keine
