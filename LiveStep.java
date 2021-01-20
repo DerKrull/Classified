@@ -5,6 +5,7 @@ public class LiveStep {
   private int choiceTaken;
   private int neededPreviousStep;
   private int neededPreviousAnswer;
+  private int alternativeStep;
 
   public LiveStep(int id, String description, LiveChoice[] choices) {
     this.id = id;
@@ -59,6 +60,15 @@ public class LiveStep {
   public void setNeededPreviousAnswer(int neededPreviousAnswer) {
     this.neededPreviousAnswer = neededPreviousAnswer;
   }
+
+  public int getAlternativeStep() {
+    return alternativeStep;
+  }
+
+  public void setAlternativeStep(int alternativeStep) {
+    this.alternativeStep = alternativeStep;
+  }
+
 
  
 }
