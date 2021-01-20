@@ -1,4 +1,4 @@
-# Daily Standup <Datum>
+# Daily Standup 20.01.2021
 *Sprint vom 16.01.2021 - 23.01.2021*
 
 ## Wie ist der Fortschritt zum Sprint Ziel (evtl. Änderungen)
