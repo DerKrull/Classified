@@ -5,11 +5,11 @@
 
 ### Kritischer Blick auf die Vorgehensweise
 
-- 
+-
 
 ### Was lief gut und was kann man verbessern
 
-- 
+-
 
 
 ## Feedback-Tür (#23) (<https://retromat.org/de/>)
