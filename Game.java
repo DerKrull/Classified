@@ -300,7 +300,7 @@ public class Game {
     + "auch größere Entscheidungen getroffen, wo du bis zu 5 Wahlmöglichkeiten hast.",
         new LiveChoice[]{
           new LiveChoice(weiter, 1)
-		  });
+          });
 
     int id = 0;
     LiveStep currentStep = steps[id];
