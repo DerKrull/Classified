@@ -133,8 +133,9 @@ public class Game {
           new LiveChoice("4 -Wirtschaftsinformatik", 25),
           new LiveChoice("5 -keine Spezialisierung", 25)
           });
-    steps[25] = new LiveStep(25, "Du belegst 3 Fächer deiner Spezialisierung.",
-        new LiveChoice[]{ //TODO vielleicht Spezialisierungsvar einfügen
+    steps[25] = new LiveStep(25, "Du belegst 3 Fächer von "
+        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
+        new LiveChoice[]{ 
           new LiveChoice(weiter, 26)
           });
     steps[26] = new LiveStep(26, "Besuchst du regelmäßig die Veranstalltungen (Vorlesungen, etc.)",
@@ -219,7 +220,8 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
           });
-    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot von <Spezialisierung>!",
+    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot im Bereich "  
+        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
         new LiveChoice[]{
           new LiveChoice("1 -Jobangebot annehmen!", 44),
           new LiveChoice("2 -Jobangebot ablehnen!", 45)
