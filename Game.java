@@ -5,14 +5,17 @@ public class Game {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);    
     //TODO add all Questions
-    int sumQuestions = 56;
+    int sumQuestions = 57;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
     //Stage1
-    steps[0] = new LiveStep(0, "Das ist die vorrübergehende Einleitung", new LiveChoice[]{
-      new LiveChoice(weiter, 1)
+    steps[0] = new LiveStep(0, "Willkommen bei Classified!\nDieses Spiel soll den Aufstieg eines "
+    + "Informatikers simulieren.\nJe nach dem, welche Entscheidungen du im Spiel triffst, wird "
+    + "sich deine Zukunft ändern.\nJetzt viel Spaß bei unserem Spiel!", new LiveChoice[]{
+      new LiveChoice(weiter, 56)
       });
-    steps[1] = new LiveStep(1, "Wie viele Stunden investierst du pro Woche für Mathe?",
+    steps[1] = new LiveStep(1, "Du beginnst im ersten Semester mit Mathematische Grundalagen "
+    + "der Informatik. \nWie viele Stunden investierst du pro Woche für Mathe?",
         new LiveChoice[]{
           new LiveChoice("1 - Weniger als 5 Std.", 2),
           new LiveChoice("2 - Mehr als 5 Std.", 3)
@@ -133,8 +136,9 @@ public class Game {
           new LiveChoice("4 -Wirtschaftsinformatik", 25),
           new LiveChoice("5 -keine Spezialisierung", 25)
           });
-    steps[25] = new LiveStep(25, "Du belegst 3 Fächer deiner Spezialisierung.",
-        new LiveChoice[]{ //TODO vielleicht Spezialisierungsvar einfügen
+    steps[25] = new LiveStep(25, "Du belegst 3 Fächer von "
+        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
+        new LiveChoice[]{ 
           new LiveChoice(weiter, 26)
           });
     steps[26] = new LiveStep(26, "Besuchst du regelmäßig die Veranstalltungen (Vorlesungen, etc.)",
@@ -168,7 +172,7 @@ public class Game {
           });
     steps[32] = new LiveStep(32, "Du wechseltst den Studiengang!\nDieser Weg endet hier!",
         new LiveChoice[]{
-          new LiveChoice("1 -Spiel beenden!", 1000) //TODO eleganteres Ende
+          new LiveChoice("1 -Spiel beenden!", 55) //TODO eleganteres Ende
           });
     steps[33] = new LiveStep(33, "Du hast die nächsten Semester soweit gemeistert!\nDie "
     + "Semesterferien stehen an! Ab ins Privatleben!",
@@ -219,14 +223,15 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
           });
-    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot von <Spezialisierung>!",
+    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot im Bereich "  
+        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
         new LiveChoice[]{
           new LiveChoice("1 -Jobangebot annehmen!", 44),
           new LiveChoice("2 -Jobangebot ablehnen!", 45)
           });
     steps[44] = new LiveStep(44, "Du begibst dich ins Berufsleben!",
         new LiveChoice[]{
-          new LiveChoice(weiter, 52)
+          new LiveChoice(weiter, 55)
           });
     steps[45] = new LiveStep(45, "Du machst das Studium fertig, aber verlierst das Jobangebot!",
         new LiveChoice[]{
@@ -285,6 +290,19 @@ public class Game {
     + " dein Weg hier!", 
         new LiveChoice[]{
           new LiveChoice(weiter, 55)
+          });
+    steps[55] = new LiveStep(55, "Hier endet dein Aufstieg als Informatiker.\nVielen Dank fürs "
+    + "spielen!",
+        new LiveChoice[]{
+          new LiveChoice("1- Spiel beenden", 90),
+          new LiveChoice("2- Spiel neustarten", 0)
+          });
+    steps[56] = new LiveStep(56, "Steuerung\n \nDie Steuerung ist sehr einfach.\nDir werden "
+    + "verschiedene Wahlmöglichkeiten gegeben.\nDu entscheidest dich mit Zahlen von 1 - 5.\n"
+    + "Manchmal werden Ergebnisse geschehen, wo du keinen Einfluss drauf hast.\nEs werden "
+    + "auch größere Entscheidungen getroffen, wo du bis zu 5 Wahlmöglichkeiten hast.",
+        new LiveChoice[]{
+          new LiveChoice(weiter, 1)
           });
 
     int id = 0;
