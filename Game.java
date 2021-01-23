@@ -14,8 +14,8 @@ public class Game {
     + "sich deine Zukunft ändern.\nJetzt viel Spaß bei unserem Spiel!", new LiveChoice[]{
       new LiveChoice(weiter, 56)
       });
-    steps[1] = new LiveStep(1, "Du beginnst im ersten Semester mit Mathematische Grundalagen der Informatik. \n"
-    + "Wie viele Stunden investierst du pro Woche für Mathe?",
+    steps[1] = new LiveStep(1, "Du beginnst im ersten Semester mit Mathematische Grundalagen "
+    + "der Informatik. \nWie viele Stunden investierst du pro Woche für Mathe?",
         new LiveChoice[]{
           new LiveChoice("1 - Weniger als 5 Std.", 2),
           new LiveChoice("2 - Mehr als 5 Std.", 3)
