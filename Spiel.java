@@ -375,10 +375,183 @@ public class Spiel {
         
         
     }
+    public void frage15(){
+        id = 17;
+        questionTextArea.setText("Herzlich Willkommen im 3.Semester!");
+        choice1.setText("Auf zur Wahl deiner Spezialisierung!");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false); 
+        choice5.setVisible(false);
+        
+    }
     
-
+    public void frage16(){
+        id = 18;
+        questionTextArea.setText("Wähle eine der Spezialisierungen.");
+        choice1.setText("Embedded Systems");
+        choice2.setVisible(true);
+        choice2.setText("Internet Engineering");
+        choice3.setVisible(true);
+        choice3.setText("Medieninformatik");
+        choice4.setVisible(true);  
+        choice4.setText("Wirtschaftsinformatik");
+        choice5.setVisible(true);
+        choice5.setText("keine Spezialisierung");
+        
+    }  
+    public void frage17(){
+        id = 19;
+        questionTextArea.setText("Besuchst du regelmäßig die Veranstalltungen (Vorlesungen, etc.)");
+        choice1.setText("Ja");
+        choice2.setVisible(true);
+        choice2.setText("Nein");
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage18(){
+        id = 20;
+        questionTextArea.setText("Wie findest du das Studium bis zu diesem Punkt?");
+        choice1.setText("Gut!");
+        choice2.setVisible(true);
+        choice2.setText("Anstrengend, wird aber schon!");
+        choice3.setVisible(true);
+        choice3.setText("Schlecht");
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage19(){
+        id = 21;
+        questionTextArea.setText("Ändere deine Spezialisierung oder wechsel den Studiengang?");
+        choice1.setText("Spezialisierung ändern!");
+        choice2.setVisible(true);
+        choice2.setText("Studiengang wechseln!");
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage20(){
+        id = 22;
+        questionTextArea.setText("Du wechseltst den Studiengang! Dieser Weg endet hier!");
+        choice1.setText("Spiel beenden!");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void wiederholungsfrage16(){
+        id = 1000;
+        questionTextArea.setText("Wähle eine der Spezialisierungen.");
+        choice1.setText("Embedded Systems");
+        choice2.setVisible(true);
+        choice2.setText("Internet Engineering");
+        choice3.setVisible(true);
+        choice3.setText("Medieninformatik");
+        choice4.setVisible(true);  
+        choice4.setText("Wirtschaftsinformatik");
+        choice5.setVisible(true);
+        choice5.setText("keine Spezialisierung");
+        
+    } 
     
+    public void frage21(){
+        id = 23;
+        questionTextArea.setText("Du hast die nächsten Semester soweit gemeistert! \nSemesterferien stehen an! Ab ins Privatleben!");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
     
+    public void frage22(){
+        id = 24;
+        questionTextArea.setText("Willst du mit deinen Kumpels nach Mallorca?");
+        choice1.setText("Na Klar!");
+        choice2.setVisible(true);
+        choice2.setText("Nein ich muss mich auf mein Studium konzentrieren.");
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage23(){
+        id = 25;
+        questionTextArea.setText("Nach ein paar Tagen feiern wird ein Freund festgenommen und\nihr teilt euch die Kosten!");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage24(){
+        id = 26;
+        questionTextArea.setText("Nach erfolgreichem Lernen gehst du in eine Kneipe/Kirmes/Club und lernst"
+                + "\njemanden kennen.\nHast du Interesse an einer Beziehung ");
+        choice1.setText("Ja");
+        choice2.setVisible(true);
+        choice2.setText("Nein");
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage25(){
+        id = 27;
+        questionTextArea.setText("Studium-Anstrengend?");
+        choice1.setText("Ja");
+        choice2.setVisible(true);
+        choice2.setText("Nein");
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage26(){
+        id = 28;
+        questionTextArea.setText("Ihr hattet ein paar Dates.\nDu bist nun in einer festen Beziehung");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage27(){
+        id = 29;
+        questionTextArea.setText("Dein Partner fragt, ob ihr zusammenziehen wollt.");
+        choice1.setText("Ja");
+        choice2.setVisible(true);
+        choice2.setText("Nein");
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage28(){
+        id = 30;
+        questionTextArea.setText("Du bekommst ein Jobangebot von <Spezialisierung>!");
+        choice1.setText("Jobangebot annehmen!");
+        choice2.setVisible(true);
+        choice2.setText("Jobangebot ablehnen!");
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage29(){
+        id = 31;
+        questionTextArea.setText("Du begibst dich ins Berufsleben!");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage30(){
+        id = 32;
+        questionTextArea.setText("Du machst das Studium fertig, aber verlierst das Jobangebot!");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
     
     public class ScreenHandler implements ActionListener{
         
@@ -495,6 +668,113 @@ public class Spiel {
                     switch (yourChoice){
                         case "a1": frage1(); break;
                     }
+				break;
+                case 16:
+                    switch (yourChoice){
+                        case "a1": frage15(); break;
+                    }
+                break;
+                case 17:
+                    switch (yourChoice){
+                        case "a1": frage16(); break;
+                    }
+                break;
+                case 18:
+                    switch (yourChoice){
+                        case "a1": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
+                        case "a2": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
+                        case "a3": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
+                        case "a4": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
+                        case "a5": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage17(); break;
+                    }
+                break;
+                case 19:
+                    switch (yourChoice){
+                        case "a1": frage18(); break;
+                        case "a2": frage18(); break;
+                    }
+                break;
+                case 20:
+                    switch (yourChoice){
+                        case "a1": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage21(); break;
+                        case "a2": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage21(); break;
+                        case "a3": frage19(); break;
+                    }
+                break;
+                case 21 :
+                    switch (yourChoice){
+                        case "a1": wiederholungsfrage16();break;
+                        case "a2": frage20(); break;
+                    }
+                break;
+                case 1000:
+                    switch(yourChoice){
+                        case "a1": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
+                        case "a2": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
+                        case "a3": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
+                        case "a4": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
+                        case "a5": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage21(); break;
+                    }
+                break;
+                case 22:
+                    switch(yourChoice){
+                        case "a1": 
+                    }
+                break;
+                case 23:
+                    switch(yourChoice){
+                        case "a1": frage22(); break;
+                    }
+                break;
+                case 24:
+                    switch(yourChoice){
+                        case "a1": frage23(); break;
+                        case "a2": frage24(); break;
+                    }
+                break;
+                case 25:
+                    switch(yourChoice){
+                        case "a1": frage28(); break;
+                    }
+                break;
+                case 26:
+                    switch(yourChoice){
+                        case "a1": frage25(); break;
+                        case "a2": frage28(); break;
+                    }
+                break;
+                case 27:
+                    switch(yourChoice){
+                        case "a1": JOptionPane.showMessageDialog(null,"Du musst deinen Partner mehrfach, wegen des Studiums versetzen!\nAus der Beziehung wird leider nichts!");frage28(); break;
+                        case "a2": frage26(); break;
+                    }
+                break;
+                case 28:
+                    switch(yourChoice){
+                        case "a1": frage27(); break;  
+                    }
+                break;
+                case 29:
+                    switch(yourChoice){
+                        case "a1": frage28(); break;
+                        case "a2": frage28(); break;                            
+                    }
+                break;
+                case 30:
+                    switch(yourChoice){
+                        case "a1": frage29(); break;
+                        case "a2": frage30(); break;    
+                    }
+                case 31:
+                    switch(yourChoice){
+                        case "a1":          break;
+                    }
+                break;
+                case 32:
+                    switch(yourChoice){
+                        case "a1":       break;
+                    }
+                break;
                     
  
             }
