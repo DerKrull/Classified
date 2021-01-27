@@ -323,7 +323,7 @@ public class Game {
       String input = in.nextLine();
       int answer = checkInput(input, currentStep);
 
-      while(answer == -1) {
+      while (answer == -1) {
         System.out.println("Fehler bei der Eingabe. Bite erneut versuchen:");
         input = in.nextLine();
         answer = checkInput(input, currentStep);
@@ -343,17 +343,15 @@ public class Game {
   }
 
   public static int checkInput(String input, LiveStep currentStep) {
-    if(input.length() > 1) {
+    if (input.length() > 1) {
       return -1;
-    }
-    else {
+    } else {
       int answer = 0;
       try {
         answer = Integer.parseInt(input);
-        LiveChoice testStep = currentStep.getChoices()[answer-1];
+        LiveChoice testStep = currentStep.getChoices()[answer - 1];
         return answer;
-      }
-      catch(Exception e) {
+      } catch (Exception e) {
         return -1;
       }
     }
