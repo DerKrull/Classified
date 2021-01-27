@@ -320,17 +320,42 @@ public class Game {
         System.out.println(choices[i].getDescription());
       }
 
-      int answer = in.nextInt();
+      String input = in.nextLine();
+      int answer = checkInput(input, currentStep);
+
+      while(answer == -1) {
+        System.out.println("Fehler bei der Eingabe. Bite erneut versuchen:");
+        input = in.nextLine();
+        answer = checkInput(input, currentStep);
+      }
 
       steps[id].setChoiceTaken(answer);
-
       id = choices[answer - 1].getNextStep();
       currentStep = steps[id];
+      
+
       if (id == sumQuestions) {
         System.out.println("Game Over");
         gameOver = false;
       }
       clearScreen(); 
+    }
+  }
+
+  public static int checkInput(String input, LiveStep currentStep) {
+    if(input.length() > 1) {
+      return -1;
+    }
+    else {
+      int answer = 0;
+      try {
+        answer = Integer.parseInt(input);
+        LiveChoice testStep = currentStep.getChoices()[answer-1];
+        return answer;
+      }
+      catch(Exception e) {
+        return -1;
+      }
     }
   }
 
@@ -350,7 +375,6 @@ public class Game {
     }
 
   }
-
 
   //https://stackoverflow.com/questions/2979383/java-clear-the-console
   public static void clearScreen() {  
