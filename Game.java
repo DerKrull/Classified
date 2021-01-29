@@ -136,11 +136,11 @@ public class Game {
           new LiveChoice("4 -Wirtschaftsinformatik", 25),
           new LiveChoice("5 -keine Spezialisierung", 25)
           });
-    steps[25] = new LiveStep(25, "Du belegst 3 Fächer von "
-        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
+    steps[25] = new LiveStep(25, "Du belegst 3 Fächer von ",
         new LiveChoice[]{ 
           new LiveChoice(weiter, 26)
           });
+    steps[25].setUsesSpecialization(true);
     steps[26] = new LiveStep(26, "Besuchst du regelmäßig die Veranstalltungen (Vorlesungen, etc.)",
         new LiveChoice[]{
           new LiveChoice("1 -Ja", 27),
@@ -223,12 +223,12 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
           });
-    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot im Bereich "  
-        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
+    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot im Bereich ",
         new LiveChoice[]{
           new LiveChoice("1 -Jobangebot annehmen!", 44),
           new LiveChoice("2 -Jobangebot ablehnen!", 45)
           });
+    steps[43].setUsesSpecialization(true);
     steps[44] = new LiveStep(44, "Du begibst dich ins Berufsleben!",
         new LiveChoice[]{
           new LiveChoice(weiter, 55)
@@ -305,13 +305,14 @@ public class Game {
           new LiveChoice(weiter, 1)
           });
 
-    int id = 0;
+    int id = 23;
     LiveStep currentStep = steps[id];
     boolean gameOver = true;
     clearScreen();
 
     while (gameOver) {
       currentStep = checkGivenAnswer(currentStep, steps);
+      currentStep = checkUsesSpecialization(currentStep, steps);
 
       System.out.println(currentStep.getDescription());
       LiveChoice[] choices = currentStep.getChoices();
@@ -331,6 +332,18 @@ public class Game {
         gameOver = false;
       }
       clearScreen(); 
+    }
+  }
+
+  public static LiveStep checkUsesSpecialization(LiveStep currentStep, LiveStep[] steps) {
+    if (currentStep.getUsesSpecialization()) {
+      String description = currentStep.getDescription();
+      description += " " 
+        + steps[24].getChoices()[steps[24].getChoiceTaken()-1].getDescription().substring(3);
+      currentStep.setDescription(description);
+      return currentStep;
+    } else {
+      return currentStep;
     }
   }
 
