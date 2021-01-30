@@ -377,9 +377,8 @@ public class Game {
         user.addMoney(creditChange);
         return user;
       }
-    }
     return user;
-  }
+    }
   
   public static int checkInput(String input, LiveStep currentStep) {
     if (input.length() > 1) {
