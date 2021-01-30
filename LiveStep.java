@@ -6,6 +6,7 @@ public class LiveStep {
   private int neededPreviousStep;
   private int neededPreviousAnswer;
   private int alternativeStep;
+  private boolean usesSpecialization;
 
   public LiveStep(int id, String description, LiveChoice[] choices) {
     this.id = id;
@@ -69,6 +70,11 @@ public class LiveStep {
     this.alternativeStep = alternativeStep;
   }
 
-
+  public boolean getUsesSpecialization() {
+    return usesSpecialization;
+  }
  
+  public void setUsesSpecialization(boolean usesSpecialization) {
+    this.usesSpecialization = usesSpecialization;
+  }
 }

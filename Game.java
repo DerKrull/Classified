@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Game {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);    
-    //TODO add all Questions
     int sumQuestions = 57;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
@@ -114,7 +113,6 @@ public class Game {
     + " in Erfurt auf und wunderst dich wie du es soweit geschafft hast", new LiveChoice[]{
       new LiveChoice("1 - Was soll man machen. Immer nach vorne schauen", 21)
       });
-    //TODO vielleicht noch eine zweite Antwort für eine Art Kreislauf
     steps[21] = new LiveStep(21, "Du hast aufgrund deiner ungeplanten Reise nicht mehr rechtzeitig" 
     + " zur Prüfung geschafft und musst sie wiederholen!", new LiveChoice[]{
       new LiveChoice("1 - Dann mach ich das dieses mal aber richtig", 22)
@@ -133,14 +131,14 @@ public class Game {
           new LiveChoice("1 -Embedded Systems", 25),
           new LiveChoice("2 -Internet Engineering", 25),
           new LiveChoice("3 -Medieninformatik", 25),
-          new LiveChoice("4 -Wirtschaftsinformatik", 25),
-          new LiveChoice("5 -keine Spezialisierung", 25)
+          new LiveChoice("4 -Wirtschaftsinformatik", 25)
+          //new LiveChoice("5 -keine Spezialisierung", 25)
           });
-    steps[25] = new LiveStep(25, "Du belegst 3 Fächer von "
-        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
+    steps[25] = new LiveStep(25, "Du belegst 3 Fächer von ",
         new LiveChoice[]{ 
           new LiveChoice(weiter, 26)
           });
+    steps[25].setUsesSpecialization(true);
     steps[26] = new LiveStep(26, "Besuchst du regelmäßig die Veranstalltungen (Vorlesungen, etc.)",
         new LiveChoice[]{
           new LiveChoice("1 -Ja", 27),
@@ -161,7 +159,7 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 33)
           });
-    steps[30] = new LiveStep(30, "Läuft! (Auswirkung Privatleben)", //TODO Auswirkung Privatleben
+    steps[30] = new LiveStep(30, "Na dann, aber immer dran bleiben!", //TODO Auswirkung Privatleben
         new LiveChoice[]{
           new LiveChoice(weiter, 33)
           });
@@ -184,6 +182,9 @@ public class Game {
           new LiveChoice("1 -Na Klar!", 35),
           new LiveChoice("2 -Nein ich muss mich auf mein Studium konzentrieren.", 36)
           });
+    steps[34].setNeededPreviousStep(27);
+    steps[34].setNeededPreviousAnswer(1);
+    steps[34].setAlternativeStep(36);
     steps[35] = new LiveStep(35, "Nach ein paar Tagen feiern wird ein Freund festgenommen "
     + "und\nihr teilt euch die Kosten!", //TODO Geld verlieren
         new LiveChoice[]{
@@ -223,12 +224,12 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
           });
-    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot im Bereich "  
-        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
+    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot im Bereich ",
         new LiveChoice[]{
           new LiveChoice("1 -Jobangebot annehmen!", 44),
           new LiveChoice("2 -Jobangebot ablehnen!", 45)
           });
+    steps[43].setUsesSpecialization(true);
     steps[44] = new LiveStep(44, "Du begibst dich ins Berufsleben!",
         new LiveChoice[]{
           new LiveChoice(weiter, 55)
@@ -312,6 +313,7 @@ public class Game {
 
     while (gameOver) {
       currentStep = checkGivenAnswer(currentStep, steps);
+      currentStep = checkUsesSpecialization(currentStep, steps);
 
       System.out.println(currentStep.getDescription());
       LiveChoice[] choices = currentStep.getChoices();
@@ -354,6 +356,18 @@ public class Game {
       } catch (Exception e) {
         return -1;
       }
+    }
+  }
+    
+  public static LiveStep checkUsesSpecialization(LiveStep currentStep, LiveStep[] steps) {
+    if (currentStep.getUsesSpecialization()) {
+      String description = currentStep.getDescription();
+      description += " " 
+        + steps[24].getChoices()[steps[24].getChoiceTaken() - 1].getDescription().substring(3);
+      currentStep.setDescription(description);
+      return currentStep;
+    } else {
+      return currentStep;
     }
   }
 
