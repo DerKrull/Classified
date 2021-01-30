@@ -610,7 +610,7 @@ public class Spiel {
     }
     public void ende(){
         id = 39;
-        questionTextArea.setText("Du hast das Spiel fertig gespielt ");
+        questionTextArea.setText("Hier endet dein Aufstieg als Informatiker. Vielen dank für das Spielen. ");
         choice1.setText("Spiel beenden");
     }
     
