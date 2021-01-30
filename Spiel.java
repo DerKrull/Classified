@@ -147,13 +147,13 @@ public class Spiel {
         choice4.setActionCommand("a4");
         choiceButtonPanel.add(choice4);
 		
-		choice4 = new JButton("Choice 5");
-        choice4.setBackground(Color.black);
-        choice4.setForeground(Color.green);
-        choice4.setFont(btntextgr);
-        choice4.setFocusPainted(false);
-        choice4.addActionListener(choiseHandler);
-        choice4.setActionCommand("a5");
+		choice5 = new JButton("Choice 5");
+        choice5.setBackground(Color.black);
+        choice5.setForeground(Color.green);
+        choice5.setFont(btntextgr);
+        choice5.setFocusPainted(false);
+        choice5.addActionListener(choiseHandler);
+        choice5.setActionCommand("a5");
         choiceButtonPanel.add(choice5);
         
         //Spielerfeld erstellen
