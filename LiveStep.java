@@ -6,6 +6,8 @@ public class LiveStep {
   private int neededPreviousStep;
   private int neededPreviousAnswer;
   private int alternativeStep;
+  private int addMoney;
+  private int removeMoney;
 
   public LiveStep(int id, String description, LiveChoice[] choices) {
     this.id = id;
@@ -69,6 +71,23 @@ public class LiveStep {
     this.alternativeStep = alternativeStep;
   }
 
+  public int getAddMoney() {
+    return addMoney;
+  }
+
+  public void setAddMoney(int addMoney) {
+    this.addMoney = addMoney;
+  }
+
+  public int getRemoveMoney() {
+    return removeMoney;
+  }
+
+  public void setRemoveMoney(int removeMoney) {
+    this.removeMoney = removeMoney;
+  }
+
+  
 
  
 }
