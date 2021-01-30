@@ -160,7 +160,7 @@ public class Spiel {
         spielerPanel = new JPanel();
         spielerPanel.setBounds(300, 800, 600, 50);
         spielerPanel.setBackground(Color.black);
-        spielerPanel.setLayout(new GridLayout(1, 4));
+        spielerPanel.setLayout(new GridLayout(1, 5));
         con.add(spielerPanel);
         
         //Extras Labels erstellen
