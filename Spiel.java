@@ -213,6 +213,7 @@ public class Spiel {
         choice2.setText("Mehr als 5 Std.");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -221,6 +222,7 @@ public class Spiel {
         questionTextArea.setText("Mathe läuft schlecht!");
         choice1.setText(">");
         choice2.setVisible(false);
+		choice5.setVisible(false);
         
 
 
@@ -230,6 +232,7 @@ public class Spiel {
         questionTextArea.setText("Mathe läuft sehr gut ");
         choice1.setText(">");
         choice2.setVisible(false);
+		choice5.setVisible(false);
         
 
 
@@ -243,6 +246,7 @@ public class Spiel {
         choice2.setText("Nein, ich suche mir keine Lerngruppe");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
 
         
         
@@ -256,6 +260,7 @@ public class Spiel {
         choice2.setText("Nein, ich schaffe das ohne Lerngruppe");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -267,6 +272,7 @@ public class Spiel {
         choice2.setText("Nein, ich habe noch nichts mit Java zu tun gehabt");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -281,6 +287,7 @@ public class Spiel {
         choice2.setText("39");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -293,6 +300,7 @@ public class Spiel {
         choice2.setText("Nein");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -305,6 +313,7 @@ public class Spiel {
         choice2.setText("Ich wohne alleine");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -317,6 +326,7 @@ public class Spiel {
         choice2.setText("Ach, das passt schon ich hab andere Quellen die mich unterstützen, da\"\nmuss ich selbst nicht arbeiten gehen");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -328,6 +338,7 @@ public class Spiel {
         choice2.setText("Ich suche mir lieber einen \\\"normalen\\\" Nebenjob und gehe kellnern");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -340,6 +351,7 @@ public class Spiel {
         choice3.setVisible(true);
         choice3.setText("Ich hab meine Eltern und Bafög");
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -351,6 +363,7 @@ public class Spiel {
         choice2.setText("Das Studium hat auf jeden Fall Priorität, sonst wäre ja das ganze\"\nSemester umsonst gewesen!");
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -361,6 +374,7 @@ public class Spiel {
         choice2.setVisible(false);
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -371,6 +385,7 @@ public class Spiel {
         choice2.setVisible(false);
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -381,6 +396,7 @@ public class Spiel {
         choice2.setVisible(false);
         choice3.setVisible(false);
         choice4.setVisible(false);
+		choice5.setVisible(false);
         
         
     }
@@ -392,6 +408,7 @@ public class Spiel {
         choice3.setVisible(false);
         choice4.setVisible(false); 
         choice5.setVisible(false);
+		choice5.setVisible(false);
         
     }
     
