@@ -552,6 +552,67 @@ public class Spiel {
         choice4.setVisible(false);        
         choice5.setVisible(false);
     }
+    public void frage31(){
+        id = 33;
+        questionTextArea.setText("Hast du dchon ein Thema für dein Bachelor Arbeit?");
+        choice1.setText("Ja");
+        choice2.setVisible(true);
+        choice2.setText("Nein");
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage32(){
+        id = 34;
+        questionTextArea.setText("Deine Freunde laden dich zu einem spontanen Studie-Trip ein.\nGehst du mit? ");
+        choice1.setText("Ja, ich habe ja noch Zeit");
+        choice2.setVisible(true);
+        choice2.setText("Nein, ich muss mich auf andere Sachen konzentrieren");
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage33(){
+        id = 35;
+        questionTextArea.setText("Du hast dich verschätzt und hast nicht geschafft dich gut vorzubreiten.");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage34(){
+        id = 36;
+        questionTextArea.setText("Du bist ein sehr vorbildlicher Student, die Zeichen stehen gut");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage35(){
+        id = 37;
+        questionTextArea.setText("Du hast eine durchschnittliche Bachelorarbeit geschrieben, du\nhast das Studium soweit abgeschlossen");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void frage36(){
+        id = 38;
+        questionTextArea.setText("Du hast eine sehr gute Bachelorarbeit geschrieben, Du hast dein\nBachelor-Studium abgeschlossen");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);        
+        choice5.setVisible(false);
+    }
+    public void ende(){
+        id = 39;
+        questionTextArea.setText("Hier endet dein Aufstieg als Informatiker. Vielen dank für das Spielen. ");
+        choice1.setText("Spiel beenden");
+    }
     
     public class ScreenHandler implements ActionListener{
         
@@ -610,9 +671,9 @@ public class Spiel {
                 break;
                 case 7 :
                     switch (yourChoice){
-                        case "a1": JOptionPane.showMessageDialog(null, "Du hast es geschafft und die Prüfung bestanden.\\nUnd jetzt\"\ngeht's weg von der Uni ab nach Hause ins Privatleben");
+                        case "a1": JOptionPane.showMessageDialog(null, "Du hast es geschafft und die Prüfung bestanden.\nUnd jetzt\ngeht's weg von der Uni ab nach Hause ins Privatleben");
                         frage6(); break;
-                        case "a2": JOptionPane.showMessageDialog(null, "Du musst viel Zeit investieren um in Prog1 am Ball zu bleiben. Du\"\nhast weniger Zeit für andere Dinge");
+                        case "a2": JOptionPane.showMessageDialog(null, "Du musst viel Zeit investieren um in Prog1 am Ball zu bleiben. Du\nhast weniger Zeit für andere Dinge");
                         frage6(); break;
                         
                     }
@@ -621,15 +682,15 @@ public class Spiel {
                     switch (yourChoice){
                         case "a1": 
                             frage7(); break;
-                        case "a2": JOptionPane.showMessageDialog(null, "Da du zu Hause wohnst hast du weniger Ausgaben, aber deine\"\nGeschwister lassen dich einfach nicht in Ruhe lernen!");
+                        case "a2": JOptionPane.showMessageDialog(null, "Da du zu Hause wohnst hast du weniger Ausgaben, aber deine\nGeschwister lassen dich einfach nicht in Ruhe lernen!");
                             frage8(); break;
                     }
                 break;
                 case 9 :
                     switch (yourChoice){
-                        case "a1": JOptionPane.showMessageDialog(null, "Du hast coole Mitbewohner, aber auch deine Ruhe, wenn du lernen\"\nmusst. Allerdigns sind deine Ausgaben höher");
+                        case "a1": JOptionPane.showMessageDialog(null, "Du hast coole Mitbewohner, aber auch deine Ruhe, wenn du lernen\nmusst. Allerdigns sind deine Ausgaben höher");
                             frage8(); break;
-                        case "a2": JOptionPane.showMessageDialog(null, "Du wohnst alleine und kannst machen was du willst, in Ruhe\" \nlernen, feiern gehen, worauf du Lust hast! Allerdings ist die Wohnung nicht ganz günstig!");
+                        case "a2": JOptionPane.showMessageDialog(null, "Du wohnst alleine und kannst machen was du willst, in Ruhe\nlernen, feiern gehen, worauf du Lust hast! Allerdings ist die Wohnung nicht ganz günstig!");
                             frage8(); break;
                     }
                 break;
@@ -666,9 +727,9 @@ public class Spiel {
                 break;
                 case 15 :
                     switch (yourChoice){
-                        case "a1": frage1(); break;
+                        case "a1": frage14(); break;
                     }
-				break;
+                break;
                 case 16:
                     switch (yourChoice){
                         case "a1": frage15(); break;
@@ -696,8 +757,8 @@ public class Spiel {
                 break;
                 case 20:
                     switch (yourChoice){
-                        case "a1": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage21(); break;
-                        case "a2": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage21(); break;
+                        case "a1": frage21(); break;
+                        case "a2": frage21(); break;
                         case "a3": frage19(); break;
                     }
                 break;
@@ -718,7 +779,12 @@ public class Spiel {
                 break;
                 case 22:
                     switch(yourChoice){
-                        case "a1": 
+                        case "a1": timer.stop();
+                            JFrame exit = new JFrame("EXIT");
+                            if(JOptionPane.showConfirmDialog(exit, "Spiel beenden", "Exit", JOptionPane.YES_NO_OPTION)
+                                    ==JOptionPane.YES_NO_OPTION){
+                                System.exit(0);
+                            } // https://www.youtube.com/watch?v=DmtGxIdXtsI                         
                     }
                 break;
                 case 23:
@@ -767,16 +833,56 @@ public class Spiel {
                     }
                 case 31:
                     switch(yourChoice){
-                        case "a1":          break;
+                        case "a1": ende(); break;
                     }
                 break;
                 case 32:
                     switch(yourChoice){
-                        case "a1":       break;
+                        case "a1": frage31(); break;
                     }
                 break;
-                    
- 
+                case 33:
+                    switch(yourChoice){
+                        case "a1": frage32(); break;
+                        case "a2": frage32(); break;                      
+                    }
+                break;
+                case 34:
+                    switch(yourChoice){
+                        case "a1": frage34(); break;
+                        case "a2": frage33(); break;
+                    }
+                break;
+                case 35:
+                    switch(yourChoice){
+                        case "a1": frage35(); timer.stop(); break;
+                    }
+                break;
+                case 36:
+                    switch(yourChoice){
+                        case "a1": frage36(); timer.stop();break;
+                    }
+                break;
+                case 37:
+                    switch(yourChoice){
+                        case "a1": ende();break;
+                    }
+                break;
+                case 38:
+                    switch(yourChoice){
+                        case "a1": ende();break;
+                    }
+                break;
+                case 39:
+                    switch(yourChoice){
+                        case "a1": timer.stop();
+                            JFrame exit = new JFrame("EXIT");
+                            if(JOptionPane.showConfirmDialog(exit, "Spiel beenden", "Exit", JOptionPane.YES_NO_OPTION)
+                                    ==JOptionPane.YES_NO_OPTION){
+                                System.exit(0);
+                            }
+                    }
+
             }
    
         }
