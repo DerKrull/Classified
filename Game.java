@@ -3,14 +3,17 @@ import java.util.Scanner;
 public class Game {
   public static void main(String[] args) {   
     //TODO add all Questions
-    int sumQuestions = 55;
+    int sumQuestions = 57;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
     //Stage1
-    steps[0] = new LiveStep(0, "Das ist die vorrübergehende Einleitung", new LiveChoice[]{
-      new LiveChoice(weiter, 1)
+    steps[0] = new LiveStep(0, "Willkommen bei Classified!\nDieses Spiel soll den Aufstieg eines "
+    + "Informatikers simulieren.\nJe nach dem, welche Entscheidungen du im Spiel triffst, wird "
+    + "sich deine Zukunft ändern.\nJetzt viel Spaß bei unserem Spiel!", new LiveChoice[]{
+      new LiveChoice(weiter, 56)
       });
-    steps[1] = new LiveStep(1, "Wie viele Stunden investierst du pro Woche für Mathe?",
+    steps[1] = new LiveStep(1, "Du beginnst im ersten Semester mit Mathematische Grundalagen "
+    + "der Informatik. \nWie viele Stunden investierst du pro Woche für Mathe?",
         new LiveChoice[]{
           new LiveChoice("1 - Weniger als 5 Std.", 2),
           new LiveChoice("2 - Mehr als 5 Std.", 3)
@@ -90,6 +93,7 @@ public class Game {
       });
     steps[17].setNeededPreviousStep(7);
     steps[17].setNeededPreviousAnswer(1);
+    steps[17].setAlternativeStep(19);
 
     steps[18] = new LiveStep(18, "Aus welchen Quellen kommt denn das Geld", new LiveChoice[]{
       new LiveChoice("1 - Meine Eltern", 19), //TODO 40% GELD
@@ -130,8 +134,9 @@ public class Game {
           new LiveChoice("4 -Wirtschaftsinformatik", 25),
           new LiveChoice("5 -keine Spezialisierung", 25)
           });
-    steps[25] = new LiveStep(25, "Du belegst 3 Fächer deiner Spezialisierung.",
-        new LiveChoice[]{ //TODO vielleicht Spezialisierungsvar einfügen
+    steps[25] = new LiveStep(25, "Du belegst 3 Fächer von "
+        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
+        new LiveChoice[]{ 
           new LiveChoice(weiter, 26)
           });
     steps[26] = new LiveStep(26, "Besuchst du regelmäßig die Veranstalltungen (Vorlesungen, etc.)",
@@ -165,7 +170,7 @@ public class Game {
           });
     steps[32] = new LiveStep(32, "Du wechseltst den Studiengang!\nDieser Weg endet hier!",
         new LiveChoice[]{
-          new LiveChoice("1 -Spiel beenden!", 1000) //TODO eleganteres Ende
+          new LiveChoice("1 -Spiel beenden!", 55) //TODO eleganteres Ende
           });
     steps[33] = new LiveStep(33, "Du hast die nächsten Semester soweit gemeistert!\nDie "
     + "Semesterferien stehen an! Ab ins Privatleben!",
@@ -185,19 +190,18 @@ public class Game {
     steps[36] = new LiveStep(36, "Nach erfolgreichem Lernen gehst du in eine Kneipe/Kirmes/Club "
     + "und lernst\njemanden kennen.\nHast du Interesse an einer Beziehung",
         new LiveChoice[]{
-          new LiveChoice("1 -Ja!", 37),  
+          new LiveChoice("1 -Ja!", 38),  
           new LiveChoice("2 -Nein!", 43)
-          });
-    steps[37] = new LiveStep(37, "(Studium-Anstrengend)", //TODO Antwort speichern
-        new LiveChoice[]{
-          new LiveChoice("1 -Ja", 39),
-          new LiveChoice("2 -Nein", 38)
           });
     steps[38] = new LiveStep(38, "Ihr hattet ein paar Dates.\nDu bist nun in einer festen "
     + "Beziehung.",
         new LiveChoice[]{
           new LiveChoice(weiter, 40)
           });
+    steps[38].setNeededPreviousStep(27);
+    steps[38].setNeededPreviousAnswer(1);
+    steps[38].setAlternativeStep(39);
+
     steps[39] = new LiveStep(39, "Du musst deinen Partner mehrfach, wegen des Studiums versetzen!"
     + "\nAus der Beziehung wird leider nichts!",
         new LiveChoice[]{
@@ -217,14 +221,15 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
           });
-    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot von <Spezialisierung>!",
+    steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot im Bereich "  
+        + steps[24].getChoices()[steps[24].getChoiceTaken()].getDescription().substring(3),
         new LiveChoice[]{
           new LiveChoice("1 -Jobangebot annehmen!", 44),
           new LiveChoice("2 -Jobangebot ablehnen!", 45)
           });
     steps[44] = new LiveStep(44, "Du begibst dich ins Berufsleben!",
         new LiveChoice[]{
-          new LiveChoice(weiter, 52)
+          new LiveChoice(weiter, 55)
           });
     steps[45] = new LiveStep(45, "Du machst das Studium fertig, aber verlierst das Jobangebot!",
         new LiveChoice[]{
@@ -233,33 +238,69 @@ public class Game {
     //Stage3
     steps[46] = new LiveStep(46, "Hast du schon ein Thema?",
         new LiveChoice[]{
-          new LiveChoice("Nein", 46),
-          new LiveChoice("Ja", 47)
+          new LiveChoice("1 - Ja", 47),
+          new LiveChoice("2 - Nein", 47)
           });
     steps[47] = new LiveStep(47, "Deine Freunde laden dich zu einem spontanen Studie-Trip ein"
     + "  Gehst du mit?",
         new LiveChoice[]{
-          new LiveChoice("Ja, ich habe ja noch Zeit", 46),
-          new LiveChoice("Nein, ich muss mich auf andere Sachen konzentrieren", 47)
+          new LiveChoice("1 - Ja, ich habe ja noch Zeit", 48),
+          new LiveChoice("2 - Nein, ich muss mich auf andere Sachen konzentrieren", 50)
           });
     steps[48] = new LiveStep(48, "Du hast dich verschätzt und hast nicht geschafft dich"
-    + " rechtzeitig anzumelden",
+    + " rechtzeitig anzumelden", 
         new LiveChoice[]{
-          new LiveChoice(weiter, 49)
+          new LiveChoice(weiter, 54)
           });
-    steps[49] = new LiveStep(49, "Du bist ein sehr vorbildlicher Student, die Zeichen stehen gut",
+    steps[48].setNeededPreviousStep(46);
+    steps[48].setNeededPreviousAnswer(2);
+    steps[48].setAlternativeStep(49);
+
+    steps[49] = new LiveStep(49, "Abwechslung tut gut, du hast dich ja bereits rechtzeitig"
+    + " angemeldet", 
         new LiveChoice[]{
-          new LiveChoice(weiter, 50)
+          new LiveChoice(weiter, 52)
           });
-    steps[50] = new LiveStep(50, "Du hast eine durchschnittliche Bachelorarbeit geschrieben, du"
+    steps[50] = new LiveStep(50, "Du bist ein sehr vorbildlicher Student, die Zeichen stehen gut",
+        new LiveChoice[]{
+          new LiveChoice(weiter, 53)
+          });
+    steps[50].setNeededPreviousStep(46);
+    steps[50].setNeededPreviousAnswer(1);
+    steps[50].setAlternativeStep(51);
+
+    steps[51] = new LiveStep(51, "Du hast noch rechtzeitig ein Thema gefunden und dich"
+    + " angemeldet!", 
+        new LiveChoice[]{
+          new LiveChoice(weiter, 52)
+          });
+    steps[52] = new LiveStep(52, "Du hast eine durchschnittliche Bachelorarbeit geschrieben, du"
     + " hast das Studium soweit abgeschlossen",
         new LiveChoice[]{
-          new LiveChoice(weiter, 52)
+          new LiveChoice(weiter, 55)
           });
-    steps[51] = new LiveStep(51, "Du hast eine sehr gute Bachelorarbeit geschrieben, Du hast"
+    steps[53] = new LiveStep(53, "Du hast eine sehr gute Bachelorarbeit geschrieben, Du hast"
     + " dein Bachelor-Studium abgeschlossen",
         new LiveChoice[]{
-          new LiveChoice(weiter, 52)
+          new LiveChoice(weiter, 55)
+          });
+    steps[54] = new LiveStep(54, "Da du die Anmeldung zur Bachelorarbeit verpasst hast, endet"
+    + " dein Weg hier!", 
+        new LiveChoice[]{
+          new LiveChoice(weiter, 55)
+          });
+    steps[55] = new LiveStep(55, "Hier endet dein Aufstieg als Informatiker.\nVielen Dank fürs "
+    + "spielen!",
+        new LiveChoice[]{
+          new LiveChoice("1- Spiel beenden", 90),
+          new LiveChoice("2- Spiel neustarten", 0)
+          });
+    steps[56] = new LiveStep(56, "Steuerung\n \nDie Steuerung ist sehr einfach.\nDir werden "
+    + "verschiedene Wahlmöglichkeiten gegeben.\nDu entscheidest dich mit Zahlen von 1 - 5.\n"
+    + "Manchmal werden Ergebnisse geschehen, wo du keinen Einfluss drauf hast.\nEs werden "
+    + "auch größere Entscheidungen getroffen, wo du bis zu 5 Wahlmöglichkeiten hast.",
+        new LiveChoice[]{
+          new LiveChoice(weiter, 1)
           });
 
     int id = 0;
@@ -304,17 +345,14 @@ public class Game {
 
   public static LiveStep checkGivenAnswer(LiveStep currentStep, LiveStep[] steps) {
     if (currentStep.getNeededPreviousStep() != 0) {
-      int id = currentStep.getNeededPreviousAnswer();
+      int id = currentStep.getNeededPreviousStep();
       LiveStep checkedStep = steps[id]; 
 
       if (checkedStep.getChoiceTaken() == currentStep.getNeededPreviousAnswer()) {
         return currentStep;
       } else {
-        int neededAnswer = currentStep.getNeededPreviousAnswer();
-        LiveChoice[] choices = currentStep.getChoices();
-        int nextStep = choices[neededAnswer].getNextStep();
-        currentStep = steps[nextStep]; 
-        return currentStep;
+        int nextStep = currentStep.getAlternativeStep();
+        return steps[nextStep];
       }
     } else {
       return currentStep;
