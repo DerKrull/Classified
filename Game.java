@@ -189,7 +189,7 @@ public class Game {
           });
     steps[34].getChoices()[0].setChangeCredit(-250);
     steps[35] = new LiveStep(35, "Nach ein paar Tagen feiern wird ein Freund festgenommen "
-    + "und\nihr teilt euch die Kosten!",
+    + "und\nihr teilt euch die Kosten (jeder 750€)!",
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
           });
@@ -251,12 +251,12 @@ public class Game {
           new LiveChoice("2 - Nein", 47)
           });
     steps[47] = new LiveStep(47, "Deine Freunde laden dich zu einem spontanen Studie-Trip ein"
-    + "  Gehst du mit?",
+    + "  Gehst du mit? (Kosten: 500€)",
         new LiveChoice[]{
           new LiveChoice("1 - Ja, ich habe ja noch Zeit", 48),
           new LiveChoice("2 - Nein, ich muss mich auf andere Sachen konzentrieren", 50)
           });
-    steps[47].getChoices()[0].setChangeCredit(-500); //TODO Beschreibung
+    steps[47].getChoices()[0].setChangeCredit(-500);
     steps[48] = new LiveStep(48, "Du hast dich verschätzt und hast nicht geschafft dich"
     + " rechtzeitig anzumelden", 
         new LiveChoice[]{
@@ -332,6 +332,10 @@ public class Game {
     while (gameOver) {
       currentStep = checkGivenAnswer(currentStep, steps);
 
+      if(id > 10 && id < 55) {
+        System.out.println("Kontostand: " + user.getCredit()) + "€";
+      }
+
       System.out.println(currentStep.getDescription());
       LiveChoice[] choices = currentStep.getChoices();
      
@@ -345,12 +349,29 @@ public class Game {
 
       id = choices[answer - 1].getNextStep();
       currentStep = steps[id];
+
+      user = checkChangeCredit(choices, user);
+
       if (id == sumQuestions) {
         System.out.println("Game Over");
         gameOver = false;
       }
       clearScreen(); 
     }
+  }
+
+  public static Player checkChangeCredit(LiveChoice[] choices, Player user) {
+    for (int i = 0; i < choices.length; i++) {
+      int creditChange = choices[i].getChangeCredit();
+      if (creditChange < 0) {
+        user.removeMoney(Math.abs(creditChange));
+        return user;
+      } else if (creditChange > 0) {
+        user.addMoney(creditChange);
+        return user;
+      }
+    }
+    return user;
   }
 
   public static LiveStep checkGivenAnswer(LiveStep currentStep, LiveStep[] steps) {
