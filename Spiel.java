@@ -107,7 +107,7 @@ public class Spiel {
         choiceButtonPanel = new JPanel();
         choiceButtonPanel.setBounds(370, 520, 450, 200);
         choiceButtonPanel.setBackground(Color.black);
-        choiceButtonPanel.setLayout(new GridLayout(4, 1));
+        choiceButtonPanel.setLayout(new GridLayout(5, 1));
         con.add(choiceButtonPanel);
         
         //AntwortButtons erstellen
@@ -160,7 +160,7 @@ public class Spiel {
         spielerPanel = new JPanel();
         spielerPanel.setBounds(300, 800, 600, 50);
         spielerPanel.setBackground(Color.black);
-        spielerPanel.setLayout(new GridLayout(1, 5));
+        spielerPanel.setLayout(new GridLayout(1, 4));
         con.add(spielerPanel);
         
         //Extras Labels erstellen
@@ -220,7 +220,7 @@ public class Spiel {
     public void cho1(){
         id = 2;
         questionTextArea.setText("Mathe läuft schlecht!");
-        choice1.setText(">");
+        choice1.setText("Weiter");
         choice2.setVisible(false);
 		choice5.setVisible(false);
         
@@ -230,7 +230,7 @@ public class Spiel {
     public void cho2(){
         id = 3;
         questionTextArea.setText("Mathe läuft sehr gut ");
-        choice1.setText(">");
+        choice1.setText("Weiter");
         choice2.setVisible(false);
 		choice5.setVisible(false);
         
@@ -281,7 +281,7 @@ public class Spiel {
     public void frage5(){
         id = 7;
         questionTextArea.setText("Was ist die Ausgabe?"
-                + "\\n\\nint i = 2;\\nint total = 0;\\nwhile\"\n (i < 9) {\\n  i++\\n  total = total + i;\\n}\\nSystem.out.println(total);\\n");
+                + "\nint i = 2;\nint total = 0;\nwhile (i < 9) {\n  i++;\n  total = total + i;}\nSystem.out.println(total);\n");
         choice1.setText("42");
         choice2.setVisible(true);
         choice2.setText("39");
@@ -659,17 +659,20 @@ public class Spiel {
                     switch (yourChoice){
                         case "a1": cho1(); break;
                         case "a2": cho2(); break;
+						default: break;
  
                     }
                 break;
                 case 2:
                     switch(yourChoice){
                         case "a1": frage2(); break;
+						default: break;
                     }
                 break;
                 case 3:
                     switch(yourChoice){
                         case "a1": frage2(); break;
+						default: break;
                     }
                 break;
                     
@@ -677,6 +680,7 @@ public class Spiel {
                     switch (yourChoice){
                         case "a1": frage4(); break;
                         case "a2": frage3(); break;
+						default: break;
  
                     }
                 break;
@@ -686,12 +690,14 @@ public class Spiel {
                         case "a1": frage4(); break;
                         case "a2": JOptionPane.showMessageDialog(null, "TIPP: Eine Lerngruppe hilft den Stoff nocheinmal zu wiederholen\" \nund in der Gruppe zu besprechen\"");
                         frage4(); break;
+						default: break;
                     }
                 break;
                 case 6 :
                     switch (yourChoice){
                         case "a1": frage5(); break;
                         case "a2": frage5(); break;
+						default: break;
                         
                     }
                 break;
@@ -701,6 +707,7 @@ public class Spiel {
                         frage6(); break;
                         case "a2": JOptionPane.showMessageDialog(null, "Du musst viel Zeit investieren um in Prog1 am Ball zu bleiben. Du\nhast weniger Zeit für andere Dinge");
                         frage6(); break;
+						default: break;
                         
                     }
                 break;
@@ -710,6 +717,7 @@ public class Spiel {
                             frage7(); break;
                         case "a2": JOptionPane.showMessageDialog(null, "Da du zu Hause wohnst hast du weniger Ausgaben, aber deine\nGeschwister lassen dich einfach nicht in Ruhe lernen!");
                             frage8(); break;
+							default: break;
                     }
                 break;
                 case 9 :
@@ -718,12 +726,14 @@ public class Spiel {
                             frage8(); break;
                         case "a2": JOptionPane.showMessageDialog(null, "Du wohnst alleine und kannst machen was du willst, in Ruhe\nlernen, feiern gehen, worauf du Lust hast! Allerdings ist die Wohnung nicht ganz günstig!");
                             frage8(); break;
+							default: break;
                     }
                 break;
                 case 10 :
                     switch (yourChoice){
                         case "a1": frage9(); break;
                         case "a2": frage10(); break;
+						default: break;
                         
                     }
                 break;
@@ -731,6 +741,7 @@ public class Spiel {
                     switch (yourChoice){
                         case "a1": frage11(); break;
                         case "a2": frage11(); break;
+						default: break;
                     }
                 break;
                 case 12 :
@@ -738,32 +749,38 @@ public class Spiel {
                         case "a1": frage11(); break;
                         case "a2": frage11(); break;
                         case "a3": frage11(); break;
+						default: break;
                     }
                 break;
                 case 13 :
                     switch (yourChoice){
                         case "a1": frage12(); break;
                         case "a2": frage14(); break;
+						default: break;
                     }
                 break;
                 case 14 :
                     switch (yourChoice){
                         case "a1": frage13(); break;
+						default: break;
                     }
                 break;
                 case 15 :
                     switch (yourChoice){
                         case "a1": frage14(); break;
+						default: break;
                     }
                 break;
                 case 16:
                     switch (yourChoice){
                         case "a1": frage15(); break;
+						default: break;
                     }
                 break;
                 case 17:
                     switch (yourChoice){
                         case "a1": frage16(); break;
+						default: break;
                     }
                 break;
                 case 18:
@@ -773,12 +790,14 @@ public class Spiel {
                         case "a3": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
                         case "a4": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
                         case "a5": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage17(); break;
+						default: break;
                     }
                 break;
                 case 19:
                     switch (yourChoice){
                         case "a1": frage18(); break;
                         case "a2": frage18(); break;
+						default: break;
                     }
                 break;
                 case 20:
@@ -786,12 +805,14 @@ public class Spiel {
                         case "a1": frage21(); break;
                         case "a2": frage21(); break;
                         case "a3": frage19(); break;
+						default: break;
                     }
                 break;
                 case 21 :
                     switch (yourChoice){
                         case "a1": wiederholungsfrage16();break;
                         case "a2": frage20(); break;
+						default: break;
                     }
                 break;
                 case 1000:
@@ -801,6 +822,7 @@ public class Spiel {
                         case "a3": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
                         case "a4": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
                         case "a5": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage21(); break;
+						default: break;
                     }
                 break;
                 case 22:
@@ -810,93 +832,113 @@ public class Spiel {
                             if(JOptionPane.showConfirmDialog(exit, "Spiel beenden", "Exit", JOptionPane.YES_NO_OPTION)
                                     ==JOptionPane.YES_NO_OPTION){
                                 System.exit(0);
-                            } // https://www.youtube.com/watch?v=DmtGxIdXtsI                         
+                            } // https://www.youtube.com/watch?v=DmtGxIdXtsI   
+						default: break;	
                     }
                 break;
                 case 23:
                     switch(yourChoice){
                         case "a1": frage22(); break;
+						default: break;
                     }
                 break;
                 case 24:
                     switch(yourChoice){
                         case "a1": frage23(); break;
                         case "a2": frage24(); break;
+						default: break;
                     }
                 break;
                 case 25:
                     switch(yourChoice){
                         case "a1": frage28(); break;
+						default: break;
                     }
                 break;
                 case 26:
                     switch(yourChoice){
                         case "a1": frage25(); break;
                         case "a2": frage28(); break;
+						default: break;
                     }
                 break;
                 case 27:
                     switch(yourChoice){
                         case "a1": JOptionPane.showMessageDialog(null,"Du musst deinen Partner mehrfach, wegen des Studiums versetzen!\nAus der Beziehung wird leider nichts!");frage28(); break;
                         case "a2": frage26(); break;
+						default: break;
                     }
                 break;
                 case 28:
                     switch(yourChoice){
                         case "a1": frage27(); break;  
+						default: break;
                     }
                 break;
                 case 29:
                     switch(yourChoice){
                         case "a1": frage28(); break;
-                        case "a2": frage28(); break;                            
+                        case "a2": frage28(); break;
+						default: break;
+						
                     }
                 break;
                 case 30:
                     switch(yourChoice){
                         case "a1": frage29(); break;
-                        case "a2": frage30(); break;    
+                        case "a2": frage30(); break;
+						default: break;
+    
                     }
                 case 31:
                     switch(yourChoice){
                         case "a1": ende(); break;
+						default: break;
                     }
                 break;
                 case 32:
                     switch(yourChoice){
                         case "a1": frage31(); break;
+						default: break;
                     }
                 break;
                 case 33:
                     switch(yourChoice){
                         case "a1": frage32(); break;
-                        case "a2": frage32(); break;                      
+                        case "a2": frage32(); break;
+						default: break;
+						
                     }
                 break;
                 case 34:
                     switch(yourChoice){
                         case "a1": frage34(); break;
                         case "a2": frage33(); break;
+						default: break;
                     }
                 break;
                 case 35:
                     switch(yourChoice){
                         case "a1": frage35(); timer.stop(); break;
+						default: break;
                     }
                 break;
                 case 36:
                     switch(yourChoice){
                         case "a1": frage36(); timer.stop();break;
+						default: break;
                     }
                 break;
                 case 37:
                     switch(yourChoice){
                         case "a1": ende();break;
+						default: break;
                     }
                 break;
                 case 38:
                     switch(yourChoice){
                         case "a1": ende();break;
+						default: break;
                     }
                 break;
                 case 39:
@@ -907,8 +949,9 @@ public class Spiel {
                                     ==JOptionPane.YES_NO_OPTION){
                                 System.exit(0);
                             }
+						default: break;
                     }
-
+				default: break;
             }
    
         }
