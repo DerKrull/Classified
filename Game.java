@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class Game {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);    
-    int sumQuestions = 57;
+    //TODO add all Questions
+    int sumQuestions = 58;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
     //Stage1
@@ -295,7 +296,7 @@ public class Game {
     steps[55] = new LiveStep(55, "Hier endet dein Aufstieg als Informatiker.\nVielen Dank fürs "
     + "spielen!",
         new LiveChoice[]{
-          new LiveChoice("1- Spiel beenden", 90),
+          new LiveChoice("1- Spiel beenden", 57),
           new LiveChoice("2- Spiel neustarten", 0)
           });
     steps[56] = new LiveStep(56, "Steuerung\n \nDie Steuerung ist sehr einfach.\nDir werden "
@@ -333,13 +334,10 @@ public class Game {
 
       steps[id].setChoiceTaken(answer);
       id = choices[answer - 1].getNextStep();
-      currentStep = steps[id];
-      
-
-      if (id == sumQuestions) {
-        System.out.println("Game Over");
+      if (id == sumQuestions - 1) {
         gameOver = false;
       }
+      currentStep = steps[id];
       clearScreen(); 
     }
   }
