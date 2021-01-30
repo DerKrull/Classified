@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Game {
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);    
-    //TODO add all Questions
     int sumQuestions = 57;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
@@ -114,7 +113,6 @@ public class Game {
     + " in Erfurt auf und wunderst dich wie du es soweit geschafft hast", new LiveChoice[]{
       new LiveChoice("1 - Was soll man machen. Immer nach vorne schauen", 21)
       });
-    //TODO vielleicht noch eine zweite Antwort für eine Art Kreislauf
     steps[21] = new LiveStep(21, "Du hast aufgrund deiner ungeplanten Reise nicht mehr rechtzeitig" 
     + " zur Prüfung geschafft und musst sie wiederholen!", new LiveChoice[]{
       new LiveChoice("1 - Dann mach ich das dieses mal aber richtig", 22)
@@ -133,8 +131,8 @@ public class Game {
           new LiveChoice("1 -Embedded Systems", 25),
           new LiveChoice("2 -Internet Engineering", 25),
           new LiveChoice("3 -Medieninformatik", 25),
-          new LiveChoice("4 -Wirtschaftsinformatik", 25),
-          new LiveChoice("5 -keine Spezialisierung", 25)
+          new LiveChoice("4 -Wirtschaftsinformatik", 25)
+          //new LiveChoice("5 -keine Spezialisierung", 25)
           });
     steps[25] = new LiveStep(25, "Du belegst 3 Fächer von ",
         new LiveChoice[]{ 
@@ -339,7 +337,7 @@ public class Game {
     if (currentStep.getUsesSpecialization()) {
       String description = currentStep.getDescription();
       description += " " 
-        + steps[24].getChoices()[steps[24].getChoiceTaken()-1].getDescription().substring(3);
+        + steps[24].getChoices()[steps[24].getChoiceTaken() - 1].getDescription().substring(3);
       currentStep.setDescription(description);
       return currentStep;
     } else {
