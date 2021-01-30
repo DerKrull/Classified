@@ -727,7 +727,7 @@ public class Spiel {
                 break;
                 case 15 :
                     switch (yourChoice){
-                        case "a1": frage1(); break;
+                        case "a1": frage14(); break;
                     }
                 break;
                 case 16:
