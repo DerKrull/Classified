@@ -358,7 +358,7 @@ public class Game {
       steps[id].setChoiceTaken(answer);
       id = choices[answer - 1].getNextStep();
 
-      user = checkChangeCredit(choices, user);
+      user = checkChangeCredit(choices, user, answer);
 
       if (id == sumQuestions - 1) {
         gameOver = false;
@@ -368,9 +368,8 @@ public class Game {
     }
   }
 
-  public static Player checkChangeCredit(LiveChoice[] choices, Player user) {
-    for (int i = 0; i < choices.length; i++) {
-      int creditChange = choices[i].getChangeCredit();
+  public static Player checkChangeCredit(LiveChoice[] choices, Player user, int answer) {
+      int creditChange = choices[answer-1].getChangeCredit();
       if (creditChange < 0) {
         user.removeMoney(Math.abs(creditChange));
         return user;
