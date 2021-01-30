@@ -107,7 +107,7 @@ public class Spiel {
         choiceButtonPanel = new JPanel();
         choiceButtonPanel.setBounds(370, 520, 450, 200);
         choiceButtonPanel.setBackground(Color.black);
-        choiceButtonPanel.setLayout(new GridLayout(4, 1));
+        choiceButtonPanel.setLayout(new GridLayout(5, 1));
         con.add(choiceButtonPanel);
         
         //AntwortButtons erstellen
@@ -160,7 +160,7 @@ public class Spiel {
         spielerPanel = new JPanel();
         spielerPanel.setBounds(300, 800, 600, 50);
         spielerPanel.setBackground(Color.black);
-        spielerPanel.setLayout(new GridLayout(1, 5));
+        spielerPanel.setLayout(new GridLayout(1, 4));
         con.add(spielerPanel);
         
         //Extras Labels erstellen
