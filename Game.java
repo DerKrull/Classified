@@ -303,7 +303,7 @@ public class Game {
           new LiveChoice(weiter, 1)
           });
 
-    int id = 23;
+    int id = 0;
     LiveStep currentStep = steps[id];
     boolean gameOver = true;
     clearScreen();
