@@ -325,7 +325,7 @@ public class Game {
       steps[id].setChoiceTaken(answer);
 
       id = choices[answer - 1].getNextStep();
-      if (id == sumQuestions-1){
+      if (id == sumQuestions - 1) {
         gameOver = false;
       }
       currentStep = steps[id];
