@@ -161,7 +161,7 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 33)
           });
-    steps[30] = new LiveStep(30, "Läuft! (Auswirkung Privatleben)", //TODO Auswirkung Privatleben
+    steps[30] = new LiveStep(30, "Na dann, aber immer dran bleiben!", //TODO Auswirkung Privatleben
         new LiveChoice[]{
           new LiveChoice(weiter, 33)
           });
@@ -184,6 +184,9 @@ public class Game {
           new LiveChoice("1 -Na Klar!", 35),
           new LiveChoice("2 -Nein ich muss mich auf mein Studium konzentrieren.", 36)
           });
+    steps[34].setNeededPreviousStep(27);
+    steps[34].setNeededPreviousAnswer(1);
+    steps[34].setAlternativeStep(36);
     steps[35] = new LiveStep(35, "Nach ein paar Tagen feiern wird ein Freund festgenommen "
     + "und\nihr teilt euch die Kosten!", //TODO Geld verlieren
         new LiveChoice[]{
