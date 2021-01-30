@@ -281,7 +281,7 @@ public class Spiel {
     public void frage5(){
         id = 7;
         questionTextArea.setText("Was ist die Ausgabe?"
-                + "\\n\\nint i = 2;\\nint total = 0;\\nwhile\"\n (i < 9) {\\n  i++\\n  total = total + i;\\n}\\nSystem.out.println(total);\\n");
+                + "\nint i = 2;\nint total = 0;\nwhile (i < 9) {\n  i++;\n  total = total + i;}\nSystem.out.println(total);\n");
         choice1.setText("42");
         choice2.setVisible(true);
         choice2.setText("39");
