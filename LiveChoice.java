@@ -1,8 +1,7 @@
 public class LiveChoice {
   private String description;
   private int nextStep;
-  private int addMoney;
-  private int removeMoney;
+  private int changeCredit;
 
   public LiveChoice(String description, int nextStep) {
     this.description = description;
@@ -25,20 +24,12 @@ public class LiveChoice {
     this.nextStep = nextStep;
   }
 
-  public int getAddMoney() {
-    return addMoney;
+  public int getChangeCredit() {
+    return changeCredit;
   }
 
-  public void setAddMoney(int addMoney) {
-    this.addMoney = addMoney;
-  }
-
-  public int getRemoveMoney() {
-    return removeMoney;
-  }
-
-  public void setRemoveMoney(int removeMoney) {
-    this.removeMoney = removeMoney;
+  public void setChangeCredit(int changeCredit) {
+    this.changeCredit = changeCredit;
   }
 
 }
