@@ -220,7 +220,7 @@ public class Spiel {
     public void cho1(){
         id = 2;
         questionTextArea.setText("Mathe läuft schlecht!");
-        choice1.setText(">");
+        choice1.setText("Weiter");
         choice2.setVisible(false);
 		choice5.setVisible(false);
         
@@ -230,7 +230,7 @@ public class Spiel {
     public void cho2(){
         id = 3;
         questionTextArea.setText("Mathe läuft sehr gut ");
-        choice1.setText(">");
+        choice1.setText("Weiter");
         choice2.setVisible(false);
 		choice5.setVisible(false);
         
