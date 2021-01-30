@@ -23,7 +23,7 @@ public class Spiel {
     Font textgr = new Font("Arial", Font.PLAIN, 44);
     Font normaletextgr = new Font("Arial", Font.PLAIN, 34);
     Font btntextgr = new Font("Arial", Font.PLAIN, 18);
-    JButton startbtn, choice1, choice2, choice3, choice4;
+    JButton startbtn, choice1, choice2, choice3, choice4, choice5;
     JTextArea questionTextArea;
     
     static int geld, id, second, min;
@@ -146,6 +146,15 @@ public class Spiel {
         choice4.addActionListener(choiseHandler);
         choice4.setActionCommand("a4");
         choiceButtonPanel.add(choice4);
+		
+		choice5 = new JButton("Choice 5");
+        choice5.setBackground(Color.black);
+        choice5.setForeground(Color.green);
+        choice5.setFont(btntextgr);
+        choice5.setFocusPainted(false);
+        choice5.addActionListener(choiseHandler);
+        choice5.setActionCommand("a5");
+        choiceButtonPanel.add(choice5);
         
         //Spielerfeld erstellen
         spielerPanel = new JPanel();
