@@ -332,8 +332,8 @@ public class Game {
     while (gameOver) {
       currentStep = checkGivenAnswer(currentStep, steps);
 
-      if(id > 10 && id < 55) {
-        System.out.println("Kontostand: " + user.getCredit()) + "€";
+      if (id > 10 && id < 55) {
+        System.out.println("Kontostand: " + user.getCredit() + "€");
       }
 
       System.out.println(currentStep.getDescription());
