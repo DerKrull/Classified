@@ -87,19 +87,24 @@ public class Game {
     steps[17] = new LiveStep(17,  "Da du Vorkenntnisse in Java hast, kannst du nach einem"
     + " entsprechenden Nebenjob suchen", new LiveChoice[]{
       new LiveChoice("1 - Da kann ich auch gleich noch Praxiserfahrung sammeln, das klingt gut",
-       19), //TODO 100% GELD
+       19), 
       new LiveChoice("2 - Ich suche mir lieber einen \"normalen\" Nebenjob und gehe kellnern",
-       19) //TODO 50% GELD
+       19)
       });
+    steps[17].getChoices()[0].setChangeCredit(2200);
+    steps[17].getChoices()[1].setChangeCredit(1600);
     steps[17].setNeededPreviousStep(7);
     steps[17].setNeededPreviousAnswer(1);
     steps[17].setAlternativeStep(19);
 
     steps[18] = new LiveStep(18, "Aus welchen Quellen kommt denn das Geld", new LiveChoice[]{
-      new LiveChoice("1 - Meine Eltern", 19), //TODO 40% GELD
-      new LiveChoice("2 - Bafög", 19), //TODO 30% GELD
-      new LiveChoice("3 - Ich hab meine Eltern und Bafög", 19) //TODO 70% GELD
+      new LiveChoice("1 - Meine Eltern", 19), 
+      new LiveChoice("2 - Bafög", 19), 
+      new LiveChoice("3 - Ich hab meine Eltern und Bafög", 19)
       });
+    steps[18].getChoices()[0].setChangeCredit(1000);
+    steps[18].getChoices()[1].setChangeCredit(700);
+    steps[18].getChoices()[2].setChangeCredit(1500);
     steps[19] = new LiveStep(19, "In der Uni steht die erste Prüfung kurz vor der Tür,"
     + " gleichzeitig hat aber auch dein bester Freund seinen 18. Geburtstag. Was machst du?",
         new LiveChoice[]{
@@ -177,16 +182,18 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 34)
           });
-    steps[34] = new LiveStep(34, "Willst du mit deinen Kumpels nach Mallorca?",
+    steps[34] = new LiveStep(34, "Willst du mit deinen Kumpels nach Mallorca? (Kosten: 250€)",
         new LiveChoice[]{
           new LiveChoice("1 -Na Klar!", 35),
           new LiveChoice("2 -Nein ich muss mich auf mein Studium konzentrieren.", 36)
           });
+    steps[34].getChoices()[0].setChangeCredit(-250);
     steps[35] = new LiveStep(35, "Nach ein paar Tagen feiern wird ein Freund festgenommen "
-    + "und\nihr teilt euch die Kosten!", //TODO Geld verlieren
+    + "und\nihr teilt euch die Kosten!",
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
           });
+    steps[35].getChoices()[0].setChangeCredit(-750); 
     steps[36] = new LiveStep(36, "Nach erfolgreichem Lernen gehst du in eine Kneipe/Kirmes/Club "
     + "und lernst\njemanden kennen.\nHast du Interesse an einer Beziehung",
         new LiveChoice[]{
@@ -207,11 +214,13 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
           });
-    steps[40] = new LiveStep(40, "Dein Partner fragt, ob ihr zusammenziehen wollt.",
+    steps[40] = new LiveStep(40, "Dein Partner fragt, ob ihr zusammenziehen wollt.\n"
+    + " Der Umzug kostet 150€",
         new LiveChoice[]{
           new LiveChoice("1 -Ja!", 41),
           new LiveChoice("2 -Nein!", 42)
           });
+    steps[40].getChoices()[0].setChangeCredit(-150);
     steps[41] = new LiveStep(41, "Mehr/Weniger Kosten!",
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
@@ -247,6 +256,7 @@ public class Game {
           new LiveChoice("1 - Ja, ich habe ja noch Zeit", 48),
           new LiveChoice("2 - Nein, ich muss mich auf andere Sachen konzentrieren", 50)
           });
+    steps[47].getChoices()[0].setChangeCredit(-500); //TODO Beschreibung
     steps[48] = new LiveStep(48, "Du hast dich verschätzt und hast nicht geschafft dich"
     + " rechtzeitig anzumelden", 
         new LiveChoice[]{
