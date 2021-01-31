@@ -192,7 +192,7 @@ public class Spiel {
     
     
     public void spielerSetup(){
-        geld = 250;
+        geld = 0;
         notenschnitt = 2.5;
         geldLabel.setText("Geld: " + geld);
         notenschnittLabel.setText("Notenschnitt: " + notenschnitt);
@@ -320,6 +320,7 @@ public class Spiel {
  
     public void frage8(){
         id = 10;
+		choiceButtonPanel.setBounds(150, 520, 850, 200);
         questionTextArea.setText("Du hast die Möglichkeit einen Nebenjob zu machen um deine \nHaushaltskasse etwas aufzubessern ");
         choice1.setText("Das hört sich vernünftig an, dann bin ich \n maximal selbstständig");
         choice2.setVisible(true);
@@ -332,6 +333,7 @@ public class Spiel {
     }
     public void frage9(){
         id = 11;
+		choiceButtonPanel.setBounds(200, 520, 700, 200);
         questionTextArea.setText("Falls du Vorkenntnisse in Programmierung hast, kannst du dich\"\njetzt nach einem Nebenjob in diesem Bereich umsehen ");
         choice1.setText("Da kann ich auch gleich noch Praxiserfahrung sammeln, das klingt gut");
         choice2.setVisible(true);
@@ -344,6 +346,7 @@ public class Spiel {
     }
     public void frage10(){
         id = 12;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Aus welchen Quellen kommt denn das Geld? ");
         choice1.setText("Meine Eltern");
         choice2.setVisible(true);
@@ -357,6 +360,7 @@ public class Spiel {
     }
     public void frage11(){
         id = 13;
+		choiceButtonPanel.setBounds(150, 520, 850, 200);
         questionTextArea.setText("In der Uni steht die erste Prüfung kurz vor der Tür,\ngleichzeitig hat aber auch dein bester Freund seinen 18. Geburtstag. Was machst du? ");
         choice1.setText("Gar keine Frage, man wird nur einmal 18. Das kann ich nicht\n verpassen!");
         choice2.setVisible(true);
@@ -369,6 +373,7 @@ public class Spiel {
     }
     public void frage12(){
         id = 14;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du warst feiern und wachst am Morgen der Prüfung in einem Regio\nin Erfurt auf und wunderst dich wie du es soweit geschafft hast ");
         choice1.setText("Was soll man machen. Immer nach vorne schauen\"");
         choice2.setVisible(false);
@@ -380,6 +385,7 @@ public class Spiel {
     }
     public void frage13(){
         id = 15;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du hast aufgrund deiner ungeplanten Reise nicht mehr rechtzeitig \nzur Prüfung geschafft und musst sie wiederholen! ");
         choice1.setText("Dann mach ich das dieses mal aber richtig");
         choice2.setVisible(false);
@@ -391,6 +397,7 @@ public class Spiel {
     }
     public void frage14(){
         id = 16;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du hast die Prüfung geschrieben und bestanden herzlichen\nGlückwunsch.\\n Auf gehts ins nächste Semester ");
         choice1.setText("Und los!");
         choice2.setVisible(false);
@@ -402,6 +409,7 @@ public class Spiel {
     }
     public void frage15(){
         id = 17;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Herzlich Willkommen im 3.Semester!");
         choice1.setText("Auf zur Wahl deiner Spezialisierung!");
         choice2.setVisible(false);
@@ -414,6 +422,7 @@ public class Spiel {
     
     public void frage16(){
         id = 18;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Wähle eine der Spezialisierungen.");
         choice1.setText("Embedded Systems");
         choice2.setVisible(true);
@@ -428,6 +437,7 @@ public class Spiel {
     }  
     public void frage17(){
         id = 19;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Besuchst du regelmäßig die Veranstalltungen (Vorlesungen, etc.)");
         choice1.setText("Ja");
         choice2.setVisible(true);
@@ -438,6 +448,7 @@ public class Spiel {
     }
     public void frage18(){
         id = 20;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Wie findest du das Studium bis zu diesem Punkt?");
         choice1.setText("Gut!");
         choice2.setVisible(true);
@@ -449,6 +460,7 @@ public class Spiel {
     }
     public void frage19(){
         id = 21;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Ändere deine Spezialisierung oder wechsel den Studiengang?");
         choice1.setText("Spezialisierung ändern!");
         choice2.setVisible(true);
@@ -459,6 +471,7 @@ public class Spiel {
     }
     public void frage20(){
         id = 22;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du wechseltst den Studiengang! Dieser Weg endet hier!");
         choice1.setText("Spiel beenden!");
         choice2.setVisible(false);
@@ -468,6 +481,7 @@ public class Spiel {
     }
     public void wiederholungsfrage16(){
         id = 1000;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Wähle eine der Spezialisierungen.");
         choice1.setText("Embedded Systems");
         choice2.setVisible(true);
@@ -483,6 +497,7 @@ public class Spiel {
     
     public void frage21(){
         id = 23;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du hast die nächsten Semester soweit gemeistert! \nSemesterferien stehen an! Ab ins Privatleben!");
         choice1.setText("Weiter");
         choice2.setVisible(false);
@@ -493,6 +508,7 @@ public class Spiel {
     
     public void frage22(){
         id = 24;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Willst du mit deinen Kumpels nach Mallorca?");
         choice1.setText("Na Klar!");
         choice2.setVisible(true);
@@ -503,6 +519,7 @@ public class Spiel {
     }
     public void frage23(){
         id = 25;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Nach ein paar Tagen feiern wird ein Freund festgenommen und\nihr teilt euch die Kosten!");
         choice1.setText("Weiter");
         choice2.setVisible(false);
@@ -512,6 +529,7 @@ public class Spiel {
     }
     public void frage24(){
         id = 26;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Nach erfolgreichem Lernen gehst du in eine Kneipe/Kirmes/Club und lernst"
                 + "\njemanden kennen.\nHast du Interesse an einer Beziehung ");
         choice1.setText("Ja");
@@ -523,6 +541,7 @@ public class Spiel {
     }
     public void frage25(){
         id = 27;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Studium-Anstrengend?");
         choice1.setText("Ja");
         choice2.setVisible(true);
@@ -533,6 +552,7 @@ public class Spiel {
     }
     public void frage26(){
         id = 28;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Ihr hattet ein paar Dates.\nDu bist nun in einer festen Beziehung");
         choice1.setText("Weiter");
         choice2.setVisible(false);
@@ -542,6 +562,7 @@ public class Spiel {
     }
     public void frage27(){
         id = 29;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Dein Partner fragt, ob ihr zusammenziehen wollt.");
         choice1.setText("Ja");
         choice2.setVisible(true);
@@ -552,7 +573,8 @@ public class Spiel {
     }
     public void frage28(){
         id = 30;
-        questionTextArea.setText("Du bekommst ein Jobangebot von <Spezialisierung>!");
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
+        questionTextArea.setText("Du bekommst ein Jobangebot von deiner Spezialisierung");
         choice1.setText("Jobangebot annehmen!");
         choice2.setVisible(true);
         choice2.setText("Jobangebot ablehnen!");
@@ -562,6 +584,7 @@ public class Spiel {
     }
     public void frage29(){
         id = 31;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du begibst dich ins Berufsleben!");
         choice1.setText("Weiter");
         choice2.setVisible(false);
@@ -571,6 +594,7 @@ public class Spiel {
     }
     public void frage30(){
         id = 32;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du machst das Studium fertig, aber verlierst das Jobangebot!");
         choice1.setText("Weiter");
         choice2.setVisible(false);
@@ -580,6 +604,7 @@ public class Spiel {
     }
     public void frage31(){
         id = 33;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Hast du dchon ein Thema für dein Bachelor Arbeit?");
         choice1.setText("Ja");
         choice2.setVisible(true);
@@ -590,6 +615,7 @@ public class Spiel {
     }
     public void frage32(){
         id = 34;
+		choiceButtonPanel.setBounds(370, 520, 470, 200);
         questionTextArea.setText("Deine Freunde laden dich zu einem spontanen Studie-Trip ein.\nGehst du mit? ");
         choice1.setText("Ja, ich habe ja noch Zeit");
         choice2.setVisible(true);
@@ -600,6 +626,7 @@ public class Spiel {
     }
     public void frage33(){
         id = 35;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du hast dich verschätzt und hast nicht geschafft dich gut vorzubreiten.");
         choice1.setText("Weiter");
         choice2.setVisible(false);
@@ -609,6 +636,7 @@ public class Spiel {
     }
     public void frage34(){
         id = 36;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du bist ein sehr vorbildlicher Student, die Zeichen stehen gut");
         choice1.setText("Weiter");
         choice2.setVisible(false);
@@ -618,6 +646,7 @@ public class Spiel {
     }
     public void frage35(){
         id = 37;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du hast eine durchschnittliche Bachelorarbeit geschrieben, du\nhast das Studium soweit abgeschlossen");
         choice1.setText("Weiter");
         choice2.setVisible(false);
@@ -627,6 +656,7 @@ public class Spiel {
     }
     public void frage36(){
         id = 38;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Du hast eine sehr gute Bachelorarbeit geschrieben, Du hast dein\nBachelor-Studium abgeschlossen");
         choice1.setText("Weiter");
         choice2.setVisible(false);
@@ -636,6 +666,7 @@ public class Spiel {
     }
     public void ende(){
         id = 39;
+		choiceButtonPanel.setBounds(370, 520, 450, 200);
         questionTextArea.setText("Hier endet dein Aufstieg als Informatiker. Vielen dank für das Spielen. ");
         choice1.setText("Spiel beenden");
     }
@@ -731,7 +762,7 @@ public class Spiel {
                 break;
                 case 10 :
                     switch (yourChoice){
-                        case "a1": frage9(); break;
+                        case "a1": geld = geld + 1600; geldLabel.setText("Geld: " + geld);frage9(); break;
                         case "a2": frage10(); break;
 						default: break;
                         
@@ -739,16 +770,16 @@ public class Spiel {
                 break;
                 case 11 :
                     switch (yourChoice){
-                        case "a1": frage11(); break;
+                        case "a1": geld = geld + 600; geldLabel.setText("Geld: " + geld); frage11(); break;
                         case "a2": frage11(); break;
 						default: break;
                     }
                 break;
                 case 12 :
                     switch (yourChoice){
-                        case "a1": frage11(); break;
-                        case "a2": frage11(); break;
-                        case "a3": frage11(); break;
+                        case "a1": geld = 1000; geldLabel.setText("Geld: " + geld); frage11(); break;
+                        case "a2": geld = 700; geldLabel.setText("Geld: " + geld); frage11(); break;
+                        case "a3": geld = 1500; geldLabel.setText("Geld: " + geld); frage11(); break;
 						default: break;
                     }
                 break;
@@ -844,14 +875,14 @@ public class Spiel {
                 break;
                 case 24:
                     switch(yourChoice){
-                        case "a1": frage23(); break;
+                        case "a1": geld = geld - 250; geldLabel.setText("Geld: " + geld);frage23(); break;
                         case "a2": frage24(); break;
 						default: break;
                     }
                 break;
                 case 25:
                     switch(yourChoice){
-                        case "a1": frage28(); break;
+                        case "a1": geld = geld - 750; geldLabel.setText("Geld: " + geld);frage28(); break;
 						default: break;
                     }
                 break;
@@ -877,7 +908,7 @@ public class Spiel {
                 break;
                 case 29:
                     switch(yourChoice){
-                        case "a1": frage28(); break;
+                        case "a1": geld = geld - 150; geldLabel.setText("Geld: " + geld);frage28(); break;
                         case "a2": frage28(); break;
 						default: break;
 						
@@ -912,7 +943,7 @@ public class Spiel {
                 break;
                 case 34:
                     switch(yourChoice){
-                        case "a1": frage34(); break;
+                        case "a1": geld = geld - 500; geldLabel.setText("Geld: " + geld); frage34(); break;
                         case "a2": frage33(); break;
 						default: break;
                     }
