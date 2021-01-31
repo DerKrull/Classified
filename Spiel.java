@@ -59,7 +59,7 @@ public class Spiel {
         titlePanel.setBackground(Color.black);
         
         // Titellabel
-        title = new JLabel("Willkommen bei Der Aufstieg als Informatiker");
+        title = new JLabel("Der Aufstieg als Informatiker");
         title.setForeground(Color.green);
         title.setFont(textgr);
         
@@ -197,12 +197,23 @@ public class Spiel {
         geldLabel.setText("Geld: " + geld);
         notenschnittLabel.setText("Notenschnitt: " + notenschnitt);
         
-        frage1();
+        einleitung();
 		zeitLabel.setText("Zeit:  " + "00" + " : " + "00");
 		second =0;
 		min = 0;
 		Timer();
 		timer.start();
+        
+    }
+    public void einleitung(){
+        id = 0;
+        questionTextArea.setText("Willkommen bei Classified!\nDieses Spiel soll den Aufstieg eines Informatikers \nsimulieren. Je nach dem, welche Entscheidungen du im \nSpiel triffst, wird sich deine Zukunft ändern.\nDu beginnst im ersten Semester mit Mathematische \nGrundalagen der Informatik.\nJetzt viel Spaß bei unserem Spiel!");
+        choice1.setText("Weiter");
+        choice2.setVisible(false);
+        choice3.setVisible(false);
+        choice4.setVisible(false);
+        choice5.setVisible(false);
+        
         
     }
     public void frage1(){
@@ -686,6 +697,12 @@ public class Spiel {
             String yourChoice = event.getActionCommand();
             
             switch (id){
+                case 0:
+                    switch (yourChoice){
+                        case "a1": frage1(); break;
+						default: break;
+                    }
+                break;				
                 case 1:
                     switch (yourChoice){
                         case "a1": cho1(); break;
