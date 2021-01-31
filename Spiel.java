@@ -19,7 +19,7 @@ public class Spiel {
     JFrame spielfenster;
     Container con;
     JPanel titlePanel, startbtnPanel, mainTextPanel, choiceButtonPanel, spielerPanel;
-    JLabel title, extrasLabel, geldLabel, zeitLabel, notenschnittLabel;
+    JLabel title, extrasLabel, geldLabel, zeitLabel;
     Font textgr = new Font("Arial", Font.PLAIN, 44);
     Font normaletextgr = new Font("Arial", Font.PLAIN, 34);
     Font btntextgr = new Font("Arial", Font.PLAIN, 18);
@@ -27,7 +27,6 @@ public class Spiel {
     JTextArea questionTextArea;
     
     static int geld, id, second, min;
-    double notenschnitt;
     String sec, m;
 	Timer timer;
 	DecimalFormat f = new DecimalFormat("00");
@@ -178,11 +177,7 @@ public class Spiel {
         zeitLabel.setFont(btntextgr);
         zeitLabel.setForeground(Color.green);
         spielerPanel.add(zeitLabel);        
-        
-        notenschnittLabel = new JLabel("Extras: ");
-        notenschnittLabel.setFont(btntextgr);
-        notenschnittLabel.setForeground(Color.green);
-        spielerPanel.add(notenschnittLabel); 
+         
         
         
         spielerSetup();
@@ -193,9 +188,7 @@ public class Spiel {
     
     public void spielerSetup(){
         geld = 0;
-        notenschnitt = 2.5;
         geldLabel.setText("Geld: " + geld);
-        notenschnittLabel.setText("Notenschnitt: " + notenschnitt);
         
         einleitung();
 		zeitLabel.setText("Zeit:  " + "00" + " : " + "00");
@@ -348,7 +341,7 @@ public class Spiel {
         questionTextArea.setText("Falls du Vorkenntnisse in Programmierung hast, \nkannst du dich\"jetzt nach einem Nebenjob \nin diesem Bereich umsehen ");
         choice1.setText("Da kann ich auch gleich noch Praxiserfahrung sammeln, das klingt gut");
         choice2.setVisible(true);
-        choice2.setText("Ich suche mir lieber einen \\\"normalen\\\" Nebenjob und gehe kellnern");
+        choice2.setText("Ich suche mir lieber einen \"normalen\" Nebenjob und gehe kellnern");
         choice3.setVisible(false);
         choice4.setVisible(false);
 		choice5.setVisible(false);
@@ -520,7 +513,7 @@ public class Spiel {
     public void frage22(){
         id = 24;
 		choiceButtonPanel.setBounds(370, 520, 450, 200);
-        questionTextArea.setText("Willst du mit deinen Kumpels nach Mallorca?");
+        questionTextArea.setText("Willst du mit deinen Kumpels nach Mallorca?\n Kostet = 250");
         choice1.setText("Na Klar!");
         choice2.setVisible(true);
         choice2.setText("Nein ich muss mich auf mein Studium konzentrieren.");
@@ -531,7 +524,7 @@ public class Spiel {
     public void frage23(){
         id = 25;
 		choiceButtonPanel.setBounds(370, 520, 450, 200);
-        questionTextArea.setText("Nach ein paar Tagen feiern wird ein Freund \nfestgenommen und ihr teilt euch die Kosten!");
+        questionTextArea.setText("Nach ein paar Tagen feiern wird ein Freund \nfestgenommen und ihr teilt euch die Kosten!\n Kostet = 750");
         choice1.setText("Weiter");
         choice2.setVisible(false);
         choice3.setVisible(false);
@@ -574,7 +567,7 @@ public class Spiel {
     public void frage27(){
         id = 29;
 		choiceButtonPanel.setBounds(370, 520, 450, 200);
-        questionTextArea.setText("Dein Partner fragt, ob ihr zusammenziehen wollt.");
+        questionTextArea.setText("Dein Partner fragt, ob ihr zusammenziehen wollt.\n Umzogskosten = 150");
         choice1.setText("Ja");
         choice2.setVisible(true);
         choice2.setText("Nein");
@@ -627,7 +620,7 @@ public class Spiel {
     public void frage32(){
         id = 34;
 		choiceButtonPanel.setBounds(370, 520, 470, 200);
-        questionTextArea.setText("Deine Freunde laden dich zu einem spontanen \nStudie-Trip ein.Gehst du mit? ");
+        questionTextArea.setText("Deine Freunde laden dich zu einem spontanen \nStudie-Trip ein.Gehst du mit?\n Kostet = 500 ");
         choice1.setText("Ja, ich habe ja noch Zeit");
         choice2.setVisible(true);
         choice2.setText("Nein, ich muss mich auf andere Sachen konzentrieren");
