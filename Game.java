@@ -84,6 +84,7 @@ public class Game {
       new LiveChoice("2 - Ach, das passt schon ich hab andere Quellen die mich unterstützen, da"
       + " muss ich selbst nicht arbeiten gehen", 18)
       });
+    steps[16].getChoices()[0].setChangeCredit(1600);
     steps[17] = new LiveStep(17,  "Da du Vorkenntnisse in Java hast, kannst du nach einem"
     + " entsprechenden Nebenjob suchen", new LiveChoice[]{
       new LiveChoice("1 - Da kann ich auch gleich noch Praxiserfahrung sammeln, das klingt gut",
@@ -91,8 +92,7 @@ public class Game {
       new LiveChoice("2 - Ich suche mir lieber einen \"normalen\" Nebenjob und gehe kellnern",
        19)
       });
-    steps[17].getChoices()[0].setChangeCredit(2200);
-    steps[17].getChoices()[1].setChangeCredit(1600);
+    steps[17].getChoices()[0].setChangeCredit(600);
     steps[17].setNeededPreviousStep(7);
     steps[17].setNeededPreviousAnswer(1);
     steps[17].setAlternativeStep(19);
