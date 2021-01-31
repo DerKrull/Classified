@@ -208,7 +208,7 @@ public class Spiel {
     public void frage1(){
         id = 1;
         choice2.setVisible(true);
-        questionTextArea.setText("Wie viele Stunden investierst du pro Woche für Mathe?");
+        questionTextArea.setText("Wie viele Stunden investierst du pro Woche f\u00FCr Mathe?");
         choice1.setText("Weniger als 5 Std.");
         choice2.setText("Mehr als 5 Std.");
         choice3.setVisible(false);
@@ -219,7 +219,7 @@ public class Spiel {
     }
     public void cho1(){
         id = 2;
-        questionTextArea.setText("Mathe läuft schlecht!");
+        questionTextArea.setText("Mathe l\u00E4uft schlecht!");
         choice1.setText("Weiter");
         choice2.setVisible(false);
 		choice5.setVisible(false);
@@ -229,7 +229,7 @@ public class Spiel {
     }
     public void cho2(){
         id = 3;
-        questionTextArea.setText("Mathe läuft sehr gut ");
+        questionTextArea.setText("Mathe l\u00E4uft sehr gut ");
         choice1.setText("Weiter");
         choice2.setVisible(false);
 		choice5.setVisible(false);
@@ -254,7 +254,7 @@ public class Spiel {
     
     public void frage3(){
         id = 5;
-        questionTextArea.setText("Willst du deine Entscheidung überdenken");
+        questionTextArea.setText("Willst du deine Entscheidung \u00FCberdenken");
         choice1.setText("Ja, ich werde mir doch eine Lerngruppe suchen");
         choice2.setVisible(true);
         choice2.setText("Nein, ich schaffe das ohne Lerngruppe");
@@ -266,7 +266,7 @@ public class Spiel {
     }
     public void frage4(){
         id = 6;
-        questionTextArea.setText("Nun zum nächsten Modul. Hast du bereits Vorkenntnisse in Java?");
+        questionTextArea.setText("Nun zum n\u00E4chsten Modul. Hast du bereits Vorkenntnisse in Java?");
         choice1.setText("Ja, ich habe bereits Vorkenntnisse in Java");
         choice2.setVisible(true);
         choice2.setText("Nein, ich habe noch nichts mit Java zu tun gehabt");
@@ -320,10 +320,10 @@ public class Spiel {
  
     public void frage8(){
         id = 10;
-        questionTextArea.setText("Du hast die Möglichkeit einen Nebenjob zu machen um deine \nHaushaltskasse etwas aufzubessern ");
-        choice1.setText("Das hört sich vernünftig an, dann bin ich \n maximal selbstständig");
+        questionTextArea.setText("Du hast die M\u00F6glichkeit einen Nebenjob zu machen um deine \nHaushaltskasse etwas aufzubessern ");
+        choice1.setText("Das h\u00F6rt sich vern\u00FCnftig an, dann bin ich \n maximal selbstst\u00E4ndig");
         choice2.setVisible(true);
-        choice2.setText("Ach, das passt schon ich hab andere Quellen die mich unterstützen, da\"\nmuss ich selbst nicht arbeiten gehen");
+        choice2.setText("Ach, das passt schon ich hab andere Quellen die mich unterst\u00FCtzen, da\"\nmuss ich selbst nicht arbeiten gehen");
         choice3.setVisible(false);
         choice4.setVisible(false);
 		choice5.setVisible(false);
@@ -347,9 +347,9 @@ public class Spiel {
         questionTextArea.setText("Aus welchen Quellen kommt denn das Geld? ");
         choice1.setText("Meine Eltern");
         choice2.setVisible(true);
-        choice2.setText("Bafög");
+        choice2.setText("Baf\u00F6g");
         choice3.setVisible(true);
-        choice3.setText("Ich hab meine Eltern und Bafög");
+        choice3.setText("Ich hab meine Eltern und Baf\u00F6g");
         choice4.setVisible(false);
 		choice5.setVisible(false);
         
@@ -357,10 +357,10 @@ public class Spiel {
     }
     public void frage11(){
         id = 13;
-        questionTextArea.setText("In der Uni steht die erste Prüfung kurz vor der Tür,\ngleichzeitig hat aber auch dein bester Freund seinen 18. Geburtstag. Was machst du? ");
+        questionTextArea.setText("In der Uni steht die erste Pr\u00FCfung kurz vor der T\u00FCr,\ngleichzeitig hat aber auch dein bester Freund seinen 18. Geburtstag. Was machst du? ");
         choice1.setText("Gar keine Frage, man wird nur einmal 18. Das kann ich nicht\n verpassen!");
         choice2.setVisible(true);
-        choice2.setText("Das Studium hat auf jeden Fall Priorität, sonst wäre ja das ganze\"\nSemester umsonst gewesen!");
+        choice2.setText("Das Studium hat auf jeden Fall Priorit\u00E4t, sonst w\u00E4re ja das ganze\"\nSemester umsonst gewesen!");
         choice3.setVisible(false);
         choice4.setVisible(false);
 		choice5.setVisible(false);
@@ -369,7 +369,7 @@ public class Spiel {
     }
     public void frage12(){
         id = 14;
-        questionTextArea.setText("Du warst feiern und wachst am Morgen der Prüfung in einem Regio\nin Erfurt auf und wunderst dich wie du es soweit geschafft hast ");
+        questionTextArea.setText("Du warst feiern und wachst am Morgen der Pr\u00FCfung in einem Regio\nin Erfurt auf und wunderst dich wie du es soweit geschafft hast ");
         choice1.setText("Was soll man machen. Immer nach vorne schauen\"");
         choice2.setVisible(false);
         choice3.setVisible(false);
@@ -380,7 +380,7 @@ public class Spiel {
     }
     public void frage13(){
         id = 15;
-        questionTextArea.setText("Du hast aufgrund deiner ungeplanten Reise nicht mehr rechtzeitig \nzur Prüfung geschafft und musst sie wiederholen! ");
+        questionTextArea.setText("Du hast aufgrund deiner ungeplanten Reise nicht mehr rechtzeitig \nzur Pr\u00FCfung geschafft und musst sie wiederholen! ");
         choice1.setText("Dann mach ich das dieses mal aber richtig");
         choice2.setVisible(false);
         choice3.setVisible(false);
@@ -391,7 +391,7 @@ public class Spiel {
     }
     public void frage14(){
         id = 16;
-        questionTextArea.setText("Du hast die Prüfung geschrieben und bestanden herzlichen\nGlückwunsch.\\n Auf gehts ins nächste Semester ");
+        questionTextArea.setText("Du hast die Pr\u00FCfung geschrieben und bestanden herzlichen\nGl\u00FCckwunsch.\\n Auf gehts ins n\u00E4chste Semester ");
         choice1.setText("Und los!");
         choice2.setVisible(false);
         choice3.setVisible(false);
@@ -414,7 +414,7 @@ public class Spiel {
     
     public void frage16(){
         id = 18;
-        questionTextArea.setText("Wähle eine der Spezialisierungen.");
+        questionTextArea.setText("W\u00E4hle eine der Spezialisierungen.");
         choice1.setText("Embedded Systems");
         choice2.setVisible(true);
         choice2.setText("Internet Engineering");
@@ -428,7 +428,7 @@ public class Spiel {
     }  
     public void frage17(){
         id = 19;
-        questionTextArea.setText("Besuchst du regelmäßig die Veranstalltungen (Vorlesungen, etc.)");
+        questionTextArea.setText("Besuchst du regelm\u00E4ßig die Veranstalltungen (Vorlesungen, etc.)");
         choice1.setText("Ja");
         choice2.setVisible(true);
         choice2.setText("Nein");
@@ -449,8 +449,8 @@ public class Spiel {
     }
     public void frage19(){
         id = 21;
-        questionTextArea.setText("Ändere deine Spezialisierung oder wechsel den Studiengang?");
-        choice1.setText("Spezialisierung ändern!");
+        questionTextArea.setText("\u00E4ndere deine Spezialisierung oder wechsel den Studiengang?");
+        choice1.setText("Spezialisierung \u00E4ndern!");
         choice2.setVisible(true);
         choice2.setText("Studiengang wechseln!");
         choice3.setVisible(false);
@@ -468,7 +468,7 @@ public class Spiel {
     }
     public void wiederholungsfrage16(){
         id = 1000;
-        questionTextArea.setText("Wähle eine der Spezialisierungen.");
+        questionTextArea.setText("W\u00E4hle eine der Spezialisierungen.");
         choice1.setText("Embedded Systems");
         choice2.setVisible(true);
         choice2.setText("Internet Engineering");
@@ -483,7 +483,7 @@ public class Spiel {
     
     public void frage21(){
         id = 23;
-        questionTextArea.setText("Du hast die nächsten Semester soweit gemeistert! \nSemesterferien stehen an! Ab ins Privatleben!");
+        questionTextArea.setText("Du hast die n\u00E4chsten Semester soweit gemeistert! \nSemesterferien stehen an! Ab ins Privatleben!");
         choice1.setText("Weiter");
         choice2.setVisible(false);
         choice3.setVisible(false);
@@ -580,7 +580,7 @@ public class Spiel {
     }
     public void frage31(){
         id = 33;
-        questionTextArea.setText("Hast du dchon ein Thema für dein Bachelor Arbeit?");
+        questionTextArea.setText("Hast du dchon ein Thema f\u00FCr dein Bachelor Arbeit?");
         choice1.setText("Ja");
         choice2.setVisible(true);
         choice2.setText("Nein");
@@ -600,7 +600,7 @@ public class Spiel {
     }
     public void frage33(){
         id = 35;
-        questionTextArea.setText("Du hast dich verschätzt und hast nicht geschafft dich gut vorzubreiten.");
+        questionTextArea.setText("Du hast dich versch\u00E4tzt und hast nicht geschafft dich gut vorzubreiten.");
         choice1.setText("Weiter");
         choice2.setVisible(false);
         choice3.setVisible(false);
@@ -636,7 +636,7 @@ public class Spiel {
     }
     public void ende(){
         id = 39;
-        questionTextArea.setText("Hier endet dein Aufstieg als Informatiker. Vielen dank für das Spielen. ");
+        questionTextArea.setText("Hier endet dein Aufstieg als Informatiker. Vielen dank f\u00FCr das Spielen. ");
         choice1.setText("Spiel beenden");
     }
     
@@ -703,9 +703,9 @@ public class Spiel {
                 break;
                 case 7 :
                     switch (yourChoice){
-                        case "a1": JOptionPane.showMessageDialog(null, "Du hast es geschafft und die Prüfung bestanden.\nUnd jetzt\ngeht's weg von der Uni ab nach Hause ins Privatleben");
+                        case "a1": JOptionPane.showMessageDialog(null, "Du hast es geschafft und die Pr\u00FCfung bestanden.\nUnd jetzt\ngeht's weg von der Uni ab nach Hause ins Privatleben");
                         frage6(); break;
-                        case "a2": JOptionPane.showMessageDialog(null, "Du musst viel Zeit investieren um in Prog1 am Ball zu bleiben. Du\nhast weniger Zeit für andere Dinge");
+                        case "a2": JOptionPane.showMessageDialog(null, "Du musst viel Zeit investieren um in Prog1 am Ball zu bleiben. Du\nhast weniger Zeit f\u00FCr andere Dinge");
                         frage6(); break;
 						default: break;
                         
@@ -722,9 +722,9 @@ public class Spiel {
                 break;
                 case 9 :
                     switch (yourChoice){
-                        case "a1": JOptionPane.showMessageDialog(null, "Du hast coole Mitbewohner, aber auch deine Ruhe, wenn du lernen\nmusst. Allerdigns sind deine Ausgaben höher");
+                        case "a1": JOptionPane.showMessageDialog(null, "Du hast coole Mitbewohner, aber auch deine Ruhe, wenn du lernen\nmusst. Allerdigns sind deine Ausgaben h\u00F6her");
                             frage8(); break;
-                        case "a2": JOptionPane.showMessageDialog(null, "Du wohnst alleine und kannst machen was du willst, in Ruhe\nlernen, feiern gehen, worauf du Lust hast! Allerdings ist die Wohnung nicht ganz günstig!");
+                        case "a2": JOptionPane.showMessageDialog(null, "Du wohnst alleine und kannst machen was du willst, in Ruhe\nlernen, feiern gehen, worauf du Lust hast! Allerdings ist die Wohnung nicht ganz g\u00FCnstig!");
                             frage8(); break;
 							default: break;
                     }
@@ -785,11 +785,11 @@ public class Spiel {
                 break;
                 case 18:
                     switch (yourChoice){
-                        case "a1": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
-                        case "a2": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
-                        case "a3": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
-                        case "a4": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage17(); break;
-                        case "a5": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage17(); break;
+                        case "a1": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Spezialisierung.");frage17(); break;
+                        case "a2": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Spezialisierung.");frage17(); break;
+                        case "a3": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Spezialisierung.");frage17(); break;
+                        case "a4": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Spezialisierung.");frage17(); break;
+                        case "a5": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Wahl.");frage17(); break;
 						default: break;
                     }
                 break;
@@ -817,11 +817,11 @@ public class Spiel {
                 break;
                 case 1000:
                     switch(yourChoice){
-                        case "a1": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
-                        case "a2": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
-                        case "a3": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
-                        case "a4": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Spezialisierung.");frage21(); break;
-                        case "a5": JOptionPane.showMessageDialog(null,"Du belegst 3 Fächer deiner Wahl.");frage21(); break;
+                        case "a1": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Spezialisierung.");frage21(); break;
+                        case "a2": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Spezialisierung.");frage21(); break;
+                        case "a3": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Spezialisierung.");frage21(); break;
+                        case "a4": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Spezialisierung.");frage21(); break;
+                        case "a5": JOptionPane.showMessageDialog(null,"Du belegst 3 F\u00E4cher deiner Wahl.");frage21(); break;
 						default: break;
                     }
                 break;
