@@ -313,6 +313,7 @@ public class Game {
     boolean gameOver = true;
     clearScreen();
 
+    gameloop:
     while (gameOver) {
       currentStep = checkGivenAnswer(currentStep, steps);
       currentStep = checkUsesSpecialization(currentStep, steps);
@@ -326,7 +327,7 @@ public class Game {
 
       String input = in.nextLine();
       if (isQuitConfirmed(input)) {
-        break;
+        break gameloop;
       }
       int answer = checkInput(input, currentStep);
 
@@ -334,7 +335,7 @@ public class Game {
         System.out.println("Fehler bei der Eingabe. Bite erneut versuchen:");
         input = in.nextLine();
         if (isQuitConfirmed(input)) {
-          break;
+          break gameloop;
         }
         answer = checkInput(input, currentStep);
       }
@@ -351,7 +352,8 @@ public class Game {
 
   public static boolean isQuitConfirmed(String input) {
     if (input.charAt(0) == 'q') {
-      System.out.println("\u001B[31m\nMöchten sie das Spiel wirklich beenden?\n1 - Ja\n2 - Nein \u001B[0m");
+      System.out.println("\u001B[31m\nMöchten sie das Spiel wirklich beenden?\n1 - Ja\n2 - Nein"
+          + " \u001B[0m");
       Scanner in = new Scanner(System.in);
       
 
@@ -359,9 +361,12 @@ public class Game {
         input = in.nextLine();
         if (input.length() == 1) {
           if (input.startsWith("1")) {
+            clearScreen();
             return true;
           }
           if (input.startsWith("2")) {
+            System.out.print('\b');
+            System.out.print("\033[4A\033[0J");
             return false;
           }
         }
