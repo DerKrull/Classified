@@ -1,6 +1,5 @@
-# ReadMe
 
-### CLassified - Das Spiel Projekt
+# CLassified - Das Spiel Projekt
 
 Das Team
 --------
@@ -8,10 +7,10 @@ Das Team
 + Omar Saloom Alissa: Entwickler und ***Schöpfer der GUI
 + Felix Krull: Entwickler und ***Product Owner
 
-Das Spiel
----------
+## Das Spiel
 
-# Systemvorraussetzungen
+Systemvorraussetzungen
+---------------------- 
 
 + eine möglichst aktuelle Java-Version
 > Wichtig: Die Systeumgebungsvariablen müssen gesetzt sein, um die .java - Datei von der Consolen starten zu können
@@ -27,7 +26,7 @@ Das Spiel
   
 
 Die Geschichte
----------------
+--------------
 
 
 # Anfänglicher Entwurf zu den Fragen und deren Ablauf
