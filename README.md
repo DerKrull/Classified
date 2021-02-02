@@ -24,6 +24,9 @@ Das Team
   + eine angeschlossene und betriebsbereite Maus
   + eine beliebige Shell zum ausführen der .java Datei
 
+### Das Konzept / Die Idee
+
++ Test
 
 ------------------  
 
