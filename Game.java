@@ -302,6 +302,7 @@ public class Game {
           });
     steps[56] = new LiveStep(56, "Steuerung\n \nDie Steuerung ist sehr einfach.\nDir werden "
     + "verschiedene Wahlmöglichkeiten gegeben.\nDu entscheidest dich mit Zahlen von 1 - 5.\n"
+    + "Mit q beendest du das Spiel.\n"
     + "Manchmal werden Ergebnisse geschehen auf die du keinen Einfluss drauf hast.\nEs werden "
     + "auch größere Entscheidungen getroffen, wo du bis zu 5 Wahlmöglichkeiten hast.",
         new LiveChoice[]{
