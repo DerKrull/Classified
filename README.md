@@ -42,8 +42,7 @@ Informatik-Studium zu spielen. Ein großer Vorteil dieses Konzepts ist die Mögl
 Die Umsetzung in der Konsole basiert in der Version 1.0 auf folgenden Klassen:
 + Game.java
 + LiveStep.java
-+ LiveChoice.java
-
++ LiveChoice.java  
 
 
 #### Game-Klasse
@@ -57,8 +56,7 @@ Was beinhaltet die Game-Klasse?
   + clearScreen
   + checkGivenAnswer
   + checkUsesSpecialization
-  + checkInput
-
+  + checkInput  
 
 
 #### LiveStep-Klasse
@@ -74,8 +72,7 @@ Was beinhaltet die LiveStep-Klasse?
   + alternativeStep
   + usesSpecialization
 + Konstruktor (id, description, choices)
-+ Getter und Setter für alle Attribute
-
++ Getter und Setter für alle Attribute  
 
 
 #### LiveChoice.Klasse
