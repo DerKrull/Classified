@@ -10,7 +10,7 @@ Das Team
 ## Das Spiel
 
 Systemvorraussetzungen
----------------------- 
+______________________
 
 + eine möglichst aktuelle Java-Version
 > Wichtig: Die Systeumgebungsvariablen müssen gesetzt sein, um die .java - Datei von der Consolen starten zu können
@@ -26,17 +26,17 @@ Systemvorraussetzungen
   
 
 Die Geschichte
---------------
+______________
 
 
-# Anfänglicher Entwurf zu den Fragen und deren Ablauf
+### Anfänglicher Entwurf zu den Fragen und deren Ablauf
 
 ![Frage1](Pictures_Readme/Fragen1.png)
 ![Frage2](Pictures_Readme/Fragen2.png)
 ![Frage3](Pictures_Readme/Fragen3.png)
 ![Frage4](Pictures_Readme/Fragen4.png)
 
-# Anfänglicher Entwurf zum grundlegenden Spielablauf
+### Anfänglicher Entwurf zum grundlegenden Spielablauf
 
 Stand der Game.java
 ![Skizze1](Pictures_Readme/GameStruktur.jpg)
