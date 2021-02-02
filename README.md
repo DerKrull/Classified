@@ -45,6 +45,7 @@ Die Umsetzung in der Konsole basiert in der Version 1.0 auf folgenden Klassen:
 + LiveChoice.java
 
 
+
 #### Game-Klasse
 
 Was beinhaltet die Game-Klasse?
@@ -57,6 +58,7 @@ Was beinhaltet die Game-Klasse?
   + checkGivenAnswer
   + checkUsesSpecialization
   + checkInput
+
 
 
 #### LiveStep-Klasse
@@ -73,6 +75,7 @@ Was beinhaltet die LiveStep-Klasse?
   + usesSpecialization
 + Konstruktor (id, description, choices)
 + Getter und Setter für alle Attribute
+
 
 
 #### LiveChoice.Klasse
@@ -96,6 +99,7 @@ Was beinhaltet die LiveChoice-Klasse?
 ![Frage2](Pictures_Readme/Fragen2.png)
 ![Frage3](Pictures_Readme/Fragen3.png)
 ![Frage4](Pictures_Readme/Fragen4.png)
+
 
 ### Anfänglicher Entwurf zum grundlegenden Spielablauf
 
