@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Game {
   public static void main(String[] args) {   
-    //TODO add all Questions
     int sumQuestions = 58;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
@@ -163,7 +162,7 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 33)
           });
-    steps[30] = new LiveStep(30, "Na dann, aber immer dran bleiben!", //TODO Auswirkung Privatleben
+    steps[30] = new LiveStep(30, "Na dann, aber immer dran bleiben!", 
         new LiveChoice[]{
           new LiveChoice(weiter, 33)
           });
