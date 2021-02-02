@@ -370,14 +370,14 @@ public class Game {
   }
 
   public static Player checkChangeCredit(LiveChoice[] choices, Player user, int answer) {
-      int creditChange = choices[answer-1].getChangeCredit();
-      if (creditChange < 0) {
-        user.removeMoney(Math.abs(creditChange));
-        return user;
-      } else if (creditChange > 0) {
-        user.addMoney(creditChange);
-        return user;
-      }
+    int creditChange = choices[answer-1].getChangeCredit();
+    if (creditChange < 0) {
+      user.removeMoney(Math.abs(creditChange));
+      return user;
+    } else if (creditChange > 0) {
+      user.addMoney(creditChange);
+      return user;
+    }
     return user;
     }
   
