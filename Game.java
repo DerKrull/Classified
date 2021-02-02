@@ -21,7 +21,7 @@ public class Game {
     steps[2] = new LiveStep(2, "Mathe läuft schlecht!", new LiveChoice[]{
       new LiveChoice(weiter, 4)
       });
-    steps[3] = new LiveStep(3, "Mathe läugt sehr gut", new LiveChoice[]{
+    steps[3] = new LiveStep(3, "Mathe läuft sehr gut", new LiveChoice[]{
       new LiveChoice(weiter, 7)
       });
     steps[4] = new LiveStep(4, "Suchst du bereits eine Lerngruppe?", new LiveChoice[]{
@@ -223,7 +223,8 @@ public class Game {
           new LiveChoice("2 -Nein!", 42)
           });
     steps[40].getChoices()[0].setChangeCredit(-150);
-    steps[41] = new LiveStep(41, "Mehr/Weniger Kosten!",
+    steps[41] = new LiveStep(41, "Der Umzug in eure Wohnung hat etwas Geld gekostet, aber "
+    + "die Haushaltskasse wird das schon verkraften.",
         new LiveChoice[]{
           new LiveChoice(weiter, 43)
           });
@@ -234,8 +235,8 @@ public class Game {
           });
     steps[43] = new LiveStep(43, "Du bekommst ein Jobangebot im Bereich ",
         new LiveChoice[]{
-          new LiveChoice("1 -Jobangebot annehmen!", 44),
-          new LiveChoice("2 -Jobangebot ablehnen!", 45)
+          new LiveChoice("1 -Jobangebot annehmen und Studium abbrechen!", 44),
+          new LiveChoice("2 -Jobangebot ablehnen und Studium fortsetzen!", 45)
           });
     steps[43].setUsesSpecialization(true);
     steps[44] = new LiveStep(44, "Du begibst dich ins Berufsleben!",
@@ -247,7 +248,7 @@ public class Game {
           new LiveChoice(weiter, 46)
           });
     //Stage3
-    steps[46] = new LiveStep(46, "Hast du schon ein Thema?",
+    steps[46] = new LiveStep(46, "Hast du schon ein Thema für deine Bachelorarbeit?",
         new LiveChoice[]{
           new LiveChoice("1 - Ja", 47),
           new LiveChoice("2 - Nein", 47)
@@ -309,7 +310,7 @@ public class Game {
           });
     steps[56] = new LiveStep(56, "Steuerung\n \nDie Steuerung ist sehr einfach.\nDir werden "
     + "verschiedene Wahlmöglichkeiten gegeben.\nDu entscheidest dich mit Zahlen von 1 - 5.\n"
-    + "Manchmal werden Ergebnisse geschehen, wo du keinen Einfluss drauf hast.\nEs werden "
+    + "Manchmal werden Ergebnisse geschehen auf die du keinen Einfluss drauf hast.\nEs werden "
     + "auch größere Entscheidungen getroffen, wo du bis zu 5 Wahlmöglichkeiten hast.",
         new LiveChoice[]{
           new LiveChoice(weiter, 1)
