@@ -11,7 +11,6 @@ Das Team
 
 ### Systemvorraussetzungen
 
---------------------------
 
 + eine möglichst aktuelle Java-Version
 > Wichtig: Die Systeumgebungsvariablen müssen gesetzt sein, um die .java - Datei von der Consolen starten zu können
@@ -24,11 +23,12 @@ Das Team
   + eine angeschlossene und betriebsbereite Tastatur
   + eine angeschlossene und betriebsbereite Maus
   + eine beliebige Shell zum ausführen der .java Datei
-  
+
+
+------------------  
 
 ### Die Geschichte
 
-------------------
 
 
 ### Anfänglicher Entwurf zu den Fragen und deren Ablauf
