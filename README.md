@@ -39,4 +39,4 @@
 # Anfänglicher Entwurf zum grundlegenden Spielablauf
 
 Stand der Game.java
-![Skizze1](pictures/GameStruktur.jpg)
+![Skizze1](Pictures_Readme/GameStruktur.jpg)
