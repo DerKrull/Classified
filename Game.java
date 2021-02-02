@@ -325,11 +325,17 @@ public class Game {
       }
 
       String input = in.nextLine();
+      if (isQuitConfirmed(input)) {
+        break;
+      }
       int answer = checkInput(input, currentStep);
 
       while (answer == -1) {
         System.out.println("Fehler bei der Eingabe. Bite erneut versuchen:");
         input = in.nextLine();
+        if (isQuitConfirmed(input)) {
+          break;
+        }
         answer = checkInput(input, currentStep);
       }
 
@@ -341,6 +347,28 @@ public class Game {
       currentStep = steps[id];
       clearScreen(); 
     }
+  }
+
+  public static boolean isQuitConfirmed(String input) {
+    if (input.charAt(0) == 'q') {
+      System.out.println("\u001B[31m\nMöchten sie das Spiel wirklich beenden?\n1 - Ja\n2 - Nein \u001B[0m");
+      Scanner in = new Scanner(System.in);
+      
+
+      while (true) {
+        input = in.nextLine();
+        if (input.length() == 1) {
+          if (input.startsWith("1")) {
+            return true;
+          }
+          if (input.startsWith("2")) {
+            return false;
+          }
+        }
+        System.out.println("Fehler bei der Eingabe. Bitte erneut versuchen:");
+      }
+    }
+    return false;
   }
 
   public static int checkInput(String input, LiveStep currentStep) {
