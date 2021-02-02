@@ -9,8 +9,9 @@ Das Team
 
 ## Das Spiel
 
-Systemvorraussetzungen
-**********************
+### Systemvorraussetzungen
+
+--------------------------
 
 + eine möglichst aktuelle Java-Version
 > Wichtig: Die Systeumgebungsvariablen müssen gesetzt sein, um die .java - Datei von der Consolen starten zu können
@@ -25,8 +26,9 @@ Systemvorraussetzungen
   + eine beliebige Shell zum ausführen der .java Datei
   
 
-Die Geschichte
-**********************
+### Die Geschichte
+
+------------------
 
 
 ### Anfänglicher Entwurf zu den Fragen und deren Ablauf
