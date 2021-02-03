@@ -71,8 +71,8 @@ Diese Attribute werden jedoch erst später z.B. in der **checkGivenAnswer**-Meth
     currentStep = checkUsesSpecialization(currentStep, steps);
 ```
 
-Zuerst werden in der ***While-Schleife*** die zwei Methoden [checkGivenAnswer](GameClass.md/checkGivenAnswer) und [checkUsesSpecialization](GameClass.md/checkUsesSpecialization) auf `currentStep` 
-ausgeführt, da sie diesen beeinflussen.
+Zuerst werden in der ***While-Schleife*** die zwei Methoden [checkGivenAnswer](GameClass.md/checkGivenAnswer) und [checkUsesSpecialization](GameClass.md/checkUsesSpecialization) 
+auf `currentStep` ausgeführt, da sie diesen beeinflussen.
 
 ```java
     System.out.println(currentStep.getDescription());
@@ -82,9 +82,9 @@ ausgeführt, da sie diesen beeinflussen.
       System.out.println(choices[i].getDescription());
     }
 ```
-In diesem Abschnitt wird zuerst die Frage, also die Description des LiveSteps mittels `currentStep.getDescription` Danach wird ein **Livechoice[]** angelegt, in das mittels 
-´currentStep.getChoices()` die im [LiveStep](LiveStepClass.md) gespeicherten Antworten übergeben werden. Die for-schleife geht dann jedes Element des `choices` Array durch und gibt 
-auch von diesen [LiveChoices](LiveChoiceClass.md) die Beschreibung mittels **.getDescription** aus.
+In diesem Abschnitt wird zuerst die Frage, also die Description des LiveSteps mittels `currentStep.getDescription` Danach wird ein **Livechoice[]** angelegt, in das mittels
+´currentStep.getChoices()` die im [LiveStep](LiveStepClass.md) gespeicherten Antworten übergeben werden. Die for-schleife geht dann jedes Element des `choices` Array durch
+und gibt auch von diesen [LiveChoices](LiveChoiceClass.md) die Beschreibung mittels **.getDescription** aus.
 
 
 ```java
@@ -100,8 +100,9 @@ auch von diesen [LiveChoices](LiveChoiceClass.md) die Beschreibung mittels **.ge
 Der nächste Abschnitt betrifft die Eingabe der Antwort. Diese wird zunächst als **String** über `.nextLine()` von der Konsole eingelesen.
 Danach wird eine Variable `int answer` initialisiert, und auf den Rückgabewert der [checkInput](GameClass.md/checkInput)-Methode gesetzt.
 
-Für den Rückgabewert -1, hat die [checkInput](GameClass.md/checkInput)-Methode den Input als eine nicht zulässige Antwort indentifiziert. In diesem Fall, wird eine kurze Fehlermeldung
-ausgegeben und erneut auf eine Eingabe gewartet. Diese Eingabe wird dann wieder durch die Methode geprüft, dies geschieht solange bis eine Gültige Eingabe vorliegt.
+Für den Rückgabewert -1, hat die [checkInput](GameClass.md/checkInput)-Methode den Input als eine nicht zulässige Antwort indentifiziert. In diesem Fall, wird eine kurze
+Fehlermeldung ausgegeben und erneut auf eine Eingabe gewartet. Diese Eingabe wird dann wieder durch die Methode geprüft, dies geschieht solange bis eine Gültige Eingabe
+vorliegt.
 
 ```java
       steps[id].setChoiceTaken(answer);
@@ -110,12 +111,12 @@ ausgegeben und erneut auf eine Eingabe gewartet. Diese Eingabe wird dann wieder 
         gameOver = false;
       }
       currentStep = steps[id];
-	  clearScreen(); 
+      clearScreen(); 
 ```
 
-Dieser letzte Abschnitt dient der Speicherung der Antwort, sowie der Auswahl der nächsten Frage für den nächsten Schleifendurchlauf. 
+Dieser letzte Abschnitt dient der Speicherung der Antwort, sowie der Auswahl der nächsten Frage für den nächsten Schleifendurchlauf.
 In der ersten Zeile wird die gegebene antwort `answer` im Attribut ChoiceTaken des `steps` mit der aktuellen `id` gespeichert.
-Im zweiten Schritt wird die Id der nächsten Frage ermittelt. Hierzu wird die Id der folgenden Frage, die als Attribut in der LiveChoice-Klasse gespeichert ist ausgelesen. 
+Im zweiten Schritt wird die Id der nächsten Frage ermittelt. Hierzu wird die Id der folgenden Frage, die als Attribut in der LiveChoice-Klasse gespeichert ist ausgelesen.
 Dazu wird das Element aus dem Array genommen, das der gegebenen Antwort entspricht. Jedoch sind Antwort und Stelle des Elements um 1 verschoben (answer = 1 => choices[0])
 
 Darauf folgt eine **if-Verzweigung**. Diese dient dazu, die ***While-Schleife*** abzubrechen, sobald die letzte Frage erreicht ist, dabei ist `sumQuestions` die Länge des Arrays
@@ -151,7 +152,7 @@ An diese Methode wird der `String input` sowie der aktuelle `LiveStep currentSte
 
 Die Methode hat die Funktion zu prüfen, ob die eingegebene Antwort einer der gültigen Antworten auf die Frage entspricht. Ist dies der Fall entspricht der Rückgabewert der gegebenen
 Antwort, jedoch wird diese von einem **String** zu einem **Integer** umgewandelt. Ist die eingegeben Antwort nicht gültig, gibt die Methode **-1** zurück, dieser Wert wird in der
-Main-Methode als Fehlercode gewertet.
+Main-Methode als Fehlercode gewertet.  
 Geprüft wird die Eingabe, indem zuerst festgestellt wird, ob die Antwort die Länge 1 hat, da nur solche als gültige Antworten vorkommen. Ist dies der Fall, wird im Rahmen des ***try-Blocks***
 getestet, ob der Input eine Zahl ist und somit zu einem **Integer** konvertiert werden kann. Ist auch dies der Fall, wird als nächstes und letztes getestet, ob die Antwort einer Antwort
 der Frage entspricht, indem versucht wird, den LiveChoice an der eingegebenen Stelle aus dem LiveChoice-Array des currentStep in die Variable `testStep` zu speichern.
