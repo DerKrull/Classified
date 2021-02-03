@@ -32,7 +32,7 @@ Als Beispiel dient die erste Frage:
 Entsprechend dem Konstruktor der LiveStep Klasse wird jedes Objekt von `steps[]` erstellt.
 Zur LiveStep-Klasse: [LiveStep Dokumentation](LiveStepClass.md)
 
-Bei ausgewählten Fragen, werden weitere Attribute des `steps[]` gesetzt, wobei hier die *setter* der LiveStep Klasse benutzt werden.
+Bei ausgewählten Fragen, werden weitere Attribute des `steps[]` gesetzt, wobei hier die *setter* der [LiveStep](LiveStepClass.md) Klasse benutzt werden.
 Zum Beispiel die folgende Frage:
 
 ```java
@@ -60,7 +60,7 @@ Diese Attribute werden jedoch erst später z.B. in der **checkGivenAnswer**-Meth
     boolean gameOver = true;
 ```
 
-1. Die Variable `id` wird verwendet um durch das LiveStep Array zu navigieren, zu Beginn wird sie auf **0** gesetzt.
+1. Die Variable `id` wird verwendet um durch das [LiveStep](LiveStepClass.md) Array zu navigieren, zu Beginn wird sie auf **0** gesetzt.
 2. Die Variable `currentStep` enthält immer die aktuelle Frage und wird zu Beginn auf die erste Frage `steps[0]` gesetzt.
 3. Die Variable `gameOver` stellt die Bedingung für die ***while-Schleife*** und wird zu Beginn auf **true** gesetzt.
 
@@ -82,8 +82,8 @@ auf `currentStep` ausgeführt, da sie diesen beeinflussen.
       System.out.println(choices[i].getDescription());
     }
 ```
-In diesem Abschnitt wird zuerst die Frage, also die Description des LiveSteps mittels `currentStep.getDescription` Danach wird ein **Livechoice[]** angelegt, in das mittels
-´currentStep.getChoices()` die im [LiveStep](LiveStepClass.md) gespeicherten Antworten übergeben werden. Die for-schleife geht dann jedes Element des `choices` Array durch
+In diesem Abschnitt wird zuerst die Frage, also die Description des [LiveSteps](LiveStepClass.md) mittels `currentStep.getDescription` Danach wird ein **[LiveChoice[]](LiveChoiceClass.md)** 
+angelegt, in das mittels `currentStep.getChoices()` die im [LiveStep](LiveStepClass.md) gespeicherten Antworten übergeben werden. Die for-schleife geht dann jedes Element des `choices` Array durch
 und gibt auch von diesen [LiveChoices](LiveChoiceClass.md) die Beschreibung mittels **.getDescription** aus.
 
 
@@ -116,7 +116,7 @@ vorliegt.
 
 Dieser letzte Abschnitt dient der Speicherung der Antwort, sowie der Auswahl der nächsten Frage für den nächsten Schleifendurchlauf.
 In der ersten Zeile wird die gegebene antwort `answer` im Attribut ChoiceTaken des `steps` mit der aktuellen `id` gespeichert.
-Im zweiten Schritt wird die Id der nächsten Frage ermittelt. Hierzu wird die Id der folgenden Frage, die als Attribut in der LiveChoice-Klasse gespeichert ist ausgelesen.
+Im zweiten Schritt wird die Id der nächsten Frage ermittelt. Hierzu wird die Id der folgenden Frage, die als Attribut in der [LiveChoice](LiveChoiceClass.md)-Klasse gespeichert ist ausgelesen.
 Dazu wird das Element aus dem Array genommen, das der gegebenen Antwort entspricht. Jedoch sind Antwort und Stelle des Elements um 1 verschoben (answer = 1 => choices[0])
 
 Darauf folgt eine **if-Verzweigung**. Diese dient dazu, die ***While-Schleife*** abzubrechen, sobald die letzte Frage erreicht ist, dabei ist `sumQuestions` die Länge des Arrays
@@ -155,7 +155,7 @@ Antwort, jedoch wird diese von einem **String** zu einem **Integer** umgewandelt
 Main-Methode als Fehlercode gewertet.  
 Geprüft wird die Eingabe, indem zuerst festgestellt wird, ob die Antwort die Länge 1 hat, da nur solche als gültige Antworten vorkommen. Ist dies der Fall, wird im Rahmen des ***try-Blocks***
 getestet, ob der Input eine Zahl ist und somit zu einem **Integer** konvertiert werden kann. Ist auch dies der Fall, wird als nächstes und letztes getestet, ob die Antwort einer Antwort
-der Frage entspricht, indem versucht wird, den LiveChoice an der eingegebenen Stelle aus dem LiveChoice-Array des currentStep in die Variable `testStep` zu speichern.
+der Frage entspricht, indem versucht wird, den [LiveChoice](LiveChoiceClass.md) an der eingegebenen Stelle aus dem [LiveChoice](LiveChoiceClass.md)-Array des currentStep in die Variable `testStep` zu speichern.
 Wenn alle diese Bedingungen erfüllt sind, wird der zu einem Integer konvertierte `Input` zurück gegeben.
 
 ### checkUsesSpecialization

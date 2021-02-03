@@ -15,13 +15,13 @@
 
 + ***id*** dient der exakten Identifizierung der einzelnen LiveSteps beispielsweise im Array
 + In ***description*** wird der Text der Frage gespeichert
-+ In ***choices*** werden die Antwortmöglichkeiten mit dem Typ LiveChoice gespeichert
++ In ***choices*** werden die Antwortmöglichkeiten mit dem Typ [LiveChoice](LiveChoiceClass.md) gespeichert
 + In ***choiceTaken*** wird die Antwort gespeichert, die auf die Frage gegeben wurde
-+ Die Attribute ***neededPreviousStep***, ***neededPreviousAnswer*** sowie ***alternativeStep*** werden für die Methode [checkGivenAnswer](GameClass.md/checkGivenAnswer)
++ Die Attribute ***neededPreviousStep***, ***neededPreviousAnswer*** sowie ***alternativeStep*** werden für die Methode [checkGivenAnswer](GameClass.md#checkgivenanswer)
   benötigt. Hierzu wird in ***neededPreviousStep*** die ID der Frage gespeichert, welche in der Methode überprüft wird. In ***neededPreviousAnswer*** wird dann die Antwort gespeichert,
   die für das Auftauchen der aktuellen Frage benötigt wird. Ist die entsprechend benötigte Antwort nicht bei der zu überprüfenden Frage gegeben worden, wird ***alternativeStep***
   relevant, da in diesem Fall direkt auf die Frage gesprungen wird, deren Id in ***alternativeStep*** gespeichert wird.
-+ ***usesSpecialization*** ist für die Methode [checkUsesSpecialization](GameClass.md/checkUsesSpecialization) wichtig, da diese nur aktiv wird, sobald ***usesSpecialization*** den
++ ***usesSpecialization*** ist für die Methode [checkUsesSpecialization](GameClass.md#checkusesspecialization) wichtig, da diese nur aktiv wird, sobald ***usesSpecialization*** den
   Wert **true** hat.
   
 ## Konstruktor
