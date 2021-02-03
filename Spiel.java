@@ -200,7 +200,7 @@ public class Spiel {
     }
     public void einleitung(){
         id = 0;
-        questionTextArea.setText("Willkommen bei Classified!\nDieses Spiel soll den Aufstieg eines Informatikers \nsimulieren. Je nach dem, welche Entscheidungen du im \nSpiel triffst, wird sich deine Zukunft \u00E4ndern.\nDu beginnst im ersten Semester mit Mathematische \nGrundalagen der Informatik.\nJetzt viel Spaß bei unserem Spiel!");
+        questionTextArea.setText("Willkommen bei Classified!\nDieses Spiel soll den Aufstieg eines Informatikers \nsimulieren. Je nach dem, welche Entscheidungen du im \nSpiel triffst, wird sich deine Zukunft \u00E4ndern.\nDu beginnst im ersten Semester mit Mathematische \nGrundalagen der Informatik.\nJetzt viel Spa\u00DF bei unserem Spiel!");
         choice1.setText("Weiter");
         choice2.setVisible(false);
         choice3.setVisible(false);
