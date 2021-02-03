@@ -31,3 +31,26 @@ steps[1] = new LiveStep(1, "Du beginnst im ersten Semester mit Mathematische Gru
 
 Entsprechend dem Konstruktor der LiveStep Klasse wird jedes Objekt von `steps[]` erstellt.
 Zur LiveStep-Klasse: [LiveStep Dokumentation](LiveStepClass.md)
+
+Bei ausgewählten Fragen, werden weitere Attribute des `steps[]` gesetzt, wobei hier die *setter* der LiveStep Klasse benutzt werden.
+Zum Beispiel die folgende Frage:
+
+```java
+steps[17] = new LiveStep(17,  "Da du Vorkenntnisse in Java hast, kannst du nach einem"
+    + " entsprechenden Nebenjob suchen", new LiveChoice[]{
+      new LiveChoice("1 - Da kann ich auch gleich noch Praxiserfahrung sammeln, das klingt gut",
+       19),
+      new LiveChoice("2 - Ich suche mir lieber einen \"normalen\" Nebenjob und gehe kellnern",
+       19)
+      });
+    steps[17].setNeededPreviousStep(7);
+    steps[17].setNeededPreviousAnswer(1);
+    steps[17].setAlternativeStep(19);
+```
+	
+Diese Attribute werden jedoch erst später z.B. in der **checkGivenAnswer**-Methode benötigt.
+
+### Gameloop
+
+#### Initialisierung vor der While-Schleife
+
