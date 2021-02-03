@@ -66,4 +66,9 @@ Diese Attribute werden jedoch erst später z.B. in der **checkGivenAnswer**-Meth
 
 #### Die While-Schleife
 
+```java
+    currentStep = checkGivenAnswer(currentStep, steps);
+    currentStep = checkUsesSpecialization(currentStep, steps);
+```
 
+Zuerst werden in der ***While-Schleife*
