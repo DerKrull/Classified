@@ -1,8 +1,8 @@
 
 # CLassified - Das Spiel Projekt
 
-Das Team
---------
+## Das Team
+
 + Jonas Wagner: Entwickler und ***Scrummaster***
 + Omar Saloom Alissa: Entwickler und ***Schöpfer der GUI***
 + Felix Krull: Entwickler und ***Product Owner***
@@ -29,7 +29,7 @@ Das Team
 ### Das Konzept / Die Idee
 
 Die Spielidee stammt von dem Brettspiel "Spiel des Lebens" ab. Dabei handelt es sich um ein Spiel, bei dem man mit seiner Spielfigur ein "ganzes Leben" durchlebt, dabei entscheidet
-hier der Würfel, was als nächstes passiert. Im Laufe des Spiels kann man dann auf Felder kommen, w.z.B. "Du wirst verhaftet - Eine Runde aussetzen", "Du hast bei einem Gewinnspiel 
+hier der Würfel, was als nächstes passiert. Im Laufe des Spiels kann man dann auf Felder kommen, w.z.B. "Du wirst verhaftet - Eine Runde aussetzen", "Du hast bei einem Gewinnspiel
 2.000€ gewonnen" oder aber Entscheidungs-Felder w.z.B. "Du hast die Möglichkeit in Aktien zu investieren".
 
 Diese Spielidee wird in unserem Spiel aufgegriffen, jedoch wollten wir die Felder nicht sturr kopieren, sodass man in unserem Spiel die Möglichkeit hat, das Leben rund um ein
@@ -84,7 +84,7 @@ Was beinhaltet die LiveChoice-Klasse?
 + Konstruktor
 + Getter und Setter für alle Attribute
 
-------------------- 
+-------------------
 
 ### Die Geschichte
 
