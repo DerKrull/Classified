@@ -47,6 +47,8 @@ Die Umsetzung in der Konsole basiert in der Version 1.0 auf folgenden Klassen:
 
 #### Game-Klasse
 
+[ausführliche Dokumentation](dokumentation/GameClass.md)
+
 Was beinhaltet die Game-Klasse?
 + Main-Methode
   + Initialisierung des Fragen(LiveStep)-Arrays
@@ -60,6 +62,8 @@ Was beinhaltet die Game-Klasse?
 
 
 #### LiveStep-Klasse
+
+[ausführliche Dokumentation](dokumentation/LiveStepClass.md)
 
 Was beinhaltet die LiveStep-Klasse?
 + Attribute
@@ -76,6 +80,8 @@ Was beinhaltet die LiveStep-Klasse?
 
 
 #### LiveChoice.Klasse
+
+[ausführliche Dokumentation](dokumentation/LiveChoiceClass.md)
 
 Was beinhaltet die LiveChoice-Klasse?
 + Attribute
