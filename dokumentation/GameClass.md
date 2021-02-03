@@ -21,7 +21,7 @@
 Als Beispiel dient die erste Frage:
 
 ```java
-  steps[1] = new LiveStep(1, "Du beginnst im ersten Semester mit Mathematische Grundalagen "
+    steps[1] = new LiveStep(1, "Du beginnst im ersten Semester mit Mathematische Grundalagen "
     + "der Informatik. \nWie viele Stunden investierst du pro Woche für Mathe?",
         new LiveChoice[]{
           new LiveChoice("1 - Weniger als 5 Std.", 2),
@@ -36,7 +36,7 @@ Bei ausgewählten Fragen, werden weitere Attribute des `steps[]` gesetzt, wobei 
 Zum Beispiel die folgende Frage:
 
 ```java
-  steps[17] = new LiveStep(17,  "Da du Vorkenntnisse in Java hast, kannst du nach einem"
+    steps[17] = new LiveStep(17,  "Da du Vorkenntnisse in Java hast, kannst du nach einem"
     + " entsprechenden Nebenjob suchen", new LiveChoice[]{
       new LiveChoice("1 - Da kann ich auch gleich noch Praxiserfahrung sammeln, das klingt gut",
        19),
@@ -114,5 +114,53 @@ ausgegeben und erneut auf eine Eingabe gewartet. Diese Eingabe wird dann wieder 
 ```
 
 Dieser letzte Abschnitt dient der Speicherung der Antwort, sowie der Auswahl der nächsten Frage für den nächsten Schleifendurchlauf. 
+In der ersten Zeile wird die gegebene antwort `answer` im Attribut ChoiceTaken des `steps` mit der aktuellen `id` gespeichert.
+Im zweiten Schritt wird die Id der nächsten Frage ermittelt. Hierzu wird die Id der folgenden Frage, die als Attribut in der LiveChoice-Klasse gespeichert ist ausgelesen. 
+Dazu wird das Element aus dem Array genommen, das der gegebenen Antwort entspricht. Jedoch sind Antwort und Stelle des Elements um 1 verschoben (answer = 1 => choices[0])
+
+Darauf folgt eine **if-Verzweigung**. Diese dient dazu, die ***While-Schleife*** abzubrechen, sobald die letzte Frage erreicht ist, dabei ist `sumQuestions` die Länge des Arrays
+und `sumQuestions - 1` die Stelle des letzten Elements.
+
+Nach der Verzweigung wird der `currentStep` auf die Frage aus dem `steps` Array an der Stelle der neuen `id` gesetzt.
+
+Zum Schluss des Gameloops wird die Methode [clearScreen] aufgerufen, dabei löscht die Methode die gesamte Ausgabe die aktuell auf der Konsole steht. So wird jede Frage auf einem
+"neuen" und freien Bildschirm angezeigt.
+
+## Die weiteren Methoden
+
+### checkInput
+
+```java
+  public static int checkInput(String input, LiveStep currentStep) {
+    if (input.length() > 1) {
+      return -1;
+    } else {
+      int answer = 0;
+      try {
+        answer = Integer.parseInt(input);
+        LiveChoice testStep = currentStep.getChoices()[answer - 1];
+        return answer;
+      } catch (Exception e) {
+        return -1;
+      }
+    }
+  }
+```
+
+An diese Methode wird der `String input` sowie der aktuelle `LiveStep currentStep` weitergegeben. Der Rückgabewert der Methode ist ein Integer, der dann in der Main-Methode als Antwort weiter benutzt wird.
+
+Die Methode hat die Funktion zu prüfen, ob die eingegebene Antwort einer der gültigen Antworten auf die Frage entspricht. Ist dies der Fall entspricht der Rückgabewert der gegebenen
+Antwort, jedoch wird diese von einem **String** zu einem **Integer** umgewandelt. Ist die eingegeben Antwort nicht gültig, gibt die Methode **-1** zurück, dieser Wert wird in der
+Main-Methode als Fehlercode gewertet.
+Geprüft wird die Eingabe, indem zuerst festgestellt wird, ob die Antwort die Länge 1 hat, da nur solche als gültige Antworten vorkommen. Ist dies der Fall, wird im Rahmen des ***try-Blocks***
+getestet, ob der Input eine Zahl ist und somit zu einem **Integer** konvertiert werden kann. Ist auch dies der Fall, wird als nächstes und letztes getestet, ob die Antwort einer Antwort
+der Frage entspricht, indem versucht wird, den LiveChoice an der eingegebenen Stelle aus dem LiveChoice-Array des currentStep in die Variable `testStep` zu speichern.
+Wenn alle diese Bedingungen erfüllt sind, wird der zu einem Integer konvertierte `Input` zurück gegeben.
+
+### checkUsesSpecialization
+
+### checkGivenAnswer
+
+### clearScreen
 
 
