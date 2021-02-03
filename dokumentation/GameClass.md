@@ -5,12 +5,12 @@
 ### Variablen Dekleration
 
 ```java
-    Scanner in = new Scanner(System.in);    
+    Scanner in = new Scanner(System.in);
     int sumQuestions = 58;
     LiveStep[] steps = new LiveStep[sumQuestions];
     String weiter = "1 - Weiter";
 ```
-	
+
 + Scanner wird erstellt
 + die Anzahl der Fragen wird festgelegt
 + Das Array `steps` wird mit der Anzahl der Fragen `sumQuestions`initialisiert
