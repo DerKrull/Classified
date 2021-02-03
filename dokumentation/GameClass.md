@@ -54,3 +54,16 @@ Diese Attribute werden jedoch erst später z.B. in der **checkGivenAnswer**-Meth
 
 #### Initialisierung vor der While-Schleife
 
+```java
+    int id = 0;
+    LiveStep currentStep = steps[id];
+    boolean gameOver = true;
+```
+
+1. Die Variable `id` wird verwendet um durch das LiveStep Array zu navigieren, zu Beginn wird sie auf **0** gesetzt.
+2. Die Variable `currentStep` enthält immer die aktuelle Frage und wird zu Beginn auf die erste Frage `steps[0]` gesetzt.
+3. Die Variable `gameOver` stellt die Bedingung für die ***while-Schleife*** und wird zu Beginn auf **true** gesetzt.
+
+#### Die While-Schleife
+
+
