@@ -30,4 +30,4 @@ steps[1] = new LiveStep(1, "Du beginnst im ersten Semester mit Mathematische Gru
 ```
 
 Entsprechend dem Konstruktor der LiveStep Klasse wird jedes Objekt von `steps[]` erstellt.
-Zur LiveStep-Klasse: ![LiveStep Dokumentation](dokumentation/LiveStepClass.md)
+Zur LiveStep-Klasse: [LiveStep Dokumentation](LiveStepClass.md)
