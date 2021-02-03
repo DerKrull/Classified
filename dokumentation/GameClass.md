@@ -160,8 +160,70 @@ Wenn alle diese Bedingungen erfüllt sind, wird der zu einem Integer konvertiert
 
 ### checkUsesSpecialization
 
+```java
+  public static LiveStep checkUsesSpecialization(LiveStep currentStep, LiveStep[] steps) {
+    if (currentStep.getUsesSpecialization()) {
+      String description = currentStep.getDescription();
+      description += " " 
+        + steps[24].getChoices()[steps[24].getChoiceTaken() - 1].getDescription().substring(3);
+      currentStep.setDescription(description);
+      return currentStep;
+    } else {
+      return currentStep;
+    }
+  }
+```
+
+Dieser Methode werden die aktuelle Frage `currentStep` und das gesamte Fragen-Array `steps` übergeben. Der Rückgabewert der Methode ist die aktuelle Frage in ergänzter Form.  
+Die Methode überprüft zunächst, ob das Attribut **usesSpecialization** auf ***true*** gesetzt ist. In diesem Fall wird dem Fragentext am Ende die vorher gewählte Spezialisierung 
+angefügt. Die Methode wird nur nach der Frage der Wahl einer Spezialisierung verwendet, da sie vorher keinen Sinn.
+
+
 ### checkGivenAnswer
 
+```java
+  public static LiveStep checkGivenAnswer(LiveStep currentStep, LiveStep[] steps) {
+    if (currentStep.getNeededPreviousStep() != 0) {
+      int id = currentStep.getNeededPreviousStep();
+      LiveStep checkedStep = steps[id]; 
+
+      if (checkedStep.getChoiceTaken() == currentStep.getNeededPreviousAnswer()) {
+        return currentStep;
+      } else {
+        int nextStep = currentStep.getAlternativeStep();
+        return steps[nextStep];
+      }
+    } else {
+      return currentStep;
+    }
+
+  }
+```
+
+Dieser Methode werden die aktuelle Frage `currentStep` und das gesamte Fragen-Array `steps` übergeben. Der Rückgabewert der Methode ist die entweder die aktuelle Frage oder
+eine andere Frage.
+
+Die Methode überprüft zuerst, ob die aktuelle Frage von einer vorigen Frage bzw. Antwort abhängt. Dies ist der Fall, wenn das Attribut neededPreviousStep gesetzt und damit
+nicht 0 ist. Ist das Attribut nicht gesetzt, wird die aktuelle Frage zurückgegeben, da in diesem Fall keine vorigen Antworten relevant sind.
+Ist das Attribut gesetzt, wird in `id` die ID der zuüberprüfenden Frage gespeichert. Mit dieser ID wird dann die entsprechende Frage aus dem Fragen-Array `steps` an der Stelle
+`id` ausgewählt und in `checkedStep` gespeichert.  
+Dann wird überprüft, ob die Antwort die bei `checkedStep` gegeben wurde und über die Objektmethode `.getChoiceTaken()` abgerufen wird, der für die aktuelle Frage `currentStep`
+benötigten Antwort `currentStep.getNeededPreviousAnswer` entspricht. Sind diese beiden Antworten gleich, wird die aktuelle Frage `currentStep` zurückgegeben und die Frage in
+Folge dessen dargestellt.  
+Sind die Antworten nicht gleich, geht die Methode in den inneren **Else-Block**. Hier wird dann in `nextStep` die ID der alternativen Frage gespeichert. Anschließend wird die
+Frage mit dieser Id aus dem Fragen-Array `steps` ausgewählt und zurückgegeben.
+
+
 ### clearScreen
+
+```java
+  public static void clearScreen() {  
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();  
+  }
+```
+
+Diese Methode dient dazu, den Bildschirm zu "reseten" und ihn für die nächste Frage neuzuladen. Dies geschieht über ANSI Escape Codes.  
+Die Methode ist in der Wirkung vergleichbar mit dem Konsolenbefehl ***clear***.
 
 
