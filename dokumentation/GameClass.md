@@ -203,7 +203,7 @@ angefügt. Die Methode wird nur nach der Frage der Wahl einer Spezialisierung ve
 Dieser Methode werden die aktuelle Frage `currentStep` und das gesamte Fragen-Array `steps` übergeben. Der Rückgabewert der Methode ist die entweder die aktuelle Frage oder
 eine andere Frage.
 
-Die Methode überprüft zuerst, ob die aktuelle Frage von einer vorigen Frage bzw. Antwort abhängt. Dies ist der Fall, wenn das Attribut neededPreviousStep gesetzt und damit
+Die Methode überprüft zuerst, ob die aktuelle Frage von einer vorigen Frage bzw. Antwort abhängt. Dies ist der Fall, wenn das Attribut **neededPreviousStep** gesetzt und damit
 nicht 0 ist. Ist das Attribut nicht gesetzt, wird die aktuelle Frage zurückgegeben, da in diesem Fall keine vorigen Antworten relevant sind.
 Ist das Attribut gesetzt, wird in `id` die ID der zuüberprüfenden Frage gespeichert. Mit dieser ID wird dann die entsprechende Frage aus dem Fragen-Array `steps` an der Stelle
 `id` ausgewählt und in `checkedStep` gespeichert.  
