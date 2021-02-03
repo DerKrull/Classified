@@ -71,7 +71,7 @@ Diese Attribute werden jedoch erst später z.B. in der **checkGivenAnswer**-Meth
     currentStep = checkUsesSpecialization(currentStep, steps);
 ```
 
-Zuerst werden in der ***While-Schleife*** die zwei Methoden [checkGivenAnswer](GameClass.md/checkGivenAnswer) und [checkUsesSpecialization](GameClass.md/checkUsesSpecialization) 
+Zuerst werden in der ***While-Schleife*** die zwei Methoden [checkGivenAnswer](GameClass.md/checkGivenAnswer) und [checkUsesSpecialization](GameClass.md/checkUsesSpecialization)
 auf `currentStep` ausgeführt, da sie diesen beeinflussen.
 
 ```java
