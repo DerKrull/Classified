@@ -144,9 +144,9 @@ wird die Eingabe dann wieder durch die Methode [checkInput](GameClass.md/checkIn
 ```java
       steps[id].setChoiceTaken(answer);
       id = choices[answer - 1].getNextStep();
-	  
-	  user = checkChangeCredit(choices, user, answer);
-	  
+
+      user = checkChangeCredit(choices, user, answer);
+
       if (id == sumQuestions - 1) {
         gameOver = false;
       }
@@ -193,7 +193,7 @@ nur ein Objekt vom Typ **[Player](PlayerClass.md)**.
 
 Innerhalb der Methode wird in den **Integer** `creditChange` das LiveChoice-Attribut `ChangeCredit` übernommen, ist dieser Wert kleiner 0, wird der Betrag des Integer mittels der Objektmethode
 `removeMoney` der Betrag vom *Kontostand* des Spielers abgezogen. Ist der Wert größer 0, wird der Wert mittels der Objektmethode `.addMoney` auf den Kontostand des Spielers addiert.
-Die Methode gibt dann immer den möglicherweise bearbeiteten `user` zurück. 
+Die Methode gibt dann immer den möglicherweise bearbeiteten `user` zurück.
 
 ### isQuitConfirmed
 

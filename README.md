@@ -99,10 +99,10 @@ Was beinhaltet die Player-Klasse?
 + Getter und Setter für alle Attribute
   + addMoney
   + removeMoney
- 
+
 *[ausführliche Dokumentation](dokumentation/PlayerClass.md)*
-  
-  
+
+ 
 -------------------
 
 ### Die Geschichte
