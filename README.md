@@ -102,7 +102,7 @@ Was beinhaltet die Player-Klasse?
 
 *[ausführliche Dokumentation](dokumentation/PlayerClass.md)*
 
- 
+
 -------------------
 
 ### Die Geschichte
