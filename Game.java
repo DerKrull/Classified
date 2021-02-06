@@ -118,7 +118,8 @@ public class Game {
           + "ja das ganze"
           + " Semester umsonst gewesen!", 22)
           });
-    steps[20] = new LiveStep(20, "Du warst feiern und wachst am Morgen der Pr\u00fcfung in einem Regio"
+    steps[20] = new LiveStep(20, "Du warst feiern und wachst am Morgen der Pr\u00fcfung "
+    +"in einem Regio"
     + " in Erfurt auf und wunderst dich wie du es soweit geschafft hast", new LiveChoice[]{
       new LiveChoice("1 - Was soll man machen. Immer nach vorne schauen", 21)
       });
@@ -399,7 +400,8 @@ public class Game {
   
   public static boolean isQuitConfirmed(String input) {
     if (input.charAt(0) == 'q') {
-      System.out.println("\u001B[31m\nM\u00f6chten sie das Spiel wirklich beenden?\n1 - Ja\n2 - Nein"
+      System.out.println("\u001B[31m\nM\u00f6chten sie das Spiel wirklich "
+      + "beenden?\n1 - Ja\n2 - Nein"
           + " \u001B[0m");
       Scanner in = new Scanner(System.in);
       
