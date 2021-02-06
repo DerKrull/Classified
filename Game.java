@@ -401,7 +401,7 @@ public class Game {
   public static boolean isQuitConfirmed(String input) {
     if (input.charAt(0) == 'q') {
       System.out.println("\u001B[31m\nM\u00f6chten sie das Spiel wirklich "
-        + "beenden?\n1 - Ja\n2 - Nein"
+          + "beenden?\n1 - Ja\n2 - Nein"
           + " \u001B[0m");
       Scanner in = new Scanner(System.in);
       
