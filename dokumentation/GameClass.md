@@ -82,7 +82,7 @@ auf `currentStep` ausgeführt, da sie diesen beeinflussen.
       System.out.println(choices[i].getDescription());
     }
 ```
-In diesem Abschnitt wird zuerst die Frage, also die Description des [LiveSteps](LiveStepClass.md) mittels `currentStep.getDescription` Danach wird ein **[LiveChoice[]](LiveChoiceClass.md)** 
+In diesem Abschnitt wird zuerst die Frage, also die Description des [LiveSteps](LiveStepClass.md) mittels `currentStep.getDescription` Danach wird ein **[LiveChoice[]](LiveChoiceClass.md)**
 angelegt, in das mittels `currentStep.getChoices()` die im [LiveStep](LiveStepClass.md) gespeicherten Antworten übergeben werden. Die for-schleife geht dann jedes Element des `choices` Array durch
 und gibt auch von diesen [LiveChoices](LiveChoiceClass.md) die Beschreibung mittels **.getDescription** aus.
 
@@ -175,7 +175,7 @@ Wenn alle diese Bedingungen erfüllt sind, wird der zu einem Integer konvertiert
 ```
 
 Dieser Methode werden die aktuelle Frage `currentStep` und das gesamte Fragen-Array `steps` übergeben. Der Rückgabewert der Methode ist die aktuelle Frage in ergänzter Form.  
-Die Methode überprüft zunächst, ob das Attribut **usesSpecialization** auf ***true*** gesetzt ist. In diesem Fall wird dem Fragentext am Ende die vorher gewählte Spezialisierung 
+Die Methode überprüft zunächst, ob das Attribut **usesSpecialization** auf ***true*** gesetzt ist. In diesem Fall wird dem Fragentext am Ende die vorher gewählte Spezialisierung
 angefügt. Die Methode wird nur nach der Frage der Wahl einer Spezialisierung verwendet, da sie vorher keinen Sinn.
 
 
