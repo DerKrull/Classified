@@ -35,7 +35,8 @@ public class Game {
       new LiveChoice("1 - Ja, ich werde mir doch eine Lerngruppe suchen", 3),
       new LiveChoice("2 - Nein, ich schaffe das ohne Lerngruppe", 7)
       });
-    steps[7] = new LiveStep(7, "Nun zum n\u00e4chsten Modul. Hast du bereits Vorkenntnisse in Java?",
+    steps[7] = new LiveStep(7, "Nun zum n\u00e4chsten Modul. Hast du bereits Vorkenntnisse "
+    + "in Java?",
         new LiveChoice[]{
           new LiveChoice("1 - Ja, ich habe bereits Vorkenntnisse in Java", 8),
           new LiveChoice("2 - Nein, ich habe noch nichts mit Java zu tun gehabt", 9)
@@ -72,15 +73,18 @@ public class Game {
       new LiveChoice(weiter, 16)
       });
     steps[15] = new LiveStep(15, "Du wohnst alleine und kannst machen was du willst, in Ruhe" 
-    + " lernen, feiern gehen, worauf du Lust hast! Allerdings ist die Wohnung nicht ganz g\u00fcnstig!",
+    + " lernen, feiern gehen, worauf du Lust hast! Allerdings ist die Wohnung nicht ganz "
+    + "g\u00fcnstig!",
          new LiveChoice[]{
            new LiveChoice(weiter, 16)
            });
     
     steps[16] = new LiveStep(16, "Du hast die M\u00f6glichkeit einen Nebenjob zu machen um deine" 
     + " Haushaltskasse etwas aufzubessern", new LiveChoice[]{
-      new LiveChoice("1 - Das h\u00f6rt sich vern\u00fcnftig an, dann bin ich maximal selbstst\u00e4ndig", 17),
-      new LiveChoice("2 - Ach, das passt schon ich hab andere Quellen die mich unterst\u00fctzen, da"
+      new LiveChoice("1 - Das h\u00f6rt sich vern\u00fcnftig an, dann bin ich maximal "
+      + "selbstst\u00e4ndig", 17),
+      new LiveChoice("2 - Ach, das passt schon ich hab andere Quellen die mich "
+      + "unterst\u00fctzen, da"
       + " muss ich selbst nicht arbeiten gehen", 18)
       });
     steps[16].getChoices()[0].setChangeCredit(1600);
@@ -104,12 +108,14 @@ public class Game {
     steps[18].getChoices()[0].setChangeCredit(1000);
     steps[18].getChoices()[1].setChangeCredit(700);
     steps[18].getChoices()[2].setChangeCredit(1500);
-    steps[19] = new LiveStep(19, "In der Uni steht die erste Pr\u00fcfung kurz vor der T\u00fcr,"
+    steps[19] = new LiveStep(19, "In der Uni steht die erste Pr\u00fcfung kurz vor der "
+    + "T\u00fcr,"
     + " gleichzeitig hat aber auch dein bester Freund seinen 18. Geburtstag. Was machst du?",
         new LiveChoice[]{
           new LiveChoice("1 - Gar keine Frage, man wird nur einmal 18. Das kann ich nicht"
           + " verpassen!", 20),
-          new LiveChoice("2 - Das Studium hat auf jeden Fall Priorit\u00e4t, sonst w\u00e4re ja das ganze"
+          new LiveChoice("2 - Das Studium hat auf jeden Fall Priorit\u00e4t, sonst w\u00e4re "
+          + "ja das ganze"
           + " Semester umsonst gewesen!", 22)
           });
     steps[20] = new LiveStep(20, "Du warst feiern und wachst am Morgen der Pr\u00fcfung in einem Regio"
@@ -142,7 +148,8 @@ public class Game {
           new LiveChoice(weiter, 26)
           });
     steps[25].setUsesSpecialization(true);
-    steps[26] = new LiveStep(26, "Besuchst du regelm\u00e4\u00dfig die Veranstalltungen (Vorlesungen, etc.)",
+    steps[26] = new LiveStep(26, "Besuchst du regelm\u00e4\u00dfig die Veranstalltungen "
+    + "(Vorlesungen, etc.)",
         new LiveChoice[]{
           new LiveChoice("1 -Ja", 27),
           new LiveChoice("2 -Nein", 28)
@@ -153,7 +160,8 @@ public class Game {
           new LiveChoice("2 -Anstrengend, wird aber schon!", 30),
           new LiveChoice("3 -Schlecht!", 31)
           });
-    steps[28] = new LiveStep(28, "Dir fehlen wichtige Vorkenntnisse, die dir sp\u00e4ter zum Nachteil"
+    steps[28] = new LiveStep(28, "Dir fehlen wichtige Vorkenntnisse, die dir sp\u00e4ter "
+    + "zum Nachteil"
     + " werden k\u00f6nnten!",
         new LiveChoice[]{
           new LiveChoice(weiter, 27)
@@ -301,8 +309,8 @@ public class Game {
         new LiveChoice[]{
           new LiveChoice(weiter, 55)
           });
-    steps[55] = new LiveStep(55, "Hier endet dein Aufstieg als Informatiker.\nVielen Dank f\u00fcrs "
-    + "spielen!",
+    steps[55] = new LiveStep(55, "Hier endet dein Aufstieg als Informatiker.\nVielen "
+    + "Dank f\u00fcrs spielen!",
         new LiveChoice[]{
           new LiveChoice("1- Spiel beenden", 57),
           new LiveChoice("2- Spiel neustarten", 0)
@@ -311,7 +319,8 @@ public class Game {
     + "verschiedene Wahlm\u00f6glichkeiten gegeben.\nDu entscheidest dich mit Zahlen von 1 - 5.\n"
     + "Mit q beendest du das Spiel.\n"
     + "Manchmal werden Ergebnisse geschehen auf die du keinen Einfluss drauf hast.\nEs werden "
-    + "auch gr\u00f6\u00dfere Entscheidungen getroffen, wo du bis zu 5 Wahlm\u00f6glichkeiten hast.",
+    + "auch gr\u00f6\u00dfere Entscheidungen getroffen, wo du bis zu 5 "
+    + "Wahlm\u00f6glichkeiten hast.",
         new LiveChoice[]{
           new LiveChoice(weiter, 1)
           });
