@@ -78,7 +78,7 @@ Was beinhaltet die LiveStep-Klasse?
 *[ausführliche Dokumentation](dokumentation/LiveStepClass.md)*
 
 
-#### LiveChoice.Klasse
+#### LiveChoice-Klasse
 
 Was beinhaltet die LiveChoice-Klasse?
 + Attribute
@@ -89,6 +89,20 @@ Was beinhaltet die LiveChoice-Klasse?
 
 *[ausführliche Dokumentation](dokumentation/LiveChoiceClass.md)*
 
+#### Player-Klasse
+
+Was beinhaltet die Player-Klasse?
++ Attribute
+  + name
+  + credit
++ Konstruktor
++ Getter und Setter für alle Attribute
+  + addMoney
+  + removeMoney
+ 
+*[ausführliche Dokumentation](dokumentation/PlayerClass.md)*
+  
+  
 -------------------
 
 ### Die Geschichte
