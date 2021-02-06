@@ -302,6 +302,7 @@ public class Game {
           });
     steps[56] = new LiveStep(56, "Steuerung\n \nDie Steuerung ist sehr einfach.\nDir werden "
     + "verschiedene Wahlmöglichkeiten gegeben.\nDu entscheidest dich mit Zahlen von 1 - 5.\n"
+    + "Mit q beendest du das Spiel.\n"
     + "Manchmal werden Ergebnisse geschehen auf die du keinen Einfluss drauf hast.\nEs werden "
     + "auch größere Entscheidungen getroffen, wo du bis zu 5 Wahlmöglichkeiten hast.",
         new LiveChoice[]{
@@ -313,6 +314,7 @@ public class Game {
     boolean gameOver = true;
     clearScreen();
 
+    gameloop:
     while (gameOver) {
       currentStep = checkGivenAnswer(currentStep, steps);
       currentStep = checkUsesSpecialization(currentStep, steps);
@@ -325,11 +327,17 @@ public class Game {
       }
 
       String input = in.nextLine();
+      if (isQuitConfirmed(input)) {
+        break gameloop;
+      }
       int answer = checkInput(input, currentStep);
 
       while (answer == -1) {
         System.out.println("Fehler bei der Eingabe. Bite erneut versuchen:");
         input = in.nextLine();
+        if (isQuitConfirmed(input)) {
+          break gameloop;
+        }
         answer = checkInput(input, currentStep);
       }
 
@@ -341,6 +349,32 @@ public class Game {
       currentStep = steps[id];
       clearScreen(); 
     }
+  }
+
+  public static boolean isQuitConfirmed(String input) {
+    if (input.charAt(0) == 'q') {
+      System.out.println("\u001B[31m\nMöchten sie das Spiel wirklich beenden?\n1 - Ja\n2 - Nein"
+          + " \u001B[0m");
+      Scanner in = new Scanner(System.in);
+      
+
+      while (true) {
+        input = in.nextLine();
+        if (input.length() == 1) {
+          if (input.startsWith("1")) {
+            clearScreen();
+            return true;
+          }
+          if (input.startsWith("2")) {
+            System.out.print('\b');
+            System.out.print("\033[4A\033[0J");
+            return false;
+          }
+        }
+        System.out.println("Fehler bei der Eingabe. Bitte erneut versuchen:");
+      }
+    }
+    return false;
   }
 
   public static int checkInput(String input, LiveStep currentStep) {
