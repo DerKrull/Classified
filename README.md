@@ -1,5 +1,5 @@
 
-# CLassified - Das Spiel Projekt
+# Classified - Das Spiel Projekt
 
 ## Das Team
 
